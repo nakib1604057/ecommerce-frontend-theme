@@ -9,6 +9,8 @@ export const FILTER_BRAND = 'FILTER_BRAND'
 export const FILTER_COLOR = 'FILTER_COLOR'
 export const FILTER_PRICE = 'FILTER_PRICE'
 export const SORT_BY = 'SORT_BY'
+export const FILTER_CATEGORIES = 'FILTER_CATEGORIES'
+
 
 export const CHANGE_CURRENCY = 'CHANGE_CURRENCY'
 

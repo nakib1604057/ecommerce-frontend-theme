@@ -10,7 +10,7 @@ import StickyBox from "react-sticky-box";
 class CollectionLeftSidebar extends Component {
 
     state = {
-        layoutColumns:3
+        layoutColumns:4
     }
 
     LayoutViewClicked(colums) {
@@ -59,8 +59,8 @@ class CollectionLeftSidebar extends Component {
                                         <div className="">
                                             <div className="row">
                                                 <div className="col-sm-12">
-                                                    <div className="collection-product-wrapper">
-                                                        <div className="product-top-filter">
+                                                    {/* <div className="collection-product-wrapper"> */}
+                                                        {/* <div className="product-top-filter">
                                                             <div className="container-fluid p-0">
                                                                 <div className="row">
                                                                     <div className="col-xl-12">
@@ -78,12 +78,13 @@ class CollectionLeftSidebar extends Component {
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                        </div> */}
 
                                                         {/*Products Listing Component*/}
-                                                        <ProductListing colSize={this.state.layoutColumns}/>
 
-                                                    </div>
+                                                    {/* </div> */}
+
+                                                    <ProductListing colSize={this.state.layoutColumns}/>
                                                 </div>
                                             </div>
                                         </div>
