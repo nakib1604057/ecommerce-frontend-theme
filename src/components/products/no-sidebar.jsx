@@ -12,6 +12,7 @@ import DetailsTopTabs from "./common/details-top-tabs";
 import { addToCart, addToCartUnsafe, addToWishlist } from '../../actions'
 import ImageZoom from './common/product/image-zoom'
 import SmallImages from './common/product/small-image'
+import { consoleLog } from '../../console';
 
 
 
@@ -48,7 +49,6 @@ class NoSideBar extends Component {
             focusOnSelect: true
         };
         
-
         return (
             <div>
 
