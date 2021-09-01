@@ -47,10 +47,10 @@ class FilterBar extends Component {
     render (){
         return (
             <div className="product-filter-content">
-                <div className="search-count">
+                {/* <div className="search-count">
                     <h5>Showing Products 1-{this.props.products.length} Result</h5>
-                </div>
-                <div className="collection-view">
+                </div> */}
+                {/* <div className="collection-view">
                     <ul>
                         <li><i
                             className="fa fa-th grid-layout-view" onClick={this.gridLayout}></i>
@@ -59,7 +59,7 @@ class FilterBar extends Component {
                             className="fa fa-list-ul list-layout-view" onClick={this.listLayout}></i>
                         </li>
                     </ul>
-                </div>
+                </div> */}
                 <div className="collection-grid-view">
                     <ul>
                         <li>
@@ -88,7 +88,7 @@ class FilterBar extends Component {
                         </li>
                     </ul>
                 </div>
-                <div className="product-page-filter">
+                {/* <div className="product-page-filter">
                     <select onChange={(e) => this.props.filterSort(e.target.value)}>
                         <option value="">Sorting items</option>
                         <option value="HighToLow">Price: High to Low</option>
@@ -97,7 +97,7 @@ class FilterBar extends Component {
                         <option value="AscOrder">Sort By Name: A To Z</option>
                         <option value="DescOrder">Sort By Name: Z To A</option>
                     </select>
-                </div>
+                </div> */}
             </div>
         )
     }

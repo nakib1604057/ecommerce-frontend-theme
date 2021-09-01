@@ -7,7 +7,7 @@ const axiosInstance = (token = null) => {
     "application/x-www-form-urlencoded";
   instance.defaults.headers["Accept"] = "application/json";
   instance.defaults.timeout = 5000;
-  instance.defaults.baseURL = 'https://dlgb.bayofstyle.com/';
+  instance.defaults.baseURL = process.env.API_URL;
   //instance.defaults.headers.common["Authorization"] = "Token " + token;
 
   instance.interceptors.request.use(

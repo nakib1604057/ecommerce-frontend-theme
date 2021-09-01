@@ -9,7 +9,7 @@ import './index.scss';
 // Import custom components
 import store from './store';
 import translations from './constants/translations'
-import { getAllProducts } from './actions'
+import { filterCategory, getAllProducts } from './actions'
 import Landing from './components/landing'
 
 
@@ -94,6 +94,7 @@ class Root extends React.Component {
 
     render() {
         store.dispatch(getAllProducts());
+        store.dispatch(filterCategory('-1'))
         consoleLog(process.env)
         return(
         	<Provider store={store}>
@@ -124,7 +125,7 @@ class Root extends React.Component {
 								{/*Routes For Single Product*/}
 								<Route path={`${process.env.PUBLIC_URL}/left-sidebar/product/:id`} component={LeftSideBar}/>
 								<Route path={`${process.env.PUBLIC_URL}/right-sidebar/product/:id`} component={RightSideBar}/>
-								<Route path={`${process.env.PUBLIC_URL}/no-sidebar/product/:id`} component={NoSideBar}/>
+								<Route path={`${process.env.PUBLIC_URL}/product/:slug`} component={NoSideBar}/>
 								<Route path={`${process.env.PUBLIC_URL}/col-left/product/:id`} component={ColumnLeft}/>
 								<Route path={`${process.env.PUBLIC_URL}/col-right/product/:id`} component={ColumnRight}/>
 								<Route path={`${process.env.PUBLIC_URL}/accordian/product/:id`} component={Accordian}/>
