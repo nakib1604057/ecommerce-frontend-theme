@@ -43,7 +43,9 @@ class wishList extends Component {
                       </tr>
                     </thead>
                     {Items.map((item, index) => {
+                      console.log(item);
                       const image = JSON.parse(item.featured_img);
+
                       return (
                         <tbody key={index}>
                           <tr>

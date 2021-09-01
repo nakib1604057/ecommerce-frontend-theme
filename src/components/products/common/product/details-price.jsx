@@ -78,7 +78,7 @@ class DetailsWithPrice extends Component {
       name: item.name,
       price: item.price,
       slug: item.slug,
-      img: JSON.parse(item.featured_img),
+      img: item.featured_img ? JSON.parse(item.featured_img) : null,
     };
     this.props.addToCartClicked(productItem, this.state.quantity);
   };
@@ -98,7 +98,7 @@ class DetailsWithPrice extends Component {
       dots: false,
       focusOnSelect: true,
     };
-    console.log(item.price);
+    console.log(item);
     return (
       <div className="col-lg-6 rtl-text">
         <div className="product-right">

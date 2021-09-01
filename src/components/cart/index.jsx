@@ -55,7 +55,7 @@ class cartComponent extends Component {
                               <Link
                                 to={`${process.env.PUBLIC_URL}/product/${item.slug}`}
                               >
-                                <img src={item.img.file_name ? urls.IMAGE_URL+item.img.file_name: defaultImage} alt="" />
+                                <img src={item.img ? urls.IMAGE_URL+item.img.file_name: defaultImage} alt="" />
                               </Link>
                             </td>
                             <td>
