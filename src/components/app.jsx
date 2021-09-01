@@ -24,7 +24,7 @@ class App extends Component {
                 {this.props.children}
                 <FooterOne logoName={'logo.png'}/>
 
-                <ThemeSettings />
+                {/* <ThemeSettings /> */}
 
             </div>
         );

@@ -97,22 +97,22 @@ class ProductItem extends Component {
                     </div>
                     <div className="product-detail">
                         <div>
-                            <div className="rating">
+                            {/* <div className="rating">
                                 {RatingStars}
-                            </div>
+                            </div> */}
                             <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${product.id}`}>
                                 <h6>{product.name}</h6>
                             </Link>
                             <h4>{symbol}{product.price-(product.price*product.discount/100)}
                                 <del><span className="money">{symbol}{product.price}</span></del>
                             </h4>
-                            {product.variants?
+                            {/* {product.variants?
                             <ul className="color-variant">
                                 {product.variants.map((vari, i) => {
                                     return (
                                         <li className={vari.color} key={i} title={vari.color} onClick={() => this.onClickHandle(vari.images)}></li>)
                                 })}
-                            </ul>:''}
+                            </ul>:''} */}
                         </div>
                     </div>
                     <Modal open={this.state.open} onClose={this.onCloseModal} center>

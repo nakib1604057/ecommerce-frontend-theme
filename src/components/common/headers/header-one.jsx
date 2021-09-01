@@ -115,7 +115,7 @@ class HeaderOne extends Component {
 														<div><img src={`${process.env.PUBLIC_URL}/assets/images/icon/search.png`} onClick={this.openSearch} className="img-fluid" alt="" />
 															<i className="fa fa-search" onClick={this.openSearch}></i></div>
 													</li>
-													<li className="onhover-div mobile-setting">
+													{/* <li className="onhover-div mobile-setting">
 														<div><img src={`${process.env.PUBLIC_URL}/assets/images/icon/setting.png`} className="img-fluid" alt="" />
 															<i className="fa fa-cog"></i></div>
 														<div className="show-div setting">
@@ -132,7 +132,7 @@ class HeaderOne extends Component {
 																<li><a href={null} onClick={() => this.props.changeCurrency('$')}>doller</a> </li>
 															</ul>
 														</div>
-													</li>
+													</li> */}
 													{/*Header Cart Component */}
 													<CartContainer/>
 												</ul>

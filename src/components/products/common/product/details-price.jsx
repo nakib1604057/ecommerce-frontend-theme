@@ -71,7 +71,7 @@ class DetailsWithPrice extends Component {
                     <ul >
                         <Slider {...colorsnav} asNavFor={this.props.navOne} ref={slider => (this.slider1 = slider)} className="color-variant">
                             {item.variants.map((vari, i) => {
-                                return <li className={vari.color} key={i} title={vari.color}></li>
+                                return <li  style={{background:'red'}} key={i} title={vari.color}></li>
                             })}
                         </Slider>
                     </ul>:''}
