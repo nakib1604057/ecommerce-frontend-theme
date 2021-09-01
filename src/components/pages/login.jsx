@@ -1,50 +1,64 @@
-import React, { Component,useState } from "react";
+import React, { Component, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-
+// import {}
 import Breadcrumb from "../common/breadcrumb";
 
 const Login = () => {
-    const [email, setEmail] = useState("");
+	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-    const [valErrors, setValErrors] = useState({});
-    const history = useHistory();
+	const [valErrors, setValErrors] = useState({});
+	const history = useHistory();
 
-    const handleEmailChange = (e) => {
+	const handleEmailChange = (e) => {
 		const errs = valErrors;
 		if (errs.invalid) delete errs.invalid;
 		setEmail(e.target.value);
-		setValErrors(errs);
+		setValErrors('');
 	};
 	const handlePasswordChange = (e) => {
 		const errs = valErrors;
 		if (errs.invalid) delete errs.invalid;
 		setPassword(e.target.value);
-		setValErrors(errs);
+		setValErrors('');
 	};
-	const onSubmit = async () => {
-		if (isObjEmpty(errors)) {
-			try {
-				const res = await loginApi(email, password);
-
-				const data = {
-					email: email,
-					userId: res.data.id,
-					firstName: res.data.firstName,
-					lastName: res.data.lastName,
-					profilePic: res.data.profilePic,
-					accessToken: res.data.accessToken,
-					refreshToken: res.data.refreshToken,
-					lastLogin: new Date().getTime() / 1000,
-				};
-				dispatch(handleLogin(data));
-				history.push("/");
-			} catch (err) {
-				const arr = {};
-				arr["invalid"] = err.data.error.message;
-
-				setValErrors(arr);
-				console.log(err.data.error.message);
-			}
+	const onSubmit = async (e) => {
+		// if (isObjEmpty(errors)) {
+		try {
+			e.preventDefault();
+            
+            if(!email){
+                const arr =[]
+                arr['email'] ="Please Enter your email"
+                setValErrors(arr)
+            }
+            else if(!password){
+                const arr = []
+                arr['password'] ="Please Enter your password";
+                setValErrors(arr)
+            }
+            else{
+                // console.log(email, password);
+			// const res = await loginApi(email, password);
+               
+            }
+			// const data = {
+			// 	email: email,
+			// 	userId: res.data.id,
+			// 	firstName: res.data.firstName,
+			// 	lastName: res.data.lastName,
+			// 	profilePic: res.data.profilePic,
+			// 	accessToken: res.data.accessToken,
+			// 	refreshToken: res.data.refreshToken,
+			// 	lastLogin: new Date().getTime() / 1000,
+			// };
+			// console.log(data)
+			// // dispatch(handleLogin(data));
+			// history.push("/");
+		} catch (err) {
+			// const arr = {};
+			// arr["invalid"] = err.data.error.message;
+			// setValErrors(arr);
+			// console.log(err.data.error.message);
 		}
 	};
 	return (
@@ -62,13 +76,15 @@ const Login = () => {
 									<div className="form-group">
 										<label htmlFor="email">Email</label>
 										<input
-											type="text"
+											type="email"
 											className="form-control"
 											id="email"
 											placeholder="Email"
-											required=""
+											required
+											onChange={handleEmailChange}
 										/>
 									</div>
+                                    {valErrors.email?(<p className="text-danger">{valErrors.email}</p>):null}
 									<div className="form-group">
 										<label htmlFor="review">Password</label>
 										<input
@@ -76,12 +92,21 @@ const Login = () => {
 											className="form-control"
 											id="review"
 											placeholder="Enter your password"
-											required=""
+											required
+                                            value={password}
+											onChange={handlePasswordChange}
 										/>
+                                    {valErrors.password?(<p className="text-danger">{valErrors.password}</p>):null}
+										
 									</div>
-									<a href="#" className="btn btn-solid">
+
+									<button
+										type="submit"
+										className="btn btn-solid"
+										onClick={onSubmit}
+									>
 										Login
-									</a>
+									</button>
 								</form>
 							</div>
 						</div>
