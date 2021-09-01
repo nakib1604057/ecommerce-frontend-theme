@@ -93,13 +93,13 @@ class HeaderOne extends Component {
 							<div className="col-sm-12">
 								<div className="main-menu">
 									<div className="menu-left">
-										<div className="navbar">
+										{/* <div className="navbar">
 											<a href="javascript:void(0)" onClick={this.openNav}>
 												<div className="bar-style"> <i className="fa fa-bars sidebar-bar" aria-hidden="true"></i></div>
-											</a>
-											{/*SideBar Navigation Component*/}
-											<SideBar/>
-										</div>
+											</a> */}
+											{/* SideBar Navigation Component */}
+											{/* <SideBar/> */}
+										{/* </div> */}
 										<div className="brand-logo">
 											<LogoImage logo={this.props.logoName} />
 										</div>
@@ -116,22 +116,11 @@ class HeaderOne extends Component {
 															<i className="fa fa-search" onClick={this.openSearch}></i></div>
 													</li>
 													{/* <li className="onhover-div mobile-setting">
-														<div><img src={`${process.env.PUBLIC_URL}/assets/images/icon/setting.png`} className="img-fluid" alt="" />
-															<i className="fa fa-cog"></i></div>
-														<div className="show-div setting">
-															<h6>language</h6>
-															<ul>
-																<li><a href={null} onClick={() => this.changeLanguage('en')}>English</a> </li>
-																<li><a href={null} onClick={() => this.changeLanguage('fn')}>French</a> </li>
-															</ul>
-															<h6>currency</h6>
-															<ul className="list-inline">
-																<li><a href={null} onClick={() => this.props.changeCurrency('€')}>euro</a> </li>
-																<li><a href={null} onClick={() => this.props.changeCurrency('₹')}>rupees</a> </li>
-																<li><a href={null} onClick={() => this.props.changeCurrency('£')}>pound</a> </li>
-																<li><a href={null} onClick={() => this.props.changeCurrency('$')}>doller</a> </li>
-															</ul>
-														</div>
+														<div><img src={`${process.env.PUBLIC_URL}/shop`} className="img-fluid" alt="" />
+															<i className="fa fa-cog"></i>
+															<i className="fa fa-shopify"></i>
+															</div>
+												
 													</li> */}
 													{/*Header Cart Component */}
 													<CartContainer/>

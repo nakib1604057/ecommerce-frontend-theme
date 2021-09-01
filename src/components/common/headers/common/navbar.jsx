@@ -89,9 +89,9 @@ class NavBar extends Component {
 							</li>
 							<li>
 								<Link
-									to="#"
+									to="/"
 									className="nav-link"
-									onClick={(e) => this.handleSubmenu(e)}
+									// onClick={(e) => this.handleSubmenu(e)}
 								>
 									{translate("home")}
 									{/* <span className="sub-arrow"></span> */}
@@ -109,9 +109,9 @@ class NavBar extends Component {
 							</li>
 							<li>
 								<Link
-									to="#"
+									to="/shop"
 									className="nav-link"
-									onClick={(e) => this.handleSubmenu(e)}
+									// onClick={(e) => this.handleSubmenu(e)}
 								>
 									{translate("shop")}
 									{/* <span className="sub-arrow"></span> */}
