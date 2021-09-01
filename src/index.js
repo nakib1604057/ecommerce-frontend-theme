@@ -87,13 +87,14 @@ import ElementProductTab from "./components/features/product/element-product-tab
 // Portfolio Features
 import GridCols from "./components/features/portfolio/grid-cols"
 import MasonaryGridCols from "./components/features/portfolio/masonary-grid-cols"
+import { consoleLog } from './console';
 
 
 class Root extends React.Component {
 
     render() {
         store.dispatch(getAllProducts());
-
+        consoleLog(process.env)
         return(
         	<Provider store={store}>
                 <IntlProvider translations={translations} locale='en'>
