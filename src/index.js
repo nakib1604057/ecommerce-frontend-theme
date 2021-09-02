@@ -96,8 +96,7 @@ import { ToastContainer } from "react-toastify";
 class Root extends React.Component {
   render() {
     store.dispatch(filterCategory("-1"));
-    store.dispatch(getInfo());
-    store.dispatch(getCategories());
+   
     return (
       <>
         <ToastContainer />

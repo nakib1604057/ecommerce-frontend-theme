@@ -92,7 +92,7 @@ class ProductListItem extends Component {
             <Link
               to="javascript:void(0)"
               title="Add to Wishlist"
-              onClick={onAddToWishlistClicked}
+              // onClick={onAddToWishlistClicked}
             >
               <i className="fa fa-heart" aria-hidden="true"></i>
             </Link>
