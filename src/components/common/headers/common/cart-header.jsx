@@ -8,7 +8,7 @@ const CartHeader  = ({item, total, symbol, removeFromCart}) => (
                     <Link to={`${process.env.PUBLIC_URL}/product/${item.slug}`}><img alt="" className="mr-3" src={item.img ? `${item.img.file_name}`: defaultImage} /></Link>
                     <div className="media-body">
                         <Link to={`${process.env.PUBLIC_URL}/product/${item.slug}`}><h4>{item.name}</h4></Link>
-                        <h4><span>{item.qty} x BDT {(item.price)}</span></h4>
+                        <h4><span>{item.qty} x TK {(item.price)}</span></h4>
                     </div>
                 </div>
                 {/*<span>{cart}</span>*/}

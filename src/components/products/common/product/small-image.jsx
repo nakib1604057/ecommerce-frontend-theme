@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
+import { defaultImage } from "../../../../constants/defaultImage";
+import { urls } from "../../../../constants/urls";
 
 class SmallImages extends Component {
   constructor(props) {
@@ -17,8 +19,14 @@ class SmallImages extends Component {
   render() {
     const { item, settings } = this.props;
 
-    var productsnav = settings;
-
+    var productsnav = {
+      slidesToShow: item.images.length,
+      slidesToScroll: 1,
+      swipeToSlide: true,
+      draggable: true,
+      focusOnSelect: true,
+    };
+    console.log(item);
     return (
       <div className="row">
         <div className="col-12 p-0">
@@ -30,7 +38,16 @@ class SmallImages extends Component {
           >
             {item.images.map((vari, index) => (
               <div key={index}>
-                <img src={`${vari}`} key={index} alt="" className="img-fluid" />
+                <img
+                  src={
+                    vari.file_name
+                      ? "https://dlgb.bayofstyle.com/uploads/" + vari.file_name
+                      : defaultImage
+                  }
+                  key={index}
+                  alt=""
+                  className="img-fluid"
+                />
               </div>
             ))}
           </Slider>

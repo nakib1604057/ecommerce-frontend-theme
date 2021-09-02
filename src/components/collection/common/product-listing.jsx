@@ -18,7 +18,7 @@ const ProductListing = props => {
   const [lastPageProductTotal, setLastPageProductTotal] = useState(null);
 
   const store = useSelector(store => store.filters);
-
+  const dispatch = useDispatch();
   useEffect(() => {
     loadProducts(0, "changed");
   }, [store.categories]);
@@ -44,6 +44,10 @@ const ProductListing = props => {
     }
   };
 
+  const addCart = (product, qty) => {
+    dispatch(addToCart(product, qty));
+  };
+
   return (
     <div>
       <div className="product-wrapper-grid">
@@ -62,8 +66,7 @@ const ProductListing = props => {
                   <ProductListItem
                     product={product}
                     onAddToCompareClicked={() => addToCompare(product)}
-                    onAddToWishlistClicked={() => addToWishlist(product)}
-                    onAddToCartClicked={addToCart}
+                    onAddToCartClicked={addCart}
                     key={index}
                   />
                 </div>
@@ -121,8 +124,4 @@ const mapStateToProps = state => ({
   symbol: state.data.symbol,
 });
 
-export default connect(mapStateToProps, {
-  addToCart,
-  addToWishlist,
-  addToCompare,
-})(ProductListing);
+export default ProductListing;

@@ -17,6 +17,7 @@ class DetailsWithPrice extends Component {
       price: item.price,
       regularPrice: item.regularPrice,
       variationsSelected: null,
+      id: item.id,
     };
   }
 
@@ -29,8 +30,15 @@ class DetailsWithPrice extends Component {
   };
 
   componentDidMount() {
+    const item = this.props.item;
     this.setState({
       nav3: this.slider3,
+      variationsSelected: item.attributes
+        ? item.attributes.map(i => null)
+        : null,
+      price: item.price,
+      regularPrice: item.regularPrice,
+      id: item.id,
     });
   }
 
@@ -47,38 +55,121 @@ class DetailsWithPrice extends Component {
     this.setState({ quantity: parseInt(e.target.value) });
   };
 
-  renderColor = options => {
+  renderColor = (options, index) => {
     return options.map((vari, i) => {
       return (
         <li
-          style={{ backgroundColor: `${vari.option_name.toLowerCase()}` }}
+          style={{
+            backgroundColor: `${vari.option_name.toLowerCase()}`,
+            border:
+              this.state.variationsSelected &&
+              this.state.variationsSelected[index] &&
+              this.state.variationsSelected[index].option_name ===
+                vari.option_name
+                ? `1px solid black`
+                : null,
+          }}
           key={i}
+          onClick={e => this.onSelectedOptions(index, vari)}
           title={vari.option_name}
         ></li>
       );
     });
   };
-  onSelectedOptions = (attribute_index, option_name) => {
-    console.log(attribute_index, "asdasd");
+
+  checkNullValueVariants = variants => {
+    let flag = true;
+    variants.map(item => {
+      if (item === null) {
+        flag = false;
+      }
+    });
+    return flag;
+  };
+  checkVariantValue = variant => {
+    let combinations = "";
+    variant.map(item => {
+      combinations += item.option_id.toString();
+    });
+
+    
+    this.props.item.variants &&
+      this.props.item.variants.map(item => {
+        if (
+          item.variantCombination
+            .split("")
+            .sort()
+            .join("") ===
+          combinations
+            .split("")
+            .sort()
+            .join("")
+        ) {
+          this.setState({
+            id: item.id,
+            price: item.price,
+            regularPrice: item.regularPrice,
+          });
+        } else {
+          this.setState({
+            id: this.props.item.id,
+            price: this.props.item.price,
+            regularPrice: this.props.item.regularPrice,
+          });
+        }
+      });
+  };
+  onSelectedOptions = (attribute_index, option) => {
+    const variant = this.state.variationsSelected;
+
+    variant[attribute_index] = option;
+
+    if (this.checkNullValueVariants(variant)) {
+      this.checkVariantValue(variant);
+    }
+    this.setState({
+      variationsSelected: variant,
+    });
   };
   renderAttributes = (options, index) => {
     return options.map((vari, i) => {
       return (
-        <li key={i}>
-          <a onClick={e => console.log(e)}>{vari.option_name}</a>
+        <li
+          key={i}
+          style={{
+            border:
+              this.state.variationsSelected &&
+              this.state.variationsSelected[index] &&
+              this.state.variationsSelected[index].option_name ===
+                vari.option_name
+                ? `1px solid black`
+                : null,
+            padding: 1,
+            marginRight: 1,
+          }}
+        >
+          <a onClick={e => this.onSelectedOptions(index, vari)}>
+            {vari.option_name}
+          </a>
         </li>
       );
     });
   };
   addToCart = () => {
-    console.log(this.props.item);
     const item = this.props.item;
     const productItem = {
-      id: item.id,
+      id: this.state.id,
       name: item.name,
-      price: item.price,
+      price: this.state.price,
       slug: item.slug,
       img: item.featured_img ? JSON.parse(item.featured_img) : null,
+      attributes: this.state.variationsSelected
+        ? this.state.variationsSelected[0] || this.state.variationsSelected[0]
+          ? this.state.variationsSelected.map(item => ({
+              name: item ? item.option_name : "",
+            }))
+          : null
+        : null,
     };
     this.props.addToCartClicked(productItem, this.state.quantity);
   };
@@ -98,7 +189,6 @@ class DetailsWithPrice extends Component {
       dots: false,
       focusOnSelect: true,
     };
-    console.log(item);
     return (
       <div className="col-lg-6 rtl-text">
         <div className="product-right">
@@ -106,29 +196,38 @@ class DetailsWithPrice extends Component {
           {item.regularPrice !== null ? (
             <>
               <h4>
-                <del>BDT {item.regularPrice}</del>
-                <span>{(item.price / item.regularPrice) * 100}% off</span>
+                <del>TK {this.state.regularPrice}</del>
+                <span>
+                  {100 - (this.state.price / this.state.regularPrice) * 100}%
+                  off
+                </span>
               </h4>
-              <h3>BDT {item.price} </h3>
+              <h3>TK {this.state.price} </h3>
             </>
           ) : (
-            <h3>BDT {item.price}</h3>
+            <h3>TK {this.state.price}</h3>
           )}
           {item.attributes ? (
             <ul>
               {item.attributes.map((attribute, index) => {
                 return (
-                  <Slider
-                    {...colorsnav}
-                    asNavFor={this.props.navOne}
-                    ref={slider => (this.slider1 = slider)}
-                    className="color-variant"
-                  >
+                  <>
                     {attribute.attribute_name.toLowerCase() === "color" ||
-                    attribute.attribute_name.toLowerCase() === "colour"
-                      ? this.renderColor(attribute.options, index)
-                      : this.renderAttributes(attribute.options, index)}
-                  </Slider>
+                    attribute.attribute_name.toLowerCase() === "colour" ? (
+                      <Slider
+                        {...colorsnav}
+                        asNavFor={this.props.navOne}
+                        ref={slider => (this.slider1 = slider)}
+                        className="color-variant"
+                      >
+                        {this.renderColor(attribute.options, index)}
+                      </Slider>
+                    ) : (
+                      <Link>
+                        {this.renderAttributes(attribute.options, index)}
+                      </Link>
+                    )}
+                  </>
                 );
               })}
             </ul>

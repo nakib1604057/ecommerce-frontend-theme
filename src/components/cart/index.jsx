@@ -47,7 +47,6 @@ class cartComponent extends Component {
                       </tr>
                     </thead>
                     {cartItems.map((item, index) => {
-                        console.log(item.price)
                       return (
                         <tbody key={index}>
                           <tr>
@@ -55,7 +54,14 @@ class cartComponent extends Component {
                               <Link
                                 to={`${process.env.PUBLIC_URL}/product/${item.slug}`}
                               >
-                                <img src={item.img ? urls.IMAGE_URL+item.img.file_name: defaultImage} alt="" />
+                                <img
+                                  src={
+                                    item.img
+                                      ? urls.IMAGE_URL + item.img.file_name
+                                      : defaultImage
+                                  }
+                                  alt=""
+                                />
                               </Link>
                             </td>
                             <td>
@@ -63,7 +69,13 @@ class cartComponent extends Component {
                                 to={`${process.env.PUBLIC_URL}/product/${item.slug}`}
                               >
                                 {item.name}
+                                <br></br>
+                                {item.attributes && item.attributes[0].name && "Variations:"}
+                                {item.attributes && item.attributes.map(item => {
+                                  return <>{item.name || ""} </>;
+                                })}
                               </Link>
+
                               <div className="mobile-cart-content row">
                                 <div className="col-xs-3">
                                   <div className="qty-box">
@@ -78,29 +90,28 @@ class cartComponent extends Component {
                                   </div>
                                 </div>
                                 <div className="col-xs-3">
-                                  <h2 className="td-color">
-                                    BDT {item.price}
-                                  </h2>
+                                  <h2 className="td-color">TK {item.price}</h2>
                                 </div>
                                 <div className="col-xs-3">
                                   <h2 className="td-color">
-                                    <a
-                                      href="#"
+                                    <button
+                                      // href={null}
+                                      // href=''
                                       className="icon"
-                                      onClick={() =>
-                                        this.props.removeFromCart(item)
-                                      }
+                                      onClick={e => {
+                                        e.preventDefault();
+
+                                        this.props.removeFromCart(item);
+                                      }}
                                     >
                                       <i className="icon-close"></i>
-                                    </a>
+                                    </button>
                                   </h2>
                                 </div>
                               </div>
                             </td>
                             <td>
-                              <h2>
-                                {item.price}/-
-                              </h2>
+                              <h2>{item.price}/-</h2>
                             </td>
                             <td>
                               <div className="qty-box">
@@ -142,7 +153,6 @@ class cartComponent extends Component {
                             </td>
                             <td>
                               <a
-                                href="#"
                                 className="icon"
                                 onClick={() => this.props.removeFromCart(item)}
                               >
@@ -151,7 +161,7 @@ class cartComponent extends Component {
                             </td>
                             <td>
                               <h2 className="td-color">
-                                {item.qty*item.price}/-
+                                {item.qty * item.price}/-
                               </h2>
                             </td>
                           </tr>
@@ -164,9 +174,7 @@ class cartComponent extends Component {
                       <tr>
                         <td>total price :</td>
                         <td>
-                          <h2>
-                            {total}/-
-                          </h2>
+                          <h2>{total}/-</h2>
                         </td>
                       </tr>
                     </tfoot>
