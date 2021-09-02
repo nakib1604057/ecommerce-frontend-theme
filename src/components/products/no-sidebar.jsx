@@ -125,7 +125,6 @@ class NoSideBar extends Component {
             </div>
           </div>
         </section>
-
         <RelatedProduct />
       </div>
     );
