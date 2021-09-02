@@ -92,7 +92,7 @@ class Root extends React.Component {
   render() {
     store.dispatch(getAllProducts());
     store.dispatch(filterCategory("-1"));
-    consoleLog(process.env);
+   
     return (
       <>
         <ToastContainer />
@@ -219,7 +219,7 @@ class Root extends React.Component {
                       component={Login}
                     />
                     <Route
-                      path={`${process.env.PUBLIC_URL}/pages/register`}
+                      path={`${process.env.PUBLIC_URL}/register`}
                       component={Register}
                     />
                     <Route

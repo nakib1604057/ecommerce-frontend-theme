@@ -2555,12 +2555,22 @@ r .top-header .header-dropdown li:nth-child(2) {
 	font-weight: 700;
 }
 .absolute-product .product-box {
+<<<<<<< HEAD
 	width: 100%;
 	display: inline-block;
 	padding-bottom: 10px;
 	-webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 	border-radius: 5px;
+=======
+  width: 100%;
+  display: inline-block;
+  padding-bottom: 10px;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+          
+  border-radius: 5px;
+>>>>>>> 329d4456f07c458da4b7e4a133b2e638e414d3ee
 }
 .absolute-product .product-box .img-wrapper {
 	border-radius: 5px 5px 0 0;

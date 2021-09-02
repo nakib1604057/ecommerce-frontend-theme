@@ -93,7 +93,7 @@ class Dashboard extends Component {
 								<div className="container">
 									<div className="row">
 										<div className="col-lg-12 ">
-											<PreOrderForm />
+											<PreOrderForm  onCloseModal={this.onCloseModal}/>
 										</div>
 									</div>
 								</div>

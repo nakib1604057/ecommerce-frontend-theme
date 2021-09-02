@@ -61,7 +61,7 @@ const ProductListing = props => {
                       ? "col-xl-3 col-md-6 col-grid-box"
                       : "col-lg-" + props.colSize
                   }`}
-                  key={index}
+                  key={index} style={{marginBottom: "30px"}}
                 >
                   <ProductListItem
                     product={product}
