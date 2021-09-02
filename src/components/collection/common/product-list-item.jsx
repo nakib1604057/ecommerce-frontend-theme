@@ -64,10 +64,6 @@ class ProductListItem extends Component {
   render() {
     const {
       product,
-      symbol,
-      onAddToCartClicked,
-      onAddToWishlistClicked,
-      onAddToCompareClicked,
     } = this.props;
     const { open } = this.state;
     
