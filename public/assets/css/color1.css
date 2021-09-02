@@ -138,7 +138,10 @@ a:focus {
 button:focus {
 	outline: none;
 }
+.boxShadow{
+	box-shadow: 0px 0px 10px 3px rgb(193 187 187 / 30%);
 
+}
 .white {
 	background-color: #fff;
 	border: 1px solid #aaa;

@@ -35,13 +35,13 @@ class CollectionLeftSidebar extends Component {
 				</Helmet>
 				{/*SEO Support End */}
 
-				<Breadcrumb title={"Collection"} />
+				<Breadcrumb title={"Shop"} />
 
 				<section className="section-b-space">
 					<div className="collection-wrapper">
 						<div className="container">
 							<div className="row">
-								<div className="col-sm-3 collection-filter">
+								<div className="col-sm-3 collection-filter" style={{ boxShadow:"0px 0px 42px rgb(158 157 157 / 30%)",padding: "20px",borderRadius: "5px"}}>
 									<StickyBox offsetTop={20} offsetBottom={20}>
 										<div>
 											<Filter />

@@ -47,8 +47,8 @@ const SpecialProducts = ({
 					<Tabs className="theme-tab">
 						<TabList className="tabs tab-title">
 							<Tab>New Products</Tab>
-							<Tab>Mens Wear</Tab>
-							<Tab>Womens Wear</Tab>
+							<Tab>Featured Product</Tab>
+							<Tab>Popular Product</Tab>
 						</TabList>
 
 						<TabPanel>
@@ -56,20 +56,6 @@ const SpecialProducts = ({
 								{newProduct.map((product, index) => (
 									<ProductItem
 									// products={prod}
-										product={product}
-										symbol={symbol}
-										onAddToCompareClicked={() => addToCompare(product)}
-										onAddToWishlistClicked={() => addToWishlist(product)}
-										onAddToCartClicked={() => addToCart(product, 1)}
-										key={index}
-									/>
-								))}
-							</div>
-						</TabPanel>
-						<TabPanel>
-							<div className="no-slider row">
-								{popularProduct.map((product, index) => (
-									<ProductItem
 										product={product}
 										symbol={symbol}
 										onAddToCompareClicked={() => addToCompare(product)}
@@ -94,6 +80,21 @@ const SpecialProducts = ({
 								))}
 							</div>
 						</TabPanel>
+						<TabPanel>
+							<div className="no-slider row">
+								{popularProduct.map((product, index) => (
+									<ProductItem
+										product={product}
+										symbol={symbol}
+										onAddToCompareClicked={() => addToCompare(product)}
+										onAddToWishlistClicked={() => addToWishlist(product)}
+										onAddToCartClicked={() => addToCart(product, 1)}
+										key={index}
+									/>
+								))}
+							</div>
+						</TabPanel>
+						
 					</Tabs>
 				</div>
 			</section>

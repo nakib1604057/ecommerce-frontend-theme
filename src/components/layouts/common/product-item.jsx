@@ -67,7 +67,7 @@ class ProductItem extends Component {
 
 
 		return (
-			<div className="product-box">
+			<div className="product-box" style={{boxShadow: "0px 0px 12px rgb(132 124 124 / 30%)"}}>
 				<div className="img-wrapper">
 					{/* <div className="lable-block">
                             {(product.new == true)? <span className="lable3">new</span> : ''}
@@ -88,7 +88,7 @@ class ProductItem extends Component {
 							 
 						</Link>
 					</div>
-					<div className="cart-info cart-wrap">
+					<div className="cart-info cart-wrap" style={{background: "rgb(255 255 255 / 90%)",borderRadius:"20px",marginRight: "10px",marginBottom: "20px"}}>
 						<button title="Add to cart" onClick={onAddToCartClicked}>
 							<i className="fa fa-shopping-cart" aria-hidden="true"></i>
 						</button>
@@ -99,22 +99,7 @@ class ProductItem extends Component {
 						>
 							<i className="fa fa-heart" aria-hidden="true"></i>
 						</a>
-						<a
-							href="javascript:void(0)"
-							data-toggle="modal"
-							data-target="#quick-view"
-							title="Quick View"
-							onClick={this.onOpenModal}
-						>
-							<i className="fa fa-search" aria-hidden="true"></i>
-						</a>
-						<Link
-							to={`${process.env.PUBLIC_URL}/compare`}
-							title="Compare"
-							onClick={onAddToCompareClicked}
-						>
-							<i className="fa fa-refresh" aria-hidden="true"></i>
-						</Link>
+						
 					</div>
 					{product.variants ? (
 						<ul className="product-thumb-list">
@@ -138,7 +123,7 @@ class ProductItem extends Component {
 						""
 					)}
 				</div>
-				<div className="product-detail">
+				<div className="product-detail" style={{padding:"12px"}}>
 					<div>
 						{/* <div className="rating">
                                 {RatingStars}

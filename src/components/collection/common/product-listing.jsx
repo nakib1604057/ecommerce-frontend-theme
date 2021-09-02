@@ -62,6 +62,7 @@ const ProductListing = props => {
                       : "col-lg-" + props.colSize
                   }`}
                   key={index}
+                  style={{marginBottom:'20px'}}
                 >
                   <ProductListItem
                     product={product}
@@ -75,7 +76,7 @@ const ProductListing = props => {
           </div>
           {isLoading && <div className="loading-cls"></div>}
           {lastPageProductTotal > 0 && (
-            <div onClick={() => loadProducts(page)}>Load More</div>
+           <div className="m-auto text-center">  <button class="btn btn-outline-danger btn-lg rounded" onClick={() => loadProducts(page)}>Load More</button></div>   
           )}
           {/* {productList.length > 0 ? (
             <InfiniteScroll
