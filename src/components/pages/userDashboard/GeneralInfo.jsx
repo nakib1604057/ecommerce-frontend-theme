@@ -1,6 +1,7 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 
 const GeneralInfo = () => {
+	const 
 	return (
 		<div>
 			<div className="page-title">
