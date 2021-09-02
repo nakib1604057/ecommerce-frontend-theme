@@ -9,10 +9,17 @@ import UpdateGeneralInfo from "./userDashboard/UpdateGeneralInfo";
 import UpdatePassword from "./userDashboard/UpdatePassword";
 import UpdateAddress from "./userDashboard/UpdateAddress";
 import TrackPreOrder from "./userDashboard/TrackPreOrder";
-
+import { getUserInfo } from "../../services/api/userApi";
 const Dashboard = () => {
 	const [open, setOpen] = useState(false);
-
+	const [userData, setUserData] = useState([]);
+	useEffect(async () => {
+		try {
+			const resData = await getUserInfo();
+			// console.log(resData.data)
+			setUserData(resData.data.results[0])
+		} catch (err) {}
+	}, []);
 	const onOpenModal = () => {
 		// this.setState({ open: true });
 		setOpen(true);
@@ -70,7 +77,7 @@ const Dashboard = () => {
 								<div className="dashboard-right">
 									<div className="dashboard">
 										<TabPanel>
-											<GeneralInfo />
+											<GeneralInfo  userData={userData}/>
 										</TabPanel>
 										<TabPanel>
 											<div className="no-slider row">

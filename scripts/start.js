@@ -51,13 +51,13 @@ if (process.env.HOST) {
         chalk.bold(process.env.HOST)
       )}`
     )
-  );
+
   
     `If this was unintentional, check that you haven't mistakenly set it in your shell.`
-  );
+
   
     `Learn more here: ${chalk.yellow('http://bit.ly/CRA-advanced-config')}`
-  );
+  
   console.log();
 }
 

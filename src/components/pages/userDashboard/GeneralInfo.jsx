@@ -1,14 +1,16 @@
-import React,{useEffect,useState} from "react";
-
-const GeneralInfo = () => {
-	const 
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+const GeneralInfo = ({ userData }) => {
+	console.log("userDaa", userData);
+	const empty = ()=>(<span className="text-danger">empty</span>)
 	return (
 		<div>
 			<div className="page-title">
-				<h2>My Dashboard</h2>
+				<h2>
+					Hello, {userData.first_name} {userData.last_name} !
+				</h2>
 			</div>
 			<div className="welcome-msg">
-				<p>Hello, MARK JECNO !</p>
 				<p>
 					From your My Account Dashboard you have the ability to view a snapshot
 					of your recent account activity and update your account information.
@@ -23,15 +25,22 @@ const GeneralInfo = () => {
 					<div className="col-sm-6">
 						<div className="box">
 							<div className="box-title">
-								<h3>Contact Information</h3>
+								<h3>General Information</h3>
 								<a href="#">Edit</a>
 							</div>
 							<div className="box-content">
-								<h6>MARK JECNO</h6>
-								<h6>MARk-JECNO@gmail.com</h6>
-								<h6>
-									<a href="#">Change Password</a>
-								</h6>
+								<h5>
+									{" "}
+									<strong>UserName: </strong>
+									{userData.user_name}{" "}
+								</h5>
+								<h5>
+									<strong>Phone Number: </strong> {userData.phone_number}
+								</h5>
+
+								{/* <h6>
+									<Link to="#">Change Password</Link>
+								</h6> */}
 							</div>
 						</div>
 					</div>
@@ -51,23 +60,46 @@ const GeneralInfo = () => {
 					<div className="box">
 						<div className="box-title">
 							<h3>Address Book</h3>
-							<a href="#">Manage Addresses</a>
+							{/* <Link h="#">Manage Addresses</a> */}
 						</div>
 						<div className="row">
 							<div className="col-sm-6">
-								<h6>Default Billing Address</h6>
+								
 								<address>
-									You have not set a default billing address.
+									<h5>
+										<strong>Country: </strong>
+										{userData.country?userData.country:(empty())}
+									</h5>
+									<h5>
+										<strong>Division: </strong> {userData.division?userData.division:(empty())}
+									</h5>
+
+									<h5>
+										<strong>City/Town: </strong> {userData.city?userData.city:(empty())}
+									</h5>
+
 									<br />
-									<a href="#">Edit Address</a>
+									{/* <a href="#">Edit Address</a> */}
 								</address>
 							</div>
 							<div className="col-sm-6">
-								<h6>Default Shipping Address</h6>
+								
 								<address>
-									You have not set a default shipping address.
+									<h5>
+										
+										<strong>House No: </strong>
+										{userData.houseNo?userData.houseNo:(empty())}
+									</h5>
+									<h5>
+										<strong>Landmark: </strong> {userData.landmark?userData.landmark:(empty())}
+									</h5>
+
+									<h5>
+										
+										<strong>Post Code: </strong> {userData.postCode?userData.postCode:(empty())}
+									</h5>
 									<br />
-									<a href="#">Edit Address</a>
+									{/* <a href="#">Edit Address</a> */}
 								</address>
 							</div>
 						</div>
