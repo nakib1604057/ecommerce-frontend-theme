@@ -56,7 +56,7 @@ class ProductListItem extends Component {
       onAddToCompareClicked,
     } = this.props;
     const { open } = this.state;
-
+    
     const image = JSON.parse(product.image);
     return (
       <div className="product-box mb-2">

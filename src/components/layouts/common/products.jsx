@@ -1,7 +1,7 @@
 import React, { Component, useState, useEffect } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { connect } from "react-redux";
-import { getNewProducts } from "../../../services/api/homePage";
+import { getNewProducts,getFeaturedProducts,getPopularProducts } from "../../../services/api/homePage";
 import {
 	getBestSeller,
 	getMensWear,
@@ -20,17 +20,22 @@ const SpecialProducts = ({
 	addToCompare,
 }) => {
 	const [newProduct, setNewProduct] = useState([]);
-	const [fearuredProduct, setFeaturedProduct] = useState();
-	const [popularProduct, setPopularProduct] = useState();
+	const [featuredProduct, setFeaturedProduct] = useState([]);
+	const [popularProduct, setPopularProduct] = useState([]);
 	useEffect(async () => {
 		try {
 			const newProductData = await getNewProducts();
+			console.log(newProductData)
 			setNewProduct(newProductData.data.products);
+			const featuredProductData= await getFeaturedProducts();
+			setFeaturedProduct(featuredProductData.data.products)
+			const popularProductData = await getPopularProducts();
+			setPopularProduct(popularProductData.data.products)
 		} catch (err) {
 			console.log(err);
 		}
 	}, []);
-
+    // console.log(newProduct)
 	return (
 		<div>
 			<div className="title1 section-t-space">
@@ -48,8 +53,9 @@ const SpecialProducts = ({
 
 						<TabPanel>
 							<div className="no-slider row">
-								{bestSeller.map((product, index) => (
+								{newProduct.map((product, index) => (
 									<ProductItem
+									// products={prod}
 										product={product}
 										symbol={symbol}
 										onAddToCompareClicked={() => addToCompare(product)}
@@ -62,7 +68,7 @@ const SpecialProducts = ({
 						</TabPanel>
 						<TabPanel>
 							<div className="no-slider row">
-								{mensWear.map((product, index) => (
+								{popularProduct.map((product, index) => (
 									<ProductItem
 										product={product}
 										symbol={symbol}
@@ -76,7 +82,7 @@ const SpecialProducts = ({
 						</TabPanel>
 						<TabPanel>
 							<div className=" no-slider row">
-								{womensWear.map((product, index) => (
+								{featuredProduct.map((product, index) => (
 									<ProductItem
 										product={product}
 										symbol={symbol}

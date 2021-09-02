@@ -10,8 +10,6 @@ import FooterOne from "./common/footers/footer-one";
 import FooterTwo from "./common/footers/footer-two";
 import FooterThree from "./common/footers/footer-three";
 
-// ThemeSettings
-import ThemeSettings from "./common/theme-settings"
 
 
 

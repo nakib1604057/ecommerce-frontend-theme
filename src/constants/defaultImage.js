@@ -1,1 +1,1 @@
-export const defaultImage = '../assets/images/fashion/product/1.jpg'
+export const defaultImage = '../assets/images/fashion/Bay of Style 306 (1).JPG'
