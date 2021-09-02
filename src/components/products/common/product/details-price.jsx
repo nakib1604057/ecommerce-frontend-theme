@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import Modal from "react-responsive-modal";
 import { consoleLog } from "../../../../console";
-
+import { toast,ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+  
 class DetailsWithPrice extends Component {
   constructor(props) {
     super(props);

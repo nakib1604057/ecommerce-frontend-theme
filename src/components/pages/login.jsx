@@ -7,20 +7,19 @@ import Breadcrumb from "../common/breadcrumb";
 const Login = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-	const [valErrors, setValErrors] = useState({});
+	const [valErrors, setValErrors] = useState({email:null, password:null});
 	const history = useHistory();
 
 	const handleEmailChange = (e) => {
 		const errs = valErrors;
-		if (errs.invalid) delete errs.invalid;
 		setEmail(e.target.value);
-		setValErrors('');
+		valErrors['email'] = null
+		setValErrors(valErrors);
 	};
 	const handlePasswordChange = (e) => {
-		const errs = valErrors;
-		if (errs.invalid) delete errs.invalid;
 		setPassword(e.target.value);
-		setValErrors('');
+		valErrors['password'] = null
+		setValErrors(valErrors);
 	};
 	const onSubmit = async (e) => {
 		// if (isObjEmpty(errors)) {
