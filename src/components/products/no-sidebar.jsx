@@ -65,7 +65,6 @@ class NoSideBar extends Component {
     if (this.state.loading) {
       return <div className="loading-cls"></div>;
     }
-    console.log(this.props.item);
     return (
       <div>
         <Breadcrumb title={" Product / " + item.name} />
@@ -76,21 +75,23 @@ class NoSideBar extends Component {
             <div className="collection-wrapper">
               <div className="container">
                 <div className="row">
-                  <div className="col-lg-6 product-thumbnail">
+                  <div className="col-lg-4 product-thumbnail">
                     <Slider
                       {...products}
                       asNavFor={this.state.nav2}
                       ref={slider => (this.slider1 = slider)}
                       className="product-slick"
                     >
-                      {item.images.map((vari, index) => (
-                        <div key={index}>
-                          <ImageZoom
-                            image={vari.images}
-                            className="img-fluid image_zoom_cls-0"
-                          />
-                        </div>
-                      ))}
+                      {item.images.map((vari, index) => {
+                        return (
+                          <div key={index}>
+                            <ImageZoom
+                              image={vari.file_name}
+                              className="img-fluid image_zoom_cls-0"
+                            />
+                          </div>
+                        );
+                      })}
                     </Slider>
                     <SmallImages
                       item={item}
@@ -139,4 +140,8 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-export default connect(mapStateToProps, {addToCart, addToCartUnsafe, addToWishlist })(withRouter(NoSideBar));
+export default connect(mapStateToProps, {
+  addToCart,
+  addToCartUnsafe,
+  addToWishlist,
+})(withRouter(NoSideBar));

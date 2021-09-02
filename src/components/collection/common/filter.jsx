@@ -71,7 +71,10 @@ const Filter = () => {
                           type="checkbox"
                           onClick={clickBrandHendle}
                           value={category.category_id.toString()}
-                          defaultChecked={
+                          // defaultChecked={
+
+                          // }
+                          checked={
                             store.categories === category.category_id.toString()
                               ? true
                               : false

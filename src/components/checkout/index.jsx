@@ -291,7 +291,7 @@ class checkOut extends Component {
                                 <li key={index}>
                                   {item.name} × {item.qty}{" "}
                                   <span>
-                                    {symbol} {item.qty * item.price}
+                                    {item.qty * item.price} TK
                                   </span>
                                 </li>
                               );
@@ -301,8 +301,8 @@ class checkOut extends Component {
                             <li>
                               Subtotal{" "}
                               <span className="count">
-                                {symbol}
-                                {total}
+                                
+                                {total} TK
                               </span>
                             </li>
                             {/* <li>
@@ -336,8 +336,8 @@ class checkOut extends Component {
                             <li>
                               Total{" "}
                               <span className="count">
-                                {symbol}
-                                {total}
+                                
+                                {total} TK
                               </span>
                             </li>
                           </ul>

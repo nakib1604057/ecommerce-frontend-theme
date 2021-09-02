@@ -47,6 +47,20 @@ class ProductListItem extends Component {
     this.setState({ quantity: parseInt(e.target.value) });
   };
 
+  onAddCart = product => {
+    console.log('sdsd')
+    this.props.onAddToCartClicked(
+      {
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        slug: product.slug,
+        img: product.featured_img ? JSON.parse(product.featured_img) : null,
+        attributes: null,
+      },
+      1
+    );
+  };
   render() {
     const {
       product,
@@ -58,6 +72,7 @@ class ProductListItem extends Component {
     const { open } = this.state;
     
     const image = JSON.parse(product.image);
+    console.log(urls.IMAGE_URL + image.file_name)
     return (
       <div className="product-box mb-2">
         <div className="img-wrapper">
@@ -75,19 +90,16 @@ class ProductListItem extends Component {
             </Link>
           </div>
           <div className="cart-info cart-wrap">
-            <button
-              title="Add to cart"
-              onClick={() => onAddToCartClicked(product, 1)}
-            >
+            <button title="Add to cart" onClick={() => this.onAddCart(product)}>
               <i className="fa fa-shopping-cart" aria-hidden="true"></i>
             </button>
-            <a
+            {/* <a
               href="javascript:void(0)"
               title="Add to Wishlist"
               onClick={onAddToWishlistClicked}
             >
               <i className="fa fa-heart" aria-hidden="true"></i>
-            </a>
+            </a> */}
           </div>
         </div>
         <div className="product-detail">
@@ -96,11 +108,11 @@ class ProductListItem extends Component {
               <h6>{product.name}</h6>
             </Link>
             <h4>
-              BDT {product.discount || product.price}
+              TK {product.discount || product.price}
               {product.discount && (
                 <del>
                   <span className="money">
-                    BDT
+                    TK
                     {product.price}
                   </span>
                 </del>
