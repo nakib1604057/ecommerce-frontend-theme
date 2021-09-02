@@ -9,7 +9,12 @@ import "./index.scss";
 // Import custom components
 import store from "./store";
 import translations from "./constants/translations";
-import { filterCategory, getAllProducts } from "./actions";
+import {
+  filterCategory,
+  getAllProducts,
+  getCategories,
+  getInfo,
+} from "./actions";
 import Landing from "./components/landing";
 
 // Layouts
@@ -90,9 +95,9 @@ import { ToastContainer } from "react-toastify";
 
 class Root extends React.Component {
   render() {
-    store.dispatch(getAllProducts());
     store.dispatch(filterCategory("-1"));
-   
+    store.dispatch(getInfo());
+    store.dispatch(getCategories());
     return (
       <>
         <ToastContainer />

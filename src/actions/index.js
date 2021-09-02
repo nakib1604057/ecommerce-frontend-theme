@@ -3,7 +3,8 @@ import * as types from "../constants/ActionTypes";
 import store from "../store";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
-
+import axiosInstance from "../api/axiosInstance";
+import { urls } from "../constants/urls";
 export const fetchProductsBegin = () => ({
   type: types.FETCH_PRODUCTS_BEGIN,
 });
@@ -118,3 +119,25 @@ export const changeCurrency = symbol => ({
   type: types.CHANGE_CURRENCY,
   symbol,
 });
+
+export const getInfo = () => {
+  return dispatch => {
+    axiosInstance()
+      .get(urls.GET_INFO)
+      .then(res => {
+        dispatch({ type: types.ADD_INFO, data: res.data.results });
+      });
+  };
+};
+
+// Categories
+export const getCategories = () => {
+  return dispatch => {
+    axiosInstance()
+      .get(urls.GET_CATEGORIES)
+      .then(res => {
+        dispatch({ type: types.ADD_CATEGORY, data: res.data.data.categories });
+      });
+  };
+};
+

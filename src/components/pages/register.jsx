@@ -8,7 +8,7 @@ import { isEmailValid, isValidPassword } from "../../constants/utils";
 import Breadcrumb from "../common/breadcrumb";
 
 const Register = () => {
-    const history = useHistory()
+  const history = useHistory();
   const initialStateForRegistration = {
     name: "",
     email: "",
@@ -26,6 +26,7 @@ const Register = () => {
 
   const [state, setState] = useState(initialStateForRegistration);
   const [error, setError] = useState(initialStateForError);
+  const [isLoading, setIsLoading] = useState(false);
 
   const onChange = e => {
     const { name, value } = e.target;
@@ -39,7 +40,7 @@ const Register = () => {
     e.preventDefault();
 
     const { name, email, phoneNumber, confirmPassword, password } = state;
-    console.log(name)
+
     if (name.trim().length === 0) {
       toast.error("Please Enter Your Name");
 
@@ -69,6 +70,7 @@ const Register = () => {
     onRegister();
   };
   const onRegister = async () => {
+    setIsLoading(false);
     const { name, email, phoneNumber, confirmPassword, password } = state;
     try {
       const res = await axiosInstance().post(urls.REGISTER_URL, {
@@ -78,13 +80,17 @@ const Register = () => {
         password: password,
       });
 
-      toast.success("Successfully Registered. Please login again with your email and password!")
-      history.replace('/pages/login')
+      setIsLoading(false);
+      toast.success(
+        "Successfully Registered. Please login again with your email and password!"
+      );
+      history.replace("/pages/login");
     } catch (error) {
+      setIsLoading(false);
       toast.error(error.data.error.message);
     }
   };
-  console.log(state)
+  console.log(state);
   return (
     <div>
       <Breadcrumb title={"create account"} />
@@ -160,9 +166,15 @@ const Register = () => {
                         onChange={onChange}
                       />
                     </div>
-                    <button className="btn btn-solid" onClick={onSubmit}>
-                      create Account
-                    </button>
+                    {isLoading ? (
+                      <div>
+                        <div className="loading-cls"></div>
+                      </div>
+                    ) : (
+                      <button className="btn btn-solid" onClick={onSubmit}>
+                        create Account
+                      </button>
+                    )}
                   </div>
                 </form>
               </div>

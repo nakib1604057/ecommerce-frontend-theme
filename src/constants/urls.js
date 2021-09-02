@@ -9,5 +9,6 @@ export const urls = {
   IMAGE_URL: `${process.env.API_URL}uploads/`,
   LOGIN_UTL: `api/auth/login`,
   REGISTER_URL: `api/auth/register`,
-  PRE_ORDER:`api/ecommrece/pre-order`
+  PRE_ORDER:`api/ecommrece/pre-order`,
+  GET_INFO:`api/admin/admin-info`
 };

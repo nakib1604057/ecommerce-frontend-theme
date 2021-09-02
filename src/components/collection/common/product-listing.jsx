@@ -47,6 +47,9 @@ const ProductListing = props => {
   const addCart = (product, qty) => {
     dispatch(addToCart(product, qty));
   };
+  const addWishList = (product) =>{
+    dispatch(addToWishlist(product))
+  }
 
   return (
     <div>
@@ -65,8 +68,9 @@ const ProductListing = props => {
                 >
                   <ProductListItem
                     product={product}
-                    onAddToCompareClicked={() => addToCompare(product)}
+                    // onAddToCompareClicked={() => addToCompare(product)}
                     onAddToCartClicked={addCart}
+                    onAddToWishlistClicked={addWishList}
                     key={index}
                   />
                 </div>

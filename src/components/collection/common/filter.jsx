@@ -22,10 +22,14 @@ const Filter = () => {
 
   const dispatch = useDispatch();
   const store = useSelector(state => state.filters);
-
+  const categoriesStore = useSelector(state => state.categories);
   consoleLog(store);
   useEffect(() => {
-    loadCategories();
+    if (categoriesStore.length === 1) {
+      loadCategories();
+    } else {
+      setCategories([...categoriesStore.category]);
+    }
   }, []);
   const loadCategories = async () => {
     try {
