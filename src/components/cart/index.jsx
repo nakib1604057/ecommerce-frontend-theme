@@ -47,7 +47,7 @@ class cartComponent extends Component {
 											</tr>
 										</thead>
 										{cartItems.map((item, index) => {
-											console.log(item.price);
+											console.log(item);
 											return (
 												<tbody key={index}>
 													<tr>
@@ -57,8 +57,8 @@ class cartComponent extends Component {
 															>
 																<img
 																	src={
-																		item.img
-																			? urls.IMAGE_URL + item.img.file_name
+																		item.image
+																			? urls.IMAGE_URL + item.image.file_name
 																			: defaultImage
 																	}
 																	alt=""

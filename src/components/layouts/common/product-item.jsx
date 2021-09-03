@@ -62,9 +62,13 @@ class ProductItem extends Component {
     // console.log('new',product.image);
 
     // if(product.image.file_name && product.image.product_id){
-    const image = product.image;
+    const image =
+      typeof product.image === 'string'
+        ? JSON.parse(product.image)
+        : product.image;
 
     // }
+
 
     return (
       <div
@@ -75,7 +79,10 @@ class ProductItem extends Component {
           <div className="lable-block">
             {type && (
               <span className="lable3">
-                {100 - (product.price / product.regularPrice) * 100}%
+                {(100 - (product.price / product.regularPrice) * 100).toFixed(
+                  0
+                )}
+                %
               </span>
             )}
           </div>

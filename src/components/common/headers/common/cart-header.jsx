@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { defaultImage } from "../../../../constants/defaultImage";
+import { urls } from "../../../../constants/urls";
 
 const CartHeader = ({ item, total, symbol, removeFromCart }) => (
 	<li >
@@ -9,7 +10,7 @@ const CartHeader = ({ item, total, symbol, removeFromCart }) => (
 				<img
 					alt=""
 					className="mr-3"
-					src={item.img ? `${item.img.file_name}` : defaultImage}
+					src={item.image ?urls.IMAGE_URL+item.image.file_name : defaultImage}
 				/>
 			</Link>
 			<div className="media-body">

@@ -18,7 +18,8 @@ class wishList extends Component {
       name: item.name,
       price: item.price,
       slug: item.slug,
-      img: JSON.parse(item.featured_img),
+      img:
+        item.image === undefined ? JSON.parse(item.featured_img) : item.image,
     };
     this.props.addToCartAndRemoveWishlist(productItem, 1);
   };
@@ -45,9 +46,9 @@ class wishList extends Component {
                     {Items.map((item, index) => {
                       console.log(item);
                       const image =
-                        item.featured_img !== undefined
+                        item.image === undefined
                           ? JSON.parse(item.featured_img)
-                          : JSON.parse(item.image);
+                          : item.image;
 
                       return (
                         <tbody key={index}>
@@ -84,13 +85,13 @@ class wishList extends Component {
                               >
                                 <i className="fa fa-times"></i>
                               </a>
-                              <a
+                              {/* <a
                                 href="javascript:void(0)"
                                 className="cart"
                                 onClick={() => this.addToCart(item)}
                               >
                                 <i className="fa fa-shopping-cart"></i>
-                              </a>
+                              </a> */}
                             </td>
                           </tr>
                         </tbody>

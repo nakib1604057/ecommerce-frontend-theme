@@ -47,7 +47,9 @@ const NewProduct = () => {
                   <Link
                     to={`${process.env.PUBLIC_URL}/product/${product.slug}`}
                   >
-                    <img className="img-fluid" src={`${defaultImage}`} alt="" />
+                    <img className="img-fluid" src={
+                      images.file_name ? urls.IMAGE_URL+images.file_name: defaultImage
+                    } alt="" />
                   </Link>
 
                   <div className="media-body align-self-center">
