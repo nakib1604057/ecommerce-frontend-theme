@@ -7,6 +7,7 @@ export const urls = {
   GET_POPULAR_PRODUCT: `api/popularProducts`,
   GET_PANDING_ORDERS: `api/ecommrece/user-order/pending/`,
   IMAGE_URL: `${process.env.API_URL}uploads/`,
+  GET_USER_INFO:`api/users/`,
   LOGIN_UTL: `api/auth/login`,
   REGISTER_URL: `api/auth/register`,
   PRE_ORDER:`api/ecommrece/pre-order`,
