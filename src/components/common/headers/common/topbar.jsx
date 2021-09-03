@@ -30,9 +30,9 @@ function TopBar({ translate }) {
           </div>
           <div className="col-lg-6 text-right">
             <ul className="header-dropdown">
-              {/* <li className="mobile-wishlist compare-mobile"><Link to={`${process.env.PUBLIC_URL}/compare`}><i className="fa fa-random" aria-hidden="true"></i>{translate('compare')}</Link></li> */}
+              {/* <li className="mobile-wishlist compare-mobile"><Link to={`/compare`}><i className="fa fa-random" aria-hidden="true"></i>{translate('compare')}</Link></li> */}
               <li className="mobile-wishlist">
-                <Link to={`${process.env.PUBLIC_URL}/wishlist`}>
+                <Link to={`/wishlist`}>
                   <i className="fa fa-heart" aria-hidden="true"></i>
                   {translate("wishlist")}
                 </Link>
@@ -45,7 +45,7 @@ function TopBar({ translate }) {
                     <>
                       <li>
                         <Link
-                          to={`${process.env.PUBLIC_URL}/pages/dashboard`}
+                          to={`/pages/dashboard`}
                           data-lng="en"
                         >
                           Dashboard
@@ -53,7 +53,7 @@ function TopBar({ translate }) {
                       </li>
                       <li>
                         <Link
-                          to={`${process.env.PUBLIC_URL}/`}
+                          to={`/`}
                           data-lng="en"
                           onClick={()=>logOut()}
                         >
@@ -65,7 +65,7 @@ function TopBar({ translate }) {
                     <>
                       <li>
                         <Link
-                          to={`${process.env.PUBLIC_URL}/pages/login`}
+                          to={`/pages/login`}
                           data-lng="en"
                         >
                           Login
@@ -73,7 +73,7 @@ function TopBar({ translate }) {
                       </li>
                       <li>
                         <Link
-                          to={`${process.env.PUBLIC_URL}/pages/register`}
+                          to={`/pages/register`}
                           data-lng="en"
                         >
                           Register

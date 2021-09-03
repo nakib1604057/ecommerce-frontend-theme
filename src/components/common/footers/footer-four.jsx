@@ -106,28 +106,28 @@ class FooterFour extends Component {
 										<ul>
 											<li>
 												<Link
-													to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}
+													to={`/left-sidebar/collection`}
 												>
 													womens
 												</Link>
 											</li>
 											<li>
 												<Link
-													to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}
+													to={`/left-sidebar/collection`}
 												>
 													clothing
 												</Link>
 											</li>
 											<li>
 												<Link
-													to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}
+													to={`/left-sidebar/collection`}
 												>
 													accessories
 												</Link>
 											</li>
 											<li>
 												<Link
-													to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}
+													to={`/left-sidebar/collection`}
 												>
 													featured
 												</Link>
@@ -207,7 +207,7 @@ class FooterFour extends Component {
 										<li>
 											<a href="#">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/icon/visa.png`}
+													src={`/assets/images/icon/visa.png`}
 													alt=""
 												/>
 											</a>
@@ -215,7 +215,7 @@ class FooterFour extends Component {
 										<li>
 											<a href="#">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/icon/mastercard.png`}
+													src={`/assets/images/icon/mastercard.png`}
 													alt=""
 												/>
 											</a>
@@ -223,7 +223,7 @@ class FooterFour extends Component {
 										<li>
 											<a href="#">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/icon/paypal.png`}
+													src={`/assets/images/icon/paypal.png`}
 													alt=""
 												/>
 											</a>
@@ -231,7 +231,7 @@ class FooterFour extends Component {
 										<li>
 											<a href="#">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/icon/american-express.png`}
+													src={`/assets/images/icon/american-express.png`}
 													alt=""
 												/>
 											</a>
@@ -239,7 +239,7 @@ class FooterFour extends Component {
 										<li>
 											<a href="#">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/icon/discover.png`}
+													src={`/assets/images/icon/discover.png`}
 													alt=""
 												/>
 											</a>

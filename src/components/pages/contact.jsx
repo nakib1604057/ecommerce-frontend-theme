@@ -29,7 +29,7 @@ class Contact extends Component {
                                     <ul>
                                         <li>
                                             <div className="contact-icon">
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/icon/phone.png`} alt="Generic placeholder image" />
+                                                <img src={`/assets/images/icon/phone.png`} alt="Generic placeholder image" />
                                                     <h6>Contact Us</h6>
                                             </div>
                                             <div className="media-body">
@@ -49,7 +49,7 @@ class Contact extends Component {
                                         </li>
                                         <li>
                                             <div className="contact-icon">
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/icon/email.png`} alt="Generic placeholder image" />
+                                                <img src={`/assets/images/icon/email.png`} alt="Generic placeholder image" />
                                                     <h6>Address</h6>
                                             </div>
                                             <div className="media-body">

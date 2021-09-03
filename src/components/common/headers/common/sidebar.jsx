@@ -163,7 +163,7 @@ class SideBar extends Component {
                                         </div>
                                         <div className="col-xl-4">
                                             <a href="#" className="mega-menu-banner">
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/mega-menu/fashion.jpg`} alt="" className="img-fluid"/>
+                                            <img src={`/assets/images/mega-menu/fashion.jpg`} alt="" className="img-fluid"/>
                                             </a>
                                         </div>
                                     </div>

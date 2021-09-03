@@ -17,7 +17,7 @@ class Kids extends Component {
 	componentDidMount() {
 		document
 			.getElementById("color")
-			.setAttribute("href", `${process.env.PUBLIC_URL}/assets/css/color10.css`);
+			.setAttribute("href", `/assets/css/color10.css`);
 	}
 	render() {
 		return (
@@ -79,7 +79,7 @@ class Kids extends Component {
 									<div className="collection-banner p-right text-center">
 										<div>
 											<img
-												src={`${process.env.PUBLIC_URL}/assets/images/kids/2.jpg`}
+												src={`/assets/images/kids/2.jpg`}
 												className="img-fluid  bg-img"
 												alt=""
 											/>
@@ -98,7 +98,7 @@ class Kids extends Component {
 									<div className="collection-banner p-right text-center">
 										<div>
 											<img
-												src={`${process.env.PUBLIC_URL}/assets/images/kids/1.jpg`}
+												src={`/assets/images/kids/1.jpg`}
 												className="img-fluid blur-up lazyload bg-img"
 												alt=""
 											/>

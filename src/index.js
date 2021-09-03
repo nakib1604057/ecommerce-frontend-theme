@@ -92,93 +92,93 @@ class Root extends React.Component {
                   <Switch>
                     <Layout>
                       {/*Routes For Layouts*/}
-                      {/* <Route path={`${process.env.PUBLIC_URL}/fashion`} /> */}
+                      {/* <Route path={`/fashion`} /> */}
                       <Route
                         exact
-                        path={`${process.env.PUBLIC_URL}/`}
+                        path={`/`}
                         component={Fashion}
                       />
 
                       {/*Routes For Features (Product Collection) */}
                       <Route
-                        path={`${process.env.PUBLIC_URL}/shop`}
+                        path={`/shop`}
                         component={CollectionLeftSidebar}
                       />
 
                       {/*Routes For Single Product*/}
 
                       <Route
-                        path={`${process.env.PUBLIC_URL}/product/:slug`}
+                        path={`/product/:slug`}
                         component={NoSideBar}
                       />
 
                       {/*Routes For custom Features*/}
                       <Route
-                        path={`${process.env.PUBLIC_URL}/cart`}
+                        path={`/cart`}
                         component={Cart}
                       />
                       <Route
-                        path={`${process.env.PUBLIC_URL}/wishlist`}
+                        path={`/wishlist`}
                         component={wishList}
                       />
 
                       <PrivateRoute
-                        path={`${process.env.PUBLIC_URL}/checkout`}
+                        path={`/checkout`}
                         component={checkOut}
                       />
                       <PrivateRoute
-                        path={`${process.env.PUBLIC_URL}/order-success`}
+                        path={`/order-success`}
                         component={orderSuccess}
                       />
 
                       <PrivateRoute
-                        path={`${process.env.PUBLIC_URL}/sales/orders`}
+                        path={`/sales/orders`}
                         component={aboutUs}
                       />
 
                       {/*Routes For Extra Pages*/}
                       <Route
-                        path={`${process.env.PUBLIC_URL}/pages/about-us`}
+                        path={`/pages/about-us`}
                         component={aboutUs}
                       />
                       <Route
-                        path={`${process.env.PUBLIC_URL}/pages/404`}
+                        path={`/pages/404`}
                         component={PageNotFound}
                       />
                       <Route
-                        path={`${process.env.PUBLIC_URL}/pages/lookbook`}
+                        path={`/pages/lookbook`}
                         component={lookbook}
                       />
                       <Route
-                        path={`${process.env.PUBLIC_URL}/pages/login`}
+                        path={`/pages/login`}
                         component={Login}
                       />
                       <Route
-                        path={`${process.env.PUBLIC_URL}/register`}
+                        path={`/register`}
                         component={Register}
                       />
                       <Route
-                        path={`${process.env.PUBLIC_URL}/pages/search`}
+                        path={`/pages/search`}
                         component={Search}
                       />
                       <Route
-                        path={`${process.env.PUBLIC_URL}/pages/collection`}
+                        path={`/pages/collection`}
                         component={Collection}
                       />
                       <Route
-                        path={`${process.env.PUBLIC_URL}/pages/forget-password`}
+                        path={`/pages/forget-password`}
                         component={ForgetPassword}
                       />
                       <Route
-                        path={`${process.env.PUBLIC_URL}/pages/contact`}
+                        path={`/pages/contact`}
                         component={Contact}
                       />
                       <PrivateRoute
-                        path={`${process.env.PUBLIC_URL}/pages/dashboard`}
+                        path={`/pages/dashboard`}
                         component={Dashboard}
                       />
                       <Route
-                        path={`${process.env.PUBLIC_URL}/pages/faq`}
+                        path={`/pages/faq`}
                         component={Faq}
                       />
                     </Layout>

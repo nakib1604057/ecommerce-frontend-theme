@@ -161,7 +161,7 @@ class Vegetables extends Component {
 											<div className="classic-effect">
 												<div>
 													<img
-														src={`${process.env.PUBLIC_URL}/assets/images/vegetables/blog/1.jpg`}
+														src={`/assets/images/vegetables/blog/1.jpg`}
 														className="img-fluid blur-up lazyload bg-img"
 														alt=""
 													/>
@@ -185,7 +185,7 @@ class Vegetables extends Component {
 											<div className="classic-effect">
 												<div>
 													<img
-														src={`${process.env.PUBLIC_URL}/assets/images/vegetables/blog/2.jpg`}
+														src={`/assets/images/vegetables/blog/2.jpg`}
 														className="img-fluid blur-up lazyload bg-img"
 														alt=""
 													/>
@@ -209,7 +209,7 @@ class Vegetables extends Component {
 											<div className="classic-effect">
 												<div>
 													<img
-														src={`${process.env.PUBLIC_URL}/assets/images/vegetables/blog/3.jpg`}
+														src={`/assets/images/vegetables/blog/3.jpg`}
 														className="img-fluid blur-up lazyload bg-img"
 														alt=""
 													/>
@@ -233,7 +233,7 @@ class Vegetables extends Component {
 											<div className="classic-effect">
 												<div>
 													<img
-														src={`${process.env.PUBLIC_URL}/assets/images/vegetables/blog/4.jpg`}
+														src={`/assets/images/vegetables/blog/4.jpg`}
 														className="img-fluid blur-up lazyload bg-img"
 														alt=""
 													/>

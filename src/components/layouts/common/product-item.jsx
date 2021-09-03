@@ -86,7 +86,7 @@ class ProductItem extends Component {
             )}
           </div>
           <div className="front">
-            <Link to={`${process.env.PUBLIC_URL}/product/${product.slug}`}>
+            <Link to={`/product/${product.slug}`}>
               {image ? (
                 <img
                   src={
@@ -147,7 +147,7 @@ class ProductItem extends Component {
             {/* <div className="rating">
                                 {RatingStars}
                             </div> */}
-            <Link to={`${process.env.PUBLIC_URL}/product/${product.slug}`}>
+            <Link to={`/product/${product.slug}`}>
               <h6>{product.name}</h6>
             </Link>
             <h4>
@@ -276,7 +276,7 @@ class ProductItem extends Component {
 													add to cart
 												</button>
 												<Link
-													to={`${process.env.PUBLIC_URL}/left-sidebar/product/${product.id}`}
+													to={`/left-sidebar/product/${product.id}`}
 													className="btn btn-solid"
 												>
 													view detail

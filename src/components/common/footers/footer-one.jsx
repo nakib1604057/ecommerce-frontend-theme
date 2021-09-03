@@ -129,28 +129,28 @@ const FooterOne = props => {
 									<ul>
 										<li>
 											<Link
-												to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}
+												to={`/left-sidebar/collection`}
 											>
 												womens
 											</Link>
 										</li>
 										<li>
 											<Link
-												to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}
+												to={`/left-sidebar/collection`}
 											>
 												clothing
 											</Link>
 										</li>
 										<li>
 											<Link
-												to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}
+												to={`/left-sidebar/collection`}
 											>
 												accessories
 											</Link>
 										</li>
 										<li>
 											<Link
-												to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}
+												to={`/left-sidebar/collection`}
 											>
 												featured
 											</Link>

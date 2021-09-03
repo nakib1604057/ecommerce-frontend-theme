@@ -100,7 +100,7 @@ const ProductListing = props => {
             <div className="row">
               <div className="col-sm-12 text-center section-b-space mt-5 no-found">
                 <img
-                  src={`${process.env.PUBLIC_URL}/assets/images/empty-search.jpg`}
+                  src={`/assets/images/empty-search.jpg`}
                   className="img-fluid mb-4"
                 />
                 <h3>
@@ -111,7 +111,7 @@ const ProductListing = props => {
                   with other words.
                 </p>
                 <Link
-                  to={`${process.env.PUBLIC_URL}/`}
+                  to={`/`}
                   className="btn btn-solid"
                 >
                   continue shopping

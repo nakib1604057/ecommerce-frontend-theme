@@ -45,7 +45,7 @@ const NewProduct = () => {
               return (
                 <div className="media" key={i}>
                   <Link
-                    to={`${process.env.PUBLIC_URL}/product/${product.slug}`}
+                    to={`/product/${product.slug}`}
                   >
                     <img className="img-fluid" src={
                       images.file_name ? urls.IMAGE_URL+images.file_name: defaultImage
@@ -54,7 +54,7 @@ const NewProduct = () => {
 
                   <div className="media-body align-self-center">
                     <Link
-                      to={`${process.env.PUBLIC_URL}/product/${product.slug}`}
+                      to={`/product/${product.slug}`}
                     >
                       <h6>{product.name}</h6>
                     </Link>

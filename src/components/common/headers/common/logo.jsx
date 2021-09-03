@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 function LogoImage(props) {
   return (
-    <Link to={`${process.env.PUBLIC_URL}/`}>
+    <Link to={`/`}>
       <img
-        src={`${process.env.PUBLIC_URL}/assets/images/icon/${props.logo}`}
+        src={`/assets/images/icon/${props.logo}`}
         style={{ height: 80, width: 100 }}
         alt=""
         className="img-fluid"

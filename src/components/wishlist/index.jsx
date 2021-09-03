@@ -57,7 +57,7 @@ class wishList extends Component {
                           <tr>
                             <td>
                               <Link
-                                to={`${process.env.PUBLIC_URL}/product/${item.slug}`}
+                                to={`/product/${item.slug}`}
                               >
                                 <img
                                   src={
@@ -71,7 +71,7 @@ class wishList extends Component {
                             </td>
                             <td>
                               <Link
-                                to={`${process.env.PUBLIC_URL}/product/${item.slug}`}
+                                to={`/product/${item.slug}`}
                               >
                                 {item.name}
                               </Link>
@@ -105,13 +105,13 @@ class wishList extends Component {
               <div className="row wishlist-buttons">
                 <div className="col-12">
                   <Link
-                    to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}
+                    to={`/left-sidebar/collection`}
                     className="btn btn-solid"
                   >
                     continue shopping
                   </Link>
                   <Link
-                    to={`${process.env.PUBLIC_URL}/checkout`}
+                    to={`/checkout`}
                     className="btn btn-solid"
                   >
                     check out
@@ -128,7 +128,7 @@ class wishList extends Component {
                   <div>
                     <div className="col-sm-12 empty-cart-cls text-center">
                       <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/empty-wishlist.png`}
+                        src={`/assets/images/empty-wishlist.png`}
                         className="img-fluid mb-4"
                         alt=""
                       />

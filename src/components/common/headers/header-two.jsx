@@ -109,11 +109,11 @@ class HeaderTwo extends Component {
                                             <div className="icon-nav">
                                                 <ul>
                                                     <li className="onhover-div mobile-search">
-                                                        <div><img src={`${process.env.PUBLIC_URL}/assets/images/icon/search.png`} onClick={this.openSearch} className="img-fluid" alt="" />
+                                                        <div><img src={`/assets/images/icon/search.png`} onClick={this.openSearch} className="img-fluid" alt="" />
                                                             <i className="fa fa-search" onClick={this.openSearch}></i></div>
                                                     </li>
                                                     <li className="onhover-div mobile-setting">
-                                                        <div><img src={`${process.env.PUBLIC_URL}/assets/images/icon/setting.png`} className="img-fluid" alt="" />
+                                                        <div><img src={`/assets/images/icon/setting.png`} className="img-fluid" alt="" />
                                                             <i className="fa fa-cog"></i></div>
                                                         <div className="show-div setting">
                                                             <h6>language</h6>

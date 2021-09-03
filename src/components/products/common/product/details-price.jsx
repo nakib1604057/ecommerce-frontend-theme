@@ -280,7 +280,7 @@ class DetailsWithPrice extends Component {
               add to cart
             </a>
             <Link
-              to={`${process.env.PUBLIC_URL}/checkout`}
+              to={`/checkout`}
               className="btn btn-solid"
               onClick={() => BuynowClicked(item, this.state.quantity)}
             >

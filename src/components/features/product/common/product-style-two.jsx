@@ -36,7 +36,7 @@ class ProductStyleTwo extends Component {
 
                     </div>
                     <div className="front">
-                        <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${product.id}`} ><img
+                        <Link to={`/left-sidebar/product/${product.id}`} ><img
                             src={`${
                                 product.variants?
                                     this.state.image?this.state.image:product.variants[0].images
@@ -53,7 +53,7 @@ class ProductStyleTwo extends Component {
                            data-target="#quick-view"
                            title="Quick View"
                            ><i className="fa fa-search" aria-hidden="true"></i></a>
-                        <Link to={`${process.env.PUBLIC_URL}/compare`} title="Compare" onClick={onAddToCompareClicked}>
+                        <Link to={`/compare`} title="Compare" onClick={onAddToCompareClicked}>
                             <i className="fa fa-refresh" aria-hidden="true"></i></Link>
                     </div>
                 </div>
@@ -62,7 +62,7 @@ class ProductStyleTwo extends Component {
                         <div className="rating">
                             {RatingStars}
                         </div>
-                        <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${product.id}`}>
+                        <Link to={`/left-sidebar/product/${product.id}`}>
                             <h6>{product.name}</h6>
                         </Link>
                         <h4>{symbol}{product.price-(product.price*product.discount/100)}

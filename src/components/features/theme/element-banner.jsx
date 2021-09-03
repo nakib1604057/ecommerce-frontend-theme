@@ -17,7 +17,7 @@ class ElementBanner extends Component {
                                 <a href="#">
                                     <div className="collection-banner p-right text-center">
                                         <div className="img-part">
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/sub-banner1.jpg`}
+                                            <img src={`/assets/images/sub-banner1.jpg`}
                                                  className="img-fluid blur-up lazyload bg-img" alt="" />
                                         </div>
                                         <div className="contain-banner">
@@ -33,7 +33,7 @@ class ElementBanner extends Component {
                                 <a href="#">
                                     <div className="collection-banner p-right text-center">
                                         <div className="img-part">
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/sub-banner2.jpg`}
+                                            <img src={`/assets/images/sub-banner2.jpg`}
                                                  className="img-fluid blur-up lazyload bg-img" alt="" />
                                         </div>
                                         <div className="contain-banner">
@@ -58,7 +58,7 @@ class ElementBanner extends Component {
                                 <a href="#">
                                     <div className="collection-banner p-right text-right">
                                         <div className="img-part">
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/electronics/5.jpg`}
+                                            <img src={`/assets/images/electronics/5.jpg`}
                                                  className="img-fluid blur-up lazyload bg-img" alt="" />
                                         </div>
                                         <div className="contain-banner banner-3">
@@ -74,7 +74,7 @@ class ElementBanner extends Component {
                                 <a href="#">
                                     <div className="collection-banner p-right text-right">
                                         <div className="img-part">
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/electronics/6.jpg`}
+                                            <img src={`/assets/images/electronics/6.jpg`}
                                                  className="img-fluid blur-up lazyload bg-img" alt="" />
                                         </div>
                                         <div className="contain-banner banner-3">
@@ -90,7 +90,7 @@ class ElementBanner extends Component {
                                 <a href="#">
                                     <div className="collection-banner p-right text-right">
                                         <div className="img-part">
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/electronics/7.jpg`}
+                                            <img src={`/assets/images/electronics/7.jpg`}
                                                  className="img-fluid blur-up lazyload bg-img" alt="" />
                                         </div>
                                         <div className="contain-banner banner-3">
@@ -115,7 +115,7 @@ class ElementBanner extends Component {
                                 <a href="#">
                                     <div className="collection-banner p-left">
                                         <div className="img-part">
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/banner.jpg`}
+                                            <img src={`/assets/images/banner.jpg`}
                                                  className="img-fluid blur-up lazyload bg-img" />
                                         </div>
                                         <div className="contain-banner banner-4">
@@ -131,7 +131,7 @@ class ElementBanner extends Component {
                                 <a href="#">
                                     <div className="collection-banner p-left">
                                         <div className="img-part">
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/banner1.jpg`}
+                                            <img src={`/assets/images/banner1.jpg`}
                                                  className="img-fluid blur-up lazyload bg-img" />
                                         </div>
                                         <div className="contain-banner banner-4">
@@ -147,7 +147,7 @@ class ElementBanner extends Component {
                                 <a href="#">
                                     <div className="collection-banner p-left">
                                         <div className="img-part">
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/banner.jpg`}
+                                            <img src={`/assets/images/banner.jpg`}
                                                  className="img-fluid blur-up lazyload bg-img" />
                                         </div>
                                         <div className="contain-banner banner-4">
@@ -163,7 +163,7 @@ class ElementBanner extends Component {
                                 <a href="#">
                                     <div className="collection-banner p-left">
                                         <div className="img-part">
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/banner1.jpg`}
+                                            <img src={`/assets/images/banner1.jpg`}
                                                  className="img-fluid blur-up lazyload bg-img" />
                                         </div>
                                         <div className="contain-banner banner-4">
@@ -187,7 +187,7 @@ class ElementBanner extends Component {
                             <div className="col-md-4">
                                 <a href="#">
                                     <div className="collection-banner p-left text-left">
-                                        <img src={`${process.env.PUBLIC_URL}/assets/images/fashion/banner/5.jpg`} alt=""
+                                        <img src={`/assets/images/fashion/banner/5.jpg`} alt=""
                                              className="img-fluid blur-up lazyload bg-img" />
                                             <div className="absolute-contain">
                                                 <h3>casual collection</h3>
@@ -199,7 +199,7 @@ class ElementBanner extends Component {
                             <div className="col-md-4">
                                 <a href="#">
                                     <div className="collection-banner p-left text-left">
-                                        <img src={`${process.env.PUBLIC_URL}/assets/images/fashion/banner/6.jpg`} alt=""
+                                        <img src={`/assets/images/fashion/banner/6.jpg`} alt=""
                                              className="img-fluid blur-up lazyload bg-img" />
                                             <div className="absolute-contain">
                                                 <h3>going out collection</h3>
@@ -211,7 +211,7 @@ class ElementBanner extends Component {
                             <div className="col-md-4">
                                 <a href="#">
                                     <div className="collection-banner p-left text-left">
-                                        <img src={`${process.env.PUBLIC_URL}/assets/images/fashion/banner/8.jpg`} alt=""
+                                        <img src={`/assets/images/fashion/banner/8.jpg`} alt=""
                                              className="img-fluid blur-up lazyload bg-img" />
                                             <div className="absolute-contain">
                                                 <h3>shoes & sandle</h3>

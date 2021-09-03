@@ -1,0 +1,15 @@
+{
+  "main.css": "https://prod.bayofstyle.com/static/css/main.282705a6.chunk.css",
+  "main.js": "https://prod.bayofstyle.com/static/js/main.bf05d211.chunk.js",
+  "main.js.map": "https://prod.bayofstyle.com/static/js/main.bf05d211.chunk.js.map",
+  "runtime~main.js": "https://prod.bayofstyle.com/static/js/runtime~main.defd4983.js",
+  "runtime~main.js.map": "https://prod.bayofstyle.com/static/js/runtime~main.defd4983.js.map",
+  "static/css/2.58485ae1.chunk.css": "https://prod.bayofstyle.com/static/css/2.58485ae1.chunk.css",
+  "static/js/2.74eecce7.chunk.js": "https://prod.bayofstyle.com/static/js/2.74eecce7.chunk.js",
+  "static/js/2.74eecce7.chunk.js.map": "https://prod.bayofstyle.com/static/js/2.74eecce7.chunk.js.map",
+  "index.html": "https://prod.bayofstyle.com/index.html",
+  "precache-manifest.e0c4119cab9c0069ace716f8885eb37f.js": "https://prod.bayofstyle.com/precache-manifest.e0c4119cab9c0069ace716f8885eb37f.js",
+  "service-worker.js": "https://prod.bayofstyle.com/service-worker.js",
+  "static/css/2.58485ae1.chunk.css.map": "https://prod.bayofstyle.com/static/css/2.58485ae1.chunk.css.map",
+  "static/css/main.282705a6.chunk.css.map": "https://prod.bayofstyle.com/static/css/main.282705a6.chunk.css.map"
+}

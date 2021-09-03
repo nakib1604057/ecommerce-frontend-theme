@@ -39,7 +39,7 @@ class CollectionRightSidebar extends Component {
                                             <div className="row">
                                                 <div className="col-sm-12">
                                                     <div className="top-banner-wrapper">
-                                                        <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/mega-menu/2.jpg`} className="img-fluid" alt=""/></a>
+                                                        <a href="#"><img src={`/assets/images/mega-menu/2.jpg`} className="img-fluid" alt=""/></a>
                                                         <div className="top-banner-content small-section">
                                                             <h4>fashion</h4>
                                                             <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h5>
@@ -84,7 +84,7 @@ class CollectionRightSidebar extends Component {
                                             <NewProduct/>
                                             <div className="collection-sidebar-banner">
                                                 <a href="#">
-                                                    <img src={`${process.env.PUBLIC_URL}/assets/images/side-banner.png`} className="img-fluid" alt="" />
+                                                    <img src={`/assets/images/side-banner.png`} className="img-fluid" alt="" />
                                                 </a>
                                             </div>
                                         </div>

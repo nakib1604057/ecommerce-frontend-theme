@@ -76,7 +76,7 @@ class ProductItem extends Component {
 
                         </div>
                         <div className="front">
-                            <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${product.id}`} >
+                            <Link to={`/left-sidebar/product/${product.id}`} >
                                 <img src={`${
                                     product.variants?
                                         this.state.image?this.state.image:product.variants[0].images
@@ -97,7 +97,7 @@ class ProductItem extends Component {
                                data-target="#quick-view"
                                title="Quick View"
                                onClick={this.onOpenModal}><i className="fa fa-search" aria-hidden="true"></i></a>
-                            <Link to={`${process.env.PUBLIC_URL}/compare`} title="Compare" onClick={onAddToCompareClicked}>
+                            <Link to={`/compare`} title="Compare" onClick={onAddToCompareClicked}>
                                 <i className="fa fa-refresh" aria-hidden="true"></i></Link>
                         </div>
                     </div>
@@ -106,7 +106,7 @@ class ProductItem extends Component {
                             <div className="rating">
                                 {RatingStars}
                             </div>
-                            <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${product.id}`}>
+                            <Link to={`/left-sidebar/product/${product.id}`}>
                                 <h6>{product.name}</h6>
                             </Link>
                             <h4>{symbol}{product.price-(product.price*product.discount/100)}
@@ -172,7 +172,7 @@ class ProductItem extends Component {
                                                 </div>
                                                 <div className="product-buttons">
                                                     <button  className="btn btn-solid" onClick={() => onAddToCartClicked(product, this.state.quantity)} >add to cart</button>
-                                                    <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${product.id}`} className="btn btn-solid">view detail</Link>
+                                                    <Link to={`/left-sidebar/product/${product.id}`} className="btn btn-solid">view detail</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -232,7 +232,7 @@ class ProductItem extends Component {
                                                                 <div className="product-box col-sm-3 col-6" key={i}>
                                                                     <div className="img-wrapper">
                                                                         <div className="front">
-                                                                            <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${item.id}`} >
+                                                                            <Link to={`/left-sidebar/product/${item.id}`} >
                                                                                 <img src={`${
                                                                                     item.variants?
                                                                                         item.variants[0].images
@@ -241,7 +241,7 @@ class ProductItem extends Component {
                                                                             </Link>
                                                                         </div>
                                                                         <div className="product-detail">
-                                                                            <h6><Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${item.id}`} >
+                                                                            <h6><Link to={`/left-sidebar/product/${item.id}`} >
                                                                                     <span>{item.name}</span>
                                                                             </Link></h6>
                                                                             <h4><span>{symbol}{item.price}</span></h4>

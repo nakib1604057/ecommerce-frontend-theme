@@ -61,7 +61,7 @@ class ThemeSettings extends Component {
 			.getElementById("color")
 			.setAttribute(
 				"href",
-				`${process.env.PUBLIC_URL}/assets/css/` + color + `.css`
+				`/assets/css/` + color + `.css`
 			);
 	}
 
@@ -128,7 +128,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/fashion`}
+														to={`/fashion`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -154,7 +154,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/furniture`}
+														to={`/furniture`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -180,7 +180,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/kids`}
+														to={`/kids`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -206,7 +206,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/pets`}
+														to={`/pets`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -232,7 +232,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/vegetables`}
+														to={`/vegetables`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -258,7 +258,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/watch`}
+														to={`/watch`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -284,7 +284,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/beauty`}
+														to={`/beauty`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -310,7 +310,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/electronic`}
+														to={`/electronic`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -337,7 +337,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}
+														to={`/left-sidebar/collection`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -357,7 +357,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/right-sidebar/collection`}
+														to={`/right-sidebar/collection`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -377,7 +377,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/no-sidebar/collection`}
+														to={`/no-sidebar/collection`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -397,7 +397,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/metro/collection`}
+														to={`/metro/collection`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -417,7 +417,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/full-width/collection`}
+														to={`/full-width/collection`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -444,7 +444,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/left-sidebar/product/1`}
+														to={`/left-sidebar/product/1`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -464,7 +464,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/right-sidebar/product/1`}
+														to={`/right-sidebar/product/1`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -484,7 +484,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/no-sidebar/product/1`}
+														to={`/no-sidebar/product/1`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -504,7 +504,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/col-left/product/1`}
+														to={`/col-left/product/1`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -524,7 +524,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/col-right/product/1`}
+														to={`/col-right/product/1`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -544,7 +544,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/accordian/product/1`}
+														to={`/accordian/product/1`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -564,7 +564,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/column/product/1`}
+														to={`/column/product/1`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -584,7 +584,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/left-image/product/1`}
+														to={`/left-image/product/1`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -604,7 +604,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/right-image/product/1`}
+														to={`/right-image/product/1`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -624,7 +624,7 @@ class ThemeSettings extends Component {
 													aria-label="Basic example"
 												>
 													<Link
-														to={`${process.env.PUBLIC_URL}/vertical/product/1`}
+														to={`/vertical/product/1`}
 														className="btn new-tab-btn"
 													>
 														Preview
@@ -745,7 +745,7 @@ class ThemeSettings extends Component {
 									className="btn btn-block purchase_btn"
 								>
 									<img
-										src={`${process.env.PUBLIC_URL}/assets/images/icon/angular.png`}
+										src={`/assets/images/icon/angular.png`}
 										alt=""
 										className="img-fluid"
 									/>{" "}
@@ -764,7 +764,7 @@ class ThemeSettings extends Component {
 									className="btn btn-block purchase_btn"
 								>
 									<img
-										src={`${process.env.PUBLIC_URL}/assets/images/icon/shopify.png`}
+										src={`/assets/images/icon/shopify.png`}
 										alt=""
 										className="img-fluid"
 									/>{" "}

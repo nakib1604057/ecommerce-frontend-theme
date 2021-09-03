@@ -28,13 +28,13 @@ class TopBarWhite extends Component {
 							<div className="col-lg-6 text-right">
 								<ul className="header-dropdown">
 									<li className="mobile-wishlist compare-mobile">
-										<Link to={`${process.env.PUBLIC_URL}/compare`}>
+										<Link to={`/compare`}>
 											<i className="fa fa-random" aria-hidden="true"></i>
 											{translate("compare")}
 										</Link>
 									</li>
 									<li className="mobile-wishlist">
-										<Link to={`${process.env.PUBLIC_URL}/wishlist`}>
+										<Link to={`/wishlist`}>
 											<i className="fa fa-heart" aria-hidden="true"></i>
 											{translate("wishlist")}
 										</Link>
@@ -45,7 +45,7 @@ class TopBarWhite extends Component {
 										<ul className="onhover-show-div">
 											<li>
 												<Link
-													to={`${process.env.PUBLIC_URL}/pages/login`}
+													to={`/pages/login`}
 													data-lng="en"
 												>
 													Login
@@ -53,7 +53,7 @@ class TopBarWhite extends Component {
 											</li>
 											<li>
 												<Link
-													to={`${process.env.PUBLIC_URL}/pages/register`}
+													to={`/pages/register`}
 													data-lng="en"
 												>
 													Register

@@ -6,7 +6,7 @@ import { urls } from "../../../../constants/urls";
 const CartHeader = ({ item, total, symbol, removeFromCart }) => (
 	<li >
 		<div className="media">
-			<Link to={`${process.env.PUBLIC_URL}/product/${item.slug}`}>
+			<Link to={`/product/${item.slug}`}>
 				<img
 					alt=""
 					className="mr-3"
@@ -14,7 +14,7 @@ const CartHeader = ({ item, total, symbol, removeFromCart }) => (
 				/>
 			</Link>
 			<div className="media-body">
-				<Link to={`${process.env.PUBLIC_URL}/product/${item.slug}`}>
+				<Link to={`/product/${item.slug}`}>
 					<h4>{item.name}</h4>
 				</Link>
 				<h4>

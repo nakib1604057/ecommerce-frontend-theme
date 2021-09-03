@@ -15,7 +15,7 @@ class Furniture extends Component {
 	componentDidMount() {
 		document
 			.getElementById("color")
-			.setAttribute("href", `${process.env.PUBLIC_URL}/assets/css/color5.css`);
+			.setAttribute("href", `/assets/css/color5.css`);
 	}
 
 	render() {
@@ -81,7 +81,7 @@ class Furniture extends Component {
 									<div className="collection-banner p-right text-right">
 										<div className="img-part">
 											<img
-												src={`${process.env.PUBLIC_URL}/assets/images/furniture/2banner1.jpg`}
+												src={`/assets/images/furniture/2banner1.jpg`}
 												alt=""
 												className="img-fluid blur-up lazyload bg-img"
 											/>
@@ -100,7 +100,7 @@ class Furniture extends Component {
 									<div className="collection-banner p-right text-right">
 										<div className="img-part">
 											<img
-												src={`${process.env.PUBLIC_URL}/assets/images/furniture/2banner2.jpg`}
+												src={`/assets/images/furniture/2banner2.jpg`}
 												alt=""
 												className="img-fluid blur-up lazyload bg-img"
 											/>
@@ -119,7 +119,7 @@ class Furniture extends Component {
 									<div className="collection-banner p-right text-right">
 										<div className="img-part">
 											<img
-												src={`${process.env.PUBLIC_URL}/assets/images/furniture/2banner3.jpg`}
+												src={`/assets/images/furniture/2banner3.jpg`}
 												alt=""
 												className="img-fluid blur-up lazyload bg-img"
 											/>

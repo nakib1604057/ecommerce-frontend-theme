@@ -108,7 +108,7 @@ class Price extends Component {
                                         </button>
                                     </div>
                                     <div className="modal-body">
-                                        <img src={`${process.env.PUBLIC_URL}/assets/images/size-chart.jpg`}
+                                        <img src={`/assets/images/size-chart.jpg`}
                                              alt="" className="img-fluid"/>
                                     </div>
                                 </div>
@@ -141,7 +141,7 @@ class Price extends Component {
                     </div>
                     <div className="product-buttons" >
                         <a className="btn btn-solid" onClick={() => addToCartClicked(item, this.state.quantity)}>add to cart</a>
-                        <Link to={`${process.env.PUBLIC_URL}/checkout`} className="btn btn-solid" onClick={() => BuynowClicked(item, this.state.quantity)} >buy now</Link>
+                        <Link to={`/checkout`} className="btn btn-solid" onClick={() => BuynowClicked(item, this.state.quantity)} >buy now</Link>
                     </div>
                 </div>
             </div>

@@ -97,14 +97,14 @@ class NavBar extends Component {
 									{/* <span className="sub-arrow"></span> */}
 								</Link>
 								{/* <ul className="nav-submenu" >
-                                    <li><Link to={`${process.env.PUBLIC_URL}/fashion`} >{translate('fashion')}</Link></li>
-                                    <li><Link to={`${process.env.PUBLIC_URL}/beauty`} >{translate('beauty')}</Link></li>
-                                    <li><Link to={`${process.env.PUBLIC_URL}/electronic`} >{translate('electronic')}</Link></li>
-                                    <li><Link to={`${process.env.PUBLIC_URL}/furniture`} >{translate('furniture')}</Link></li>
-                                    <li><Link to={`${process.env.PUBLIC_URL}/kids`} >{translate('kids')}</Link></li>
-                                    <li><Link to={`${process.env.PUBLIC_URL}/pets`} >{translate('pets')}</Link></li>
-                                    <li><Link to={`${process.env.PUBLIC_URL}/vegetables`} >{translate('vegetables')}</Link></li>
-                                    <li><Link to={`${process.env.PUBLIC_URL}/watch`} >{translate('watch')}</Link></li>
+                                    <li><Link to={`/fashion`} >{translate('fashion')}</Link></li>
+                                    <li><Link to={`/beauty`} >{translate('beauty')}</Link></li>
+                                    <li><Link to={`/electronic`} >{translate('electronic')}</Link></li>
+                                    <li><Link to={`/furniture`} >{translate('furniture')}</Link></li>
+                                    <li><Link to={`/kids`} >{translate('kids')}</Link></li>
+                                    <li><Link to={`/pets`} >{translate('pets')}</Link></li>
+                                    <li><Link to={`/vegetables`} >{translate('vegetables')}</Link></li>
+                                    <li><Link to={`/watch`} >{translate('watch')}</Link></li>
                                 </ul> */}
 							</li>
 							<li>
@@ -117,11 +117,11 @@ class NavBar extends Component {
 									{/* <span className="sub-arrow"></span> */}
 								</Link>
 								{/* <ul className="nav-submenu">
-                                    <li><Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} >{translate('category_left_sidebar')}</Link></li>
-                                    <li><Link to={`${process.env.PUBLIC_URL}/right-sidebar/collection`} >{translate('category_right_sidebar')}</Link></li>
-                                    <li><Link to={`${process.env.PUBLIC_URL}/no-sidebar/collection`} >{translate('category_no_sidebar')}</Link></li>
-                                    <li><Link to={`${process.env.PUBLIC_URL}/metro/collection`} >{translate('category_metro')}</Link></li>
-                                    <li><Link to={`${process.env.PUBLIC_URL}/full-width/collection`} >{translate('category_full_width')}</Link></li>
+                                    <li><Link to={`/left-sidebar/collection`} >{translate('category_left_sidebar')}</Link></li>
+                                    <li><Link to={`/right-sidebar/collection`} >{translate('category_right_sidebar')}</Link></li>
+                                    <li><Link to={`/no-sidebar/collection`} >{translate('category_no_sidebar')}</Link></li>
+                                    <li><Link to={`/metro/collection`} >{translate('category_metro')}</Link></li>
+                                    <li><Link to={`/full-width/collection`} >{translate('category_full_width')}</Link></li>
                                 </ul> */}
 							</li>
 							{/* <li >
@@ -130,14 +130,14 @@ class NavBar extends Component {
                                     <span className="sub-arrow"></span>
                                 </Link>
                                 <ul className="nav-submenu">
-                                    <li><Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/1`} >{translate('left_sidebar')}</Link></li>
-                                    <li><Link to={`${process.env.PUBLIC_URL}/right-sidebar/product/1`} >{translate('right_sidebar')}</Link></li>
-                                    <li><Link to={`${process.env.PUBLIC_URL}/no-sidebar/product/1`} >{translate('no_sidebar')}</Link></li>
-                                    <li><Link to={`${process.env.PUBLIC_URL}/col-left/product/1`} >{translate('three_col_thumbnail_left')}</Link></li>
-                                    <li><Link to={`${process.env.PUBLIC_URL}/col-right/product/1`} >{translate('three_col_thumbnail_right')}</Link></li>
-                                    <li><Link to={`${process.env.PUBLIC_URL}/column/product/1`} >{translate('thumbnail_below')}</Link></li>
-                                    <li><Link to={`${process.env.PUBLIC_URL}/left-image/product/1`} >{translate('thumbnail_left')}</Link></li>
-                                    <li><Link to={`${process.env.PUBLIC_URL}/right-image/product/1`} >{translate('thumbnail_right')}</Link></li>
+                                    <li><Link to={`/left-sidebar/product/1`} >{translate('left_sidebar')}</Link></li>
+                                    <li><Link to={`/right-sidebar/product/1`} >{translate('right_sidebar')}</Link></li>
+                                    <li><Link to={`/no-sidebar/product/1`} >{translate('no_sidebar')}</Link></li>
+                                    <li><Link to={`/col-left/product/1`} >{translate('three_col_thumbnail_left')}</Link></li>
+                                    <li><Link to={`/col-right/product/1`} >{translate('three_col_thumbnail_right')}</Link></li>
+                                    <li><Link to={`/column/product/1`} >{translate('thumbnail_below')}</Link></li>
+                                    <li><Link to={`/left-image/product/1`} >{translate('thumbnail_left')}</Link></li>
+                                    <li><Link to={`/right-image/product/1`} >{translate('thumbnail_right')}</Link></li>
                                 </ul>
                             </li> */}
 						

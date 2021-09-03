@@ -99,10 +99,10 @@ class CollectionMetro extends Component {
                                                     :
                                                     <div className="row">
                                                         <div className="col-sm-12 text-center section-b-space mt-5 no-found" >
-                                                            <img src={`${process.env.PUBLIC_URL}/assets/images/empty-search.jpg`} class="img-fluid mb-4" />
+                                                            <img src={`/assets/images/empty-search.jpg`} class="img-fluid mb-4" />
                                                             <h3>Sorry! Couldn't find the product you were looking For!!!    </h3>
                                                             <p>Please check if you have misspelt something or try searching with other words.</p>
-                                                            <Link to={`${process.env.PUBLIC_URL}/`} class="btn btn-solid">continue shopping</Link>
+                                                            <Link to={`/`} class="btn btn-solid">continue shopping</Link>
                                                         </div>
                                                     </div>
                                                 }
