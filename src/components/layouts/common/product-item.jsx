@@ -99,8 +99,7 @@ class ProductItem extends Component {
 						>
 							<i className="fa fa-heart" aria-hidden="true"></i>
 						</a>
-					
-					
+						
 					</div>
 					{/* {product.variants ? (
 						<ul className="product-thumb-list">

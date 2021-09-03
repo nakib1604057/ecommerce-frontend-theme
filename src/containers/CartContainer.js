@@ -10,9 +10,12 @@ const CartContainer = ({cartList, total, symbol, removeFromCart}) => (
      <li  className="onhover-div mobile-cart"><div className="cart-qty-cls">{cartList.length}</div>
         <Link to={`${process.env.PUBLIC_URL}/cart`}><img src={`${process.env.PUBLIC_URL}/assets/images/icon/cart.png`} className="img-fluid" alt=""/>
             <i className="fa fa-shopping-cart"></i></Link>
-        <ul className="show-div shopping-cart">
+        <ul className="show-div shopping-cart"  style={{ boxShadow: "0px 0px 10px 3px rgb(193 187 187 / 30%)" }}>
             { cartList.map((item,index) => (
+                <>
                 <CartPage key={index} item={item} total={total} symbol={symbol} removeFromCart={() => removeFromCart(item)}  />
+                <hr />
+                </>
             ))}
             {(cartList.length > 0) ?
                 <div>

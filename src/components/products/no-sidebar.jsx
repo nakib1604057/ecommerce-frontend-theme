@@ -75,6 +75,7 @@ class NoSideBar extends Component {
             <div className="collection-wrapper">
               <div className="container">
                 <div className="row">
+                  <div className="col-lg-1"></div>
                   <div className="col-lg-4 product-thumbnail">
                     <Slider
                       {...products}
@@ -99,6 +100,7 @@ class NoSideBar extends Component {
                       navOne={this.state.nav1}
                     />
                   </div>
+                  <div className="col-lg-1"></div>
                   <DetailsWithPrice
                     symbol={symbol}
                     item={item}

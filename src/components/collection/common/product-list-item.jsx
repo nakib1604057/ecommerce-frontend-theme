@@ -74,10 +74,7 @@ class ProductListItem extends Component {
     const image = JSON.parse(product.image);
     console.log(urls.IMAGE_URL + image.file_name);
     return (
-      <div
-        className="product-box mb-2"
-        style={{ boxShadow: "0px 0px 12px rgb(132 124 124 / 30%)" }}
-      >
+      <div className="product-box mb-2"style={{boxShadow: "0px 0px 12px rgb(132 124 124 / 30%)" ,marginBottom:'20px'}} >
         <div className="img-wrapper">
           <div className="front">
             <Link to={`${process.env.PUBLIC_URL}/product/${product.slug}`}>
@@ -92,28 +89,20 @@ class ProductListItem extends Component {
               />
             </Link>
           </div>
-          <div
-            className="cart-info cart-wrap"
-            style={{
-              background: "rgb(255 255 255 / 90%)",
-              borderRadius: "20px",
-              marginRight: "10px",
-              marginBottom: "20px",
-            }}
-          >
+          <div className="cart-info cart-wrap" style={{background: "rgb(255 255 255 / 90%)",borderRadius:"20px",marginRight: "10px",marginBottom: "20px"}}>
             <button title="Add to cart" onClick={() => this.onAddCart(product)}>
               <i className="fa fa-shopping-cart" aria-hidden="true"></i>
             </button>
-            <a
-              href="javascript:void(0)"
+            <Link
+              to="javascript:void(0)"
               title="Add to Wishlist"
               onClick={() => this.props.onAddToWishlistClicked(product)}
             >
               <i className="fa fa-heart" aria-hidden="true"></i>
-            </a>
+            </Link>
           </div>
         </div>
-        <div className="product-detail" style={{ padding: "12px" }}>
+        <div className="product-detail" style={{padding:"12px"}}>
           <div>
             <Link to={`${process.env.PUBLIC_URL}/product/${product.slug}`}>
               <h6>{product.name}</h6>
