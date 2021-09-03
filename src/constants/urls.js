@@ -20,4 +20,5 @@ export const urls = {
   GET_DISCOUNTED_PRODUCTS:`api/discounted-products`,
   GET_RATINGS:`api/ratings/`,
   POST_RATINGS:`api/rating/`,
+  POST_ORDER:'http://localhost:5000/api/ecommrece/order'
 };
