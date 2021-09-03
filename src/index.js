@@ -95,6 +95,7 @@ import MasonaryGridCols from "./components/features/portfolio/masonary-grid-cols
 import { consoleLog } from "./console";
 import { ToastContainer } from "react-toastify";
 import { isUserLoggedIn } from "./constants/utils";
+import PrivateRoute from './routes/PrivateRoute'
 
 class Root extends React.Component {
   render() {
@@ -145,16 +146,16 @@ class Root extends React.Component {
                         component={wishList}
                       />
                     
-                      <Route
+                      <PrivateRoute
                         path={`${process.env.PUBLIC_URL}/checkout`}
                         component={checkOut}
                       />
-                      <Route
+                      <PrivateRoute
                         path={`${process.env.PUBLIC_URL}/order-success`}
                         component={orderSuccess}
                       />
 
-                      <Route
+                      <PrivateRoute
                         path={`${process.env.PUBLIC_URL}/sales/orders`}
                         component={aboutUs}
                       />
@@ -196,7 +197,7 @@ class Root extends React.Component {
                         path={`${process.env.PUBLIC_URL}/pages/contact`}
                         component={Contact}
                       />
-                      <Route
+                      <PrivateRoute
                         path={`${process.env.PUBLIC_URL}/pages/dashboard`}
                         component={Dashboard}
                       />
