@@ -66,9 +66,9 @@ const Dashboard = () => {
 											<Tab>DashBoard</Tab>
 											<Tab>Orders</Tab>
 											<Tab>Track PreOrders</Tab>
-											<Tab>Update General Info</Tab>
+											{/* <Tab>Update General Info</Tab>
 											<Tab>Update Address</Tab>
-											<Tab>Change Password</Tab>
+											<Tab>Change Password</Tab> */}
 										</TabList>
 									</div>
 								</div>
@@ -87,7 +87,7 @@ const Dashboard = () => {
 										<TabPanel>
 											<TrackPreOrder />
 										</TabPanel>
-										<TabPanel>
+										{/* <TabPanel>
 											<UpdateGeneralInfo />
 										</TabPanel>
 										<TabPanel>
@@ -95,7 +95,7 @@ const Dashboard = () => {
 										</TabPanel>
 										<TabPanel>
 											<UpdatePassword />
-										</TabPanel>
+										</TabPanel> */}
 									</div>
 								</div>
 							</div>
