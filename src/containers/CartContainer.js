@@ -8,7 +8,7 @@ import {getCartTotal} from '../services'
 
 const CartContainer = ({cartList, total, symbol, removeFromCart}) => (
      <li  className="onhover-div mobile-cart"><div className="cart-qty-cls">{cartList.length}</div>
-        <Link to={`${process.env.PUBLIC_URL}/cart`}><img src={`${process.env.PUBLIC_URL}/assets/images/icon/cart.png`} className="img-fluid" alt=""/>
+        <Link to={`/cart`}><img src={`/assets/images/icon/cart.png`} className="img-fluid" alt=""/>
             <i className="fa fa-shopping-cart"></i></Link>
         <ul className="show-div shopping-cart"  style={{ boxShadow: "0px 0px 10px 3px rgb(193 187 187 / 30%)" }}>
             { cartList.map((item,index) => (
@@ -26,8 +26,8 @@ const CartContainer = ({cartList, total, symbol, removeFromCart}) => (
             </li>
             <li>
                 <div className="buttons">
-                    <Link to={`${process.env.PUBLIC_URL}/cart`} className="view-cart">view cart</Link>
-                    <Link to={`${process.env.PUBLIC_URL}/checkout`} className="checkout">checkout</Link>
+                    <Link to={`/cart`} className="view-cart">view cart</Link>
+                    <Link to={`/checkout`} className="checkout">checkout</Link>
                 </div>
             </li></div>
                     :

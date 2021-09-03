@@ -77,10 +77,10 @@ class ProductListItem extends Component {
       <div className="product-box mb-2"style={{boxShadow: "0px 0px 12px rgb(132 124 124 / 30%)" ,marginBottom:'20px'}} >
         <div className="img-wrapper">
           <div className="front">
-            <Link to={`${process.env.PUBLIC_URL}/product/${product.slug}`}>
+            <Link to={`/product/${product.slug}`}>
               <img
                 src={
-                  image.file_name && process.env.NODE_ENV !== "development"
+                  image.file_name
                     ? urls.IMAGE_URL + image.file_name
                     : defaultImage
                 }
@@ -94,7 +94,6 @@ class ProductListItem extends Component {
               <i className="fa fa-shopping-cart" aria-hidden="true"></i>
             </button>
             <Link
-              to="javascript:void(0)"
               title="Add to Wishlist"
               onClick={() => this.props.onAddToWishlistClicked(product)}
             >
@@ -104,7 +103,7 @@ class ProductListItem extends Component {
         </div>
         <div className="product-detail" style={{padding:"12px"}}>
           <div>
-            <Link to={`${process.env.PUBLIC_URL}/product/${product.slug}`}>
+            <Link to={`/product/${product.slug}`}>
               <h6>{product.name}</h6>
             </Link>
             <h4>

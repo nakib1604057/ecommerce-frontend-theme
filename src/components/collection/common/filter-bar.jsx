@@ -64,25 +64,25 @@ class FilterBar extends Component {
                     <ul>
                         <li>
                             <img
-                                src={`${process.env.PUBLIC_URL}/assets/images/icon/2.png`}
+                                src={`/assets/images/icon/2.png`}
                                 alt=""
                                 className="product-2-layout-view" onClick={() => this.LayoutView(6)} />
                         </li>
                         <li>
                             <img
-                                src={`${process.env.PUBLIC_URL}/assets/images/icon/3.png`}
+                                src={`/assets/images/icon/3.png`}
                                 alt=""
                                 className="product-3-layout-view" onClick={() => this.LayoutView(4)} />
                         </li>
                         <li>
                             <img
-                                src={`${process.env.PUBLIC_URL}/assets/images/icon/4.png`}
+                                src={`/assets/images/icon/4.png`}
                                 alt=""
                                 className="product-4-layout-view" onClick={() => this.LayoutView(3)} />
                         </li>
                         <li>
                             <img
-                                src={`${process.env.PUBLIC_URL}/assets/images/icon/6.png`}
+                                src={`/assets/images/icon/6.png`}
                                 alt=""
                                 className="product-6-layout-view" onClick={() => this.LayoutView(2)} />
                         </li>

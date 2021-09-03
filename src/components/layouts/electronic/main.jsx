@@ -13,7 +13,7 @@ class Electronic extends Component {
 	componentDidMount() {
 		document
 			.getElementById("color")
-			.setAttribute("href", `${process.env.PUBLIC_URL}/assets/css/color7.css`);
+			.setAttribute("href", `/assets/css/color7.css`);
 	}
 
 	render() {
@@ -76,7 +76,7 @@ class Electronic extends Component {
 										<div className="collection-banner">
 											<div className="img-part">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/electronics/sub1.jpg`}
+													src={`/assets/images/electronics/sub1.jpg`}
 													className="img-fluid blur-up lazyload bg-img"
 													alt=""
 												/>
@@ -95,7 +95,7 @@ class Electronic extends Component {
 										<div className="collection-banner">
 											<div className="img-part">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/electronics/sub2.jpg`}
+													src={`/assets/images/electronics/sub2.jpg`}
 													className="img-fluid blur-up lazyload bg-img"
 													alt=""
 												/>
@@ -114,7 +114,7 @@ class Electronic extends Component {
 										<div className="collection-banner">
 											<div className="img-part">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/electronics/sub3.jpg`}
+													src={`/assets/images/electronics/sub3.jpg`}
 													className="img-fluid blur-up lazyload bg-img"
 													alt=""
 												/>

@@ -5,9 +5,9 @@ const main = () => {
         <div className="container">
         <div className="row partition2">
             <div className="col-md-6">
-                <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}>
+                <Link to={`/left-sidebar/collection`}>
                     <div className="collection-banner p-right text-center">
-                        <img src={`${process.env.PUBLIC_URL}/assets/images/sub-banner1.jpg`} className="img-fluid" alt=""/>
+                        <img src={`/assets/images/sub-banner1.jpg`} className="img-fluid" alt=""/>
                             <div className="contain-banner">
                                 <div>
                                     <h4>save 30%</h4>
@@ -18,9 +18,9 @@ const main = () => {
                 </Link>
             </div>
             <div className="col-md-6">
-                <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}>
+                <Link to={`/left-sidebar/collection`}>
                     <div className="collection-banner p-right text-center">
-                        <img src={`${process.env.PUBLIC_URL}/assets/images/sub-banner2.jpg`} className="img-fluid" alt=""/>
+                        <img src={`/assets/images/sub-banner2.jpg`} className="img-fluid" alt=""/>
                             <div className="contain-banner">
                                 <div>
                                     <h4>save 60%</h4>

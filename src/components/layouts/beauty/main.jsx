@@ -39,7 +39,7 @@ class Beauty extends Component {
 	componentDidMount() {
 		document
 			.getElementById("color")
-			.setAttribute("href", `${process.env.PUBLIC_URL}/assets/css/color3.css`);
+			.setAttribute("href", `/assets/css/color3.css`);
 	}
 
 	render() {
@@ -98,7 +98,7 @@ class Beauty extends Component {
 						<div className="row">
 							<div className="col-xl-5 col-lg-6 col-md-12 offset-xl-1 text-center">
 								<img
-									src={`${process.env.PUBLIC_URL}/assets/images/beauty/about-us.jpg`}
+									src={`/assets/images/beauty/about-us.jpg`}
 									alt=""
 									className="img-fluid blur-up lazyload"
 								/>
@@ -161,7 +161,7 @@ class Beauty extends Component {
 								<a href="javascript:void(0)" onClick={this.onOpenModal}>
 									<div className="video-img">
 										<img
-											src={`${process.env.PUBLIC_URL}/assets/images/beauty/video_1.jpg`}
+											src={`/assets/images/beauty/video_1.jpg`}
 											alt=""
 											className="img-fluid blur-up lazyload"
 										/>

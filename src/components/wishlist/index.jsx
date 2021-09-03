@@ -18,7 +18,8 @@ class wishList extends Component {
       name: item.name,
       price: item.price,
       slug: item.slug,
-      img: JSON.parse(item.featured_img),
+      img:
+        item.image === undefined ? JSON.parse(item.featured_img) : item.image,
     };
     this.props.addToCartAndRemoveWishlist(productItem, 1);
   };
@@ -44,19 +45,23 @@ class wishList extends Component {
                     </thead>
                     {Items.map((item, index) => {
                       console.log(item);
-                      const image = item.featured_img !== undefined ? JSON.parse(item.featured_img): JSON.parse(item.image);
+                      const image =
+                        item.image === undefined
+                          ? JSON.parse(item.featured_img)
+                          : typeof item.image === "string"
+                          ? JSON.parse(item.image )
+                          : item.image;
 
                       return (
                         <tbody key={index}>
                           <tr>
                             <td>
                               <Link
-                                to={`${process.env.PUBLIC_URL}/product/${item.slug}`}
+                                to={`/product/${item.slug}`}
                               >
                                 <img
                                   src={
-                                    image.file_name &&
-                                    process.env.NODE_ENV !== "development"
+                                    image.file_name
                                       ? urls.IMAGE_URL + image.file_name
                                       : defaultImage
                                   }
@@ -66,7 +71,7 @@ class wishList extends Component {
                             </td>
                             <td>
                               <Link
-                                to={`${process.env.PUBLIC_URL}/product/${item.slug}`}
+                                to={`/product/${item.slug}`}
                               >
                                 {item.name}
                               </Link>
@@ -82,13 +87,13 @@ class wishList extends Component {
                               >
                                 <i className="fa fa-times"></i>
                               </a>
-                              <a
+                              {/* <a
                                 href="javascript:void(0)"
                                 className="cart"
                                 onClick={() => this.addToCart(item)}
                               >
                                 <i className="fa fa-shopping-cart"></i>
-                              </a>
+                              </a> */}
                             </td>
                           </tr>
                         </tbody>
@@ -100,13 +105,13 @@ class wishList extends Component {
               <div className="row wishlist-buttons">
                 <div className="col-12">
                   <Link
-                    to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}
+                    to={`/left-sidebar/collection`}
                     className="btn btn-solid"
                   >
                     continue shopping
                   </Link>
                   <Link
-                    to={`${process.env.PUBLIC_URL}/checkout`}
+                    to={`/checkout`}
                     className="btn btn-solid"
                   >
                     check out
@@ -123,7 +128,7 @@ class wishList extends Component {
                   <div>
                     <div className="col-sm-12 empty-cart-cls text-center">
                       <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/empty-wishlist.png`}
+                        src={`/assets/images/empty-wishlist.png`}
                         className="img-fluid mb-4"
                         alt=""
                       />

@@ -62,7 +62,7 @@ class aboutUs extends Component {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="banner-section">
-                                    <img src={`${process.env.PUBLIC_URL}/assets/images/about/about%20us.jpg`} className="img-fluid" alt=""/>
+                                    <img src={`/assets/images/about/about%20us.jpg`} className="img-fluid" alt=""/>
                                 </div>
                             </div>
                             <div className="col-sm-12">
@@ -97,7 +97,7 @@ class aboutUs extends Component {
                                     <div>
                                         <div className="media">
                                             <div className="text-center">
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/avtar.jpg`} alt="#" />
+                                                <img src={`/assets/images/avtar.jpg`} alt="#" />
                                                     <h5>Mark Jecno</h5>
                                                     <h6>Designer</h6>
                                             </div>
@@ -111,7 +111,7 @@ class aboutUs extends Component {
                                     <div>
                                         <div className="media">
                                             <div className="text-center">
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/2.jpg`} alt="#" />
+                                                <img src={`/assets/images/2.jpg`} alt="#" />
                                                     <h5>Mark Jecno</h5>
                                                     <h6>Designer</h6>
                                             </div>
@@ -125,7 +125,7 @@ class aboutUs extends Component {
                                     <div>
                                         <div className="media">
                                             <div className="text-center">
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/avtar.jpg`} alt="#" />
+                                                <img src={`/assets/images/avtar.jpg`} alt="#" />
                                                     <h5>Mark Jecno</h5>
                                                     <h6>Designer</h6>
                                             </div>
@@ -139,7 +139,7 @@ class aboutUs extends Component {
                                     <div>
                                         <div className="media">
                                             <div className="text-center">
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/avtar.jpg`} alt="#" />
+                                                <img src={`/assets/images/avtar.jpg`} alt="#" />
                                                     <h5>Mark Jecno</h5>
                                                     <h6>Designer</h6>
                                             </div>
@@ -153,7 +153,7 @@ class aboutUs extends Component {
                                     <div>
                                         <div className="media">
                                             <div className="text-center">
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/avtar.jpg`} alt="#" />
+                                                <img src={`/assets/images/avtar.jpg`} alt="#" />
                                                     <h5>Mark Jecno</h5>
                                                     <h6>Designer</h6>
                                             </div>
@@ -167,7 +167,7 @@ class aboutUs extends Component {
                                     <div>
                                         <div className="media">
                                             <div className="text-center">
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/avtar.jpg`} alt="#" />
+                                                <img src={`/assets/images/avtar.jpg`} alt="#" />
                                                     <h5>Mark Jecno</h5>
                                                     <h6>Designer</h6>
                                             </div>
@@ -192,27 +192,27 @@ class aboutUs extends Component {
                                 <h2>Our Team</h2>
                                 <Slider {...Team4} className="team-4">
                                     <div>
-                                        <img src={`${process.env.PUBLIC_URL}/assets/images/team/1.jpg`} className="img-fluid" alt=""/>
+                                        <img src={`/assets/images/team/1.jpg`} className="img-fluid" alt=""/>
                                         <h4>Hileri Keol</h4>
                                         <h6>CEo & Founder At Company</h6>
                                     </div>
                                     <div>
-                                        <img src={`${process.env.PUBLIC_URL}/assets/images/team/2.jpg`} className="img-fluid" alt=""/>
+                                        <img src={`/assets/images/team/2.jpg`} className="img-fluid" alt=""/>
                                         <h4>Hileri Keol</h4>
                                         <h6>CEo & Founder At Company</h6>
                                     </div>
                                     <div>
-                                        <img src={`${process.env.PUBLIC_URL}/assets/images/team/3.jpg`} className="img-fluid" alt=""/>
+                                        <img src={`/assets/images/team/3.jpg`} className="img-fluid" alt=""/>
                                         <h4>Hileri Keol</h4>
                                         <h6>CEo & Founder At Company</h6>
                                     </div>
                                     <div>
-                                        <img src={`${process.env.PUBLIC_URL}/assets/images/team/4.jpg`} className="img-fluid" alt=""/>
+                                        <img src={`/assets/images/team/4.jpg`} className="img-fluid" alt=""/>
                                         <h4>Hileri Keol</h4>
                                         <h6>CEo & Founder At Company</h6>
                                     </div>
                                     <div>
-                                        <img src={`${process.env.PUBLIC_URL}/assets/images/team/1.jpg`} className="img-fluid" alt=""/>
+                                        <img src={`/assets/images/team/1.jpg`} className="img-fluid" alt=""/>
                                         <h4>Hileri Keol</h4>
                                         <h6>CEo & Founder At Company</h6>
                                     </div>

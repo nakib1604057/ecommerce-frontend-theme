@@ -23,13 +23,13 @@ class ElementRatio extends Component {
                                             <div className="front">
                                                 <a href="product-page(no-sidebar).html">
                                                     <img
-                                                    src={`${process.env.PUBLIC_URL}/assets/images/pro3/27.jpg`}
+                                                    src={`/assets/images/pro3/27.jpg`}
                                                     className="img-fluid blur-up lazyload bg-img" alt="" /></a>
                                             </div>
                                             <div className="back">
                                                 <a href="product-page(no-sidebar).html">
                                                     <img
-                                                    src={`${process.env.PUBLIC_URL}/assets/images/pro3/28.jpg`}
+                                                    src={`/assets/images/pro3/28.jpg`}
                                                     className="img-fluid blur-up lazyload bg-img" alt="" /></a>
                                             </div>
                                             <div className="cart-info cart-wrap">
@@ -74,12 +74,12 @@ class ElementRatio extends Component {
                                                 className="lable4">on sale</span></div>
                                             <div className="front">
                                                 <a href="product-page(no-sidebar).html"><img
-                                                    src={`${process.env.PUBLIC_URL}/assets/images/pro3/1.jpg`}
+                                                    src={`/assets/images/pro3/1.jpg`}
                                                     className="img-fluid blur-up lazyload bg-img" alt="" /></a>
                                             </div>
                                             <div className="back">
                                                 <a href="product-page(no-sidebar).html"><img
-                                                    src={`${process.env.PUBLIC_URL}/assets/images/pro3/2.jpg`}
+                                                    src={`/assets/images/pro3/2.jpg`}
                                                     className="img-fluid blur-up lazyload bg-img" alt="" /></a>
                                             </div>
                                             <div className="cart-info cart-wrap">
@@ -116,12 +116,12 @@ class ElementRatio extends Component {
                                         <div className="img-wrapper">
                                             <div className="front">
                                                 <a href="product-page(no-sidebar).html"><img
-                                                    src={`${process.env.PUBLIC_URL}/assets/images/pro3/33.jpg`}
+                                                    src={`/assets/images/pro3/33.jpg`}
                                                     className="img-fluid blur-up lazyload bg-img" alt="" /></a>
                                             </div>
                                             <div className="back">
                                                 <a href="product-page(no-sidebar).html"><img
-                                                    src={`${process.env.PUBLIC_URL}/assets/images/pro3/34.jpg`}
+                                                    src={`/assets/images/pro3/34.jpg`}
                                                     className="img-fluid blur-up lazyload bg-img" alt="" /></a>
                                             </div>
                                             <div className="cart-info cart-wrap">
@@ -166,12 +166,12 @@ class ElementRatio extends Component {
                                                 className="lable4">on sale</span></div>
                                             <div className="front">
                                                 <a href="product-page(no-sidebar).html"><img
-                                                    src={`${process.env.PUBLIC_URL}/assets/images/pro3/35.jpg`}
+                                                    src={`/assets/images/pro3/35.jpg`}
                                                     className="img-fluid blur-up lazyload bg-img" alt="" /></a>
                                             </div>
                                             <div className="back">
                                                 <a href="product-page(no-sidebar).html"><img
-                                                    src={`${process.env.PUBLIC_URL}/assets/images/pro3/36.jpg`}
+                                                    src={`/assets/images/pro3/36.jpg`}
                                                     className="img-fluid blur-up lazyload bg-img" alt="" /></a>
                                             </div>
                                             <div className="cart-info cart-wrap">
@@ -229,7 +229,7 @@ class ElementRatio extends Component {
                                         <div className="img-wrapper">
                                             <div className="front">
                                                 <a href="product-page(no-sidebar).html"><img
-                                                    src={`${process.env.PUBLIC_URL}/assets/images/gym/pro/1.jpg`}
+                                                    src={`/assets/images/gym/pro/1.jpg`}
                                                     className="img-fluid blur-up lazyload bg-img" alt="" /></a>
                                             </div>
                                             <div className="cart-info cart-wrap">
@@ -256,7 +256,7 @@ class ElementRatio extends Component {
                                         <div className="img-wrapper">
                                             <div className="front">
                                                 <a href="product-page(no-sidebar).html"><img
-                                                    src={`${process.env.PUBLIC_URL}/assets/images/gym/pro/2.jpg`}
+                                                    src={`/assets/images/gym/pro/2.jpg`}
                                                     className="img-fluid blur-up lazyload bg-img" alt="" /></a>
                                             </div>
                                             <div className="cart-info cart-wrap">
@@ -283,7 +283,7 @@ class ElementRatio extends Component {
                                         <div className="img-wrapper">
                                             <div className="front">
                                                 <a href="product-page(no-sidebar).html"><img
-                                                    src={`${process.env.PUBLIC_URL}/assets/images/gym/pro/3.jpg`}
+                                                    src={`/assets/images/gym/pro/3.jpg`}
                                                     className="img-fluid blur-up lazyload bg-img" alt="" /></a>
                                             </div>
                                             <div className="cart-info cart-wrap">
@@ -310,7 +310,7 @@ class ElementRatio extends Component {
                                         <div className="img-wrapper">
                                             <div className="front">
                                                 <a href="product-page(no-sidebar).html"><img
-                                                    src={`${process.env.PUBLIC_URL}/assets/images/gym/pro/4.jpg`}
+                                                    src={`/assets/images/gym/pro/4.jpg`}
                                                     className="img-fluid blur-up lazyload bg-img" alt="" /></a>
                                             </div>
                                             <div className="cart-info cart-wrap">
@@ -351,7 +351,7 @@ class ElementRatio extends Component {
                                         <div className="img-wrapper">
                                             <div className="front">
                                                 <a href="product-page(no-sidebar).html"><img
-                                                    src={`${process.env.PUBLIC_URL}/assets/images/fashion/pro/1.jpg`}
+                                                    src={`/assets/images/fashion/pro/1.jpg`}
                                                     className="img-fluid blur-up lazyload bg-img" alt="" /></a>
                                             </div>
                                             <div className="cart-info cart-wrap">
@@ -375,7 +375,7 @@ class ElementRatio extends Component {
                                         <div className="img-wrapper">
                                             <div className="front">
                                                 <a href="product-page(no-sidebar).html"><img
-                                                    src={`${process.env.PUBLIC_URL}/assets/images/fashion/pro/2.jpg`}
+                                                    src={`/assets/images/fashion/pro/2.jpg`}
                                                     className="img-fluid blur-up lazyload bg-img" alt="" /></a>
                                             </div>
                                             <div className="cart-info cart-wrap">
@@ -399,7 +399,7 @@ class ElementRatio extends Component {
                                         <div className="img-wrapper">
                                             <div className="front">
                                                 <a href="product-page(no-sidebar).html"><img
-                                                    src={`${process.env.PUBLIC_URL}/assets/images/fashion/pro/3.jpg`}
+                                                    src={`/assets/images/fashion/pro/3.jpg`}
                                                     className="img-fluid blur-up lazyload bg-img" alt="" /></a>
                                             </div>
                                             <div className="cart-info cart-wrap">
@@ -423,7 +423,7 @@ class ElementRatio extends Component {
                                         <div className="img-wrapper">
                                             <div className="front">
                                                 <a href="product-page(no-sidebar).html"><img
-                                                    src={`${process.env.PUBLIC_URL}/assets/images/fashion/pro/4.jpg`}
+                                                    src={`/assets/images/fashion/pro/4.jpg`}
                                                     className="img-fluid blur-up lazyload bg-img" alt="" /></a>
                                             </div>
                                             <div className="cart-info cart-wrap">
@@ -461,7 +461,7 @@ class ElementRatio extends Component {
                                     <div className="product-box">
                                         <div className="img-wrapper">
                                             <div className="front">
-                                                <a href="product-page(no-sidebar).html"><img src={`${process.env.PUBLIC_URL}/assets/images/game/pro/11.jpg`}
+                                                <a href="product-page(no-sidebar).html"><img src={`/assets/images/game/pro/11.jpg`}
                                                                                              className="bg-img img-fluid blur-up lazyload"
                                                                                              alt="" /></a>
                                             </div>
@@ -496,7 +496,7 @@ class ElementRatio extends Component {
                                                 <span className="lable4">on sale</span>
                                             </div>
                                             <div className="front">
-                                                <a href="product-page(no-sidebar).html"><img src={`${process.env.PUBLIC_URL}/assets/images/game/pro/12.jpg`}
+                                                <a href="product-page(no-sidebar).html"><img src={`/assets/images/game/pro/12.jpg`}
                                                                                              className="bg-img img-fluid blur-up lazyload"
                                                                                              alt="" /></a>
                                             </div>
@@ -527,7 +527,7 @@ class ElementRatio extends Component {
                                     <div className="product-box">
                                         <div className="img-wrapper">
                                             <div className="front">
-                                                <a href="product-page(no-sidebar).html"><img src={`${process.env.PUBLIC_URL}/assets/images/game/pro/13.jpg`}
+                                                <a href="product-page(no-sidebar).html"><img src={`/assets/images/game/pro/13.jpg`}
                                                                                              className="bg-img img-fluid blur-up lazyload"
                                                                                              alt="" /></a>
                                             </div>
@@ -565,7 +565,7 @@ class ElementRatio extends Component {
                                                 <span className="lable4">on sale</span>
                                             </div>
                                             <div className="front">
-                                                <a href="product-page(no-sidebar).html"><img src={`${process.env.PUBLIC_URL}/assets/images/game/pro/14.jpg`}
+                                                <a href="product-page(no-sidebar).html"><img src={`/assets/images/game/pro/14.jpg`}
                                                                                              className="bg-img img-fluid blur-up lazyload"
                                                                                              alt="" /></a>
                                             </div>
@@ -600,7 +600,7 @@ class ElementRatio extends Component {
                                                 <span className="lable4">on sale</span>
                                             </div>
                                             <div className="front">
-                                                <a href="product-page(no-sidebar).html"><img src={`${process.env.PUBLIC_URL}/assets/images/game/pro/15.jpg`}
+                                                <a href="product-page(no-sidebar).html"><img src={`/assets/images/game/pro/15.jpg`}
                                                                                              className="bg-img img-fluid blur-up lazyload"
                                                                                              alt="" /></a>
                                             </div>

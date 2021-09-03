@@ -19,7 +19,7 @@ class ElementCategory extends Component {
                                     <div className="category-block">
                                         <a href="#">
                                             <div className="category-image">
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/icon/cat1.png`} alt="" /></div>
+                                                <img src={`/assets/images/icon/cat1.png`} alt="" /></div>
                                         </a>
                                         <div className="category-details">
                                             <a href="#">
@@ -30,7 +30,7 @@ class ElementCategory extends Component {
                                     <div className="category-block">
                                         <a href="#">
                                             <div className="category-image">
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/icon/cat2.png`} alt="" /></div>
+                                                <img src={`/assets/images/icon/cat2.png`} alt="" /></div>
                                         </a>
                                         <div className="category-details">
                                             <a href="#">
@@ -41,7 +41,7 @@ class ElementCategory extends Component {
                                     <div className="category-block">
                                         <a href="#">
                                             <div className="category-image">
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/icon/cat3.png`} alt="" /></div>
+                                                <img src={`/assets/images/icon/cat3.png`} alt="" /></div>
                                         </a>
                                         <div className="category-details">
                                             <a href="#">
@@ -52,7 +52,7 @@ class ElementCategory extends Component {
                                     <div className="category-block">
                                         <a href="#">
                                             <div className="category-image">
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/icon/cat4.png`} alt="" /></div>
+                                                <img src={`/assets/images/icon/cat4.png`} alt="" /></div>
                                         </a>
                                         <div className="category-details">
                                             <a href="#">
@@ -63,7 +63,7 @@ class ElementCategory extends Component {
                                     <div className="category-block">
                                         <a href="#">
                                             <div className="category-image">
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/icon/cat5.png`} alt="" /></div>
+                                                <img src={`/assets/images/icon/cat5.png`} alt="" /></div>
                                         </a>
                                         <div className="category-details">
                                             <a href="#">
@@ -74,7 +74,7 @@ class ElementCategory extends Component {
                                     <div className="category-block">
                                         <a href="#">
                                             <div className="category-image">
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/icon/cat6.png`} alt="" /></div>
+                                                <img src={`/assets/images/icon/cat6.png`} alt="" /></div>
                                         </a>
                                         <div className="category-details">
                                             <a href="#">
@@ -85,7 +85,7 @@ class ElementCategory extends Component {
                                     <div className="category-block">
                                         <a href="#">
                                             <div className="category-image">
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/icon/cat2.png`} alt="" /></div>
+                                                <img src={`/assets/images/icon/cat2.png`} alt="" /></div>
                                         </a>
                                         <div className="category-details">
                                             <a href="#">
@@ -96,7 +96,7 @@ class ElementCategory extends Component {
                                     <div className="category-block">
                                         <a href="#">
                                             <div className="category-image">
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/icon/cat3.png`} alt="" /></div>
+                                                <img src={`/assets/images/icon/cat3.png`} alt="" /></div>
                                         </a>
                                         <div className="category-details">
                                             <a href="#">
@@ -117,7 +117,7 @@ class ElementCategory extends Component {
                             <div className="col-sm-4 border-padding">
                                 <div className="category-banner">
                                     <div>
-                                        <img src={`${process.env.PUBLIC_URL}/assets/images/cat1.png`} className="img-fluid blur-up lazyload bg-img"
+                                        <img src={`/assets/images/cat1.png`} className="img-fluid blur-up lazyload bg-img"
                                              alt="" />
                                     </div>
                                     <div className="category-box">
@@ -130,7 +130,7 @@ class ElementCategory extends Component {
                             <div className="col-sm-4 border-padding">
                                 <div className="category-banner">
                                     <div>
-                                        <img src={`${process.env.PUBLIC_URL}/assets/images/cat2.png`} className="img-fluid blur-up lazyload bg-img"
+                                        <img src={`/assets/images/cat2.png`} className="img-fluid blur-up lazyload bg-img"
                                              alt="" />
                                     </div>
                                     <div className="category-box">
@@ -143,7 +143,7 @@ class ElementCategory extends Component {
                             <div className="col-sm-4 border-padding">
                                 <div className="category-banner">
                                     <div>
-                                        <img src={`${process.env.PUBLIC_URL}/assets/images/cat3.png`} className="img-fluid blur-up lazyload bg-img"
+                                        <img src={`/assets/images/cat3.png`} className="img-fluid blur-up lazyload bg-img"
                                              alt="" />
                                     </div>
                                     <div className="category-box">
@@ -177,7 +177,7 @@ class ElementCategory extends Component {
                         <div className="row order-section">
                             <div className="col-sm-4 p-0">
                                 <a href="#" className="image-block">
-                                    <img alt="" src={`${process.env.PUBLIC_URL}/assets/images/cat1.jpg`} className="img-fluid blur-up lazyload bg-img" />
+                                    <img alt="" src={`/assets/images/cat1.jpg`} className="img-fluid blur-up lazyload bg-img" />
                                 </a>
                             </div>
                             <div className="col-sm-4 p-0">
@@ -195,7 +195,7 @@ class ElementCategory extends Component {
                             </div>
                             <div className="col-sm-4 p-0">
                                 <a href="#" className="image-block">
-                                    <img alt="" src={`${process.env.PUBLIC_URL}/assets/images/cat2.jpg`} className="img-fluid blur-up lazyload bg-img" /></a>
+                                    <img alt="" src={`/assets/images/cat2.jpg`} className="img-fluid blur-up lazyload bg-img" /></a>
                             </div>
                             <div className="col-sm-4 p-0">
                                 <div className="contain-block">
@@ -212,7 +212,7 @@ class ElementCategory extends Component {
                             </div>
                             <div className="col-sm-4 p-0">
                                 <a href="#" className="image-block even">
-                                    <img alt="" src={`${process.env.PUBLIC_URL}/assets/images/cat3.jpg`} className="img-fluid blur-up lazyload bg-img" /></a>
+                                    <img alt="" src={`/assets/images/cat3.jpg`} className="img-fluid blur-up lazyload bg-img" /></a>
                             </div>
                             <div className="col-sm-4 p-0">
                                 <div className="contain-block">
@@ -241,7 +241,7 @@ class ElementCategory extends Component {
                                         <div className="category-wrapper">
                                             <div>
                                                 <div>
-                                                    <img src={`${process.env.PUBLIC_URL}/assets/images/watch/cat1.png`}
+                                                    <img src={`/assets/images/watch/cat1.png`}
                                                          className="img-fluid blur-up lazyload bg-img" alt="" />
                                                 </div>
                                                 <h4>watch models</h4>
@@ -258,7 +258,7 @@ class ElementCategory extends Component {
                                         <div className="category-wrapper">
                                             <div>
                                                 <div>
-                                                    <img src={`${process.env.PUBLIC_URL}/assets/images/watch/cat2.png`}
+                                                    <img src={`/assets/images/watch/cat2.png`}
                                                          className="img-fluid blur-up lazyload bg-img" alt="" />
                                                 </div>
                                                 <h4>calculator watch</h4>
@@ -274,7 +274,7 @@ class ElementCategory extends Component {
                                     <div className="category-wrapper">
                                         <div>
                                             <div>
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/watch/cat3.png`}
+                                                <img src={`/assets/images/watch/cat3.png`}
                                                      className="img-fluid blur-up lazyload bg-img" alt="" />
                                             </div>
                                             <h4>Antimagnetic watch</h4>
@@ -289,7 +289,7 @@ class ElementCategory extends Component {
                                     <div className="category-wrapper">
                                         <div>
                                             <div>
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/watch/cat2.png`}
+                                                <img src={`/assets/images/watch/cat2.png`}
                                                      className="img-fluid blur-up lazyload bg-img" alt="" />
                                             </div>
                                             <h4>History of watches</h4>
@@ -304,7 +304,7 @@ class ElementCategory extends Component {
                                     <div className="category-wrapper">
                                         <div>
                                             <div>
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/watch/cat1.png`}
+                                                <img src={`/assets/images/watch/cat1.png`}
                                                      className="img-fluid blur-up lazyload bg-img" alt="" />
                                             </div>
                                             <h4>watch models</h4>

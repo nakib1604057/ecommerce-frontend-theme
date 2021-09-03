@@ -25,7 +25,7 @@ class Watch extends Component {
 	componentDidMount() {
 		document
 			.getElementById("color")
-			.setAttribute("href", `${process.env.PUBLIC_URL}/assets/css/color4.css`);
+			.setAttribute("href", `/assets/css/color4.css`);
 	}
 
 	render() {
@@ -135,7 +135,7 @@ class Watch extends Component {
 											<div>
 												<div>
 													<img
-														src={`${process.env.PUBLIC_URL}/assets/images/watch/cat1.png`}
+														src={`/assets/images/watch/cat1.png`}
 														className="img-fluid blur-up lazyload bg-img"
 														alt=""
 													/>
@@ -166,7 +166,7 @@ class Watch extends Component {
 											<div>
 												<div>
 													<img
-														src={`${process.env.PUBLIC_URL}/assets/images/watch/cat2.png`}
+														src={`/assets/images/watch/cat2.png`}
 														className="img-fluid blur-up lazyload bg-img"
 														alt=""
 													/>
@@ -197,7 +197,7 @@ class Watch extends Component {
 											<div>
 												<div>
 													<img
-														src={`${process.env.PUBLIC_URL}/assets/images/watch/cat3.png`}
+														src={`/assets/images/watch/cat3.png`}
 														className="img-fluid blur-up lazyload bg-img"
 														alt=""
 													/>
@@ -228,7 +228,7 @@ class Watch extends Component {
 											<div>
 												<div>
 													<img
-														src={`${process.env.PUBLIC_URL}/assets/images/watch/cat2.png`}
+														src={`/assets/images/watch/cat2.png`}
 														className="img-fluid blur-up lazyload bg-img"
 														alt=""
 													/>
@@ -259,7 +259,7 @@ class Watch extends Component {
 											<div>
 												<div>
 													<img
-														src={`${process.env.PUBLIC_URL}/assets/images/watch/cat1.png`}
+														src={`/assets/images/watch/cat1.png`}
 														className="img-fluid blur-up lazyload bg-img"
 														alt=""
 													/>
@@ -309,7 +309,7 @@ class Watch extends Component {
 									<div className="collection-banner p-left">
 										<div className="img-part">
 											<img
-												src={`${process.env.PUBLIC_URL}/assets/images/banner1.jpg`}
+												src={`/assets/images/banner1.jpg`}
 												className="img-fluid blur-up lazyload bg-img"
 												alt=""
 											/>
@@ -328,7 +328,7 @@ class Watch extends Component {
 									<div className="collection-banner p-left text-left">
 										<div className="img-part">
 											<img
-												src={`${process.env.PUBLIC_URL}/assets/images/banner2.jpg`}
+												src={`/assets/images/banner2.jpg`}
 												className="img-fluid blur-up lazyload bg-img"
 												alt=""
 											/>
@@ -341,7 +341,7 @@ class Watch extends Component {
 									<div className="collection-banner p-left">
 										<div className="img-part">
 											<img
-												src={`${process.env.PUBLIC_URL}/assets/images/banner.jpg`}
+												src={`/assets/images/banner.jpg`}
 												className="img-fluid blur-up lazyload bg-img"
 												alt=""
 											/>

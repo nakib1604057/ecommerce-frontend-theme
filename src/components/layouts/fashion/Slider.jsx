@@ -24,7 +24,7 @@ const main = () => {
                                     <div>
                                         <h4>welcome to bay Of Style</h4>
                                         <h1>men fashion</h1>
-                                        <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} className="btn btn-solid">shop now</Link>
+                                        <Link to={`/left-sidebar/collection`} className="btn btn-solid">shop now</Link>
                                     </div>
                                 </div>
                             </div>
@@ -43,7 +43,7 @@ const main = () => {
                                         <div>
                                             <h4>welcome to fashion</h4>
                                             <h1>women fashion</h1>
-                                            <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} className="btn btn-solid">shop now</Link>
+                                            <Link to={`/left-sidebar/collection`} className="btn btn-solid">shop now</Link>
                                         </div>
                                     </div>
                                 </div>

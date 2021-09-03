@@ -56,16 +56,16 @@ class FooterTwo extends Component {
                                             </div>
                                             <div className="footer-contant">
                                                 <ul>
-                                                    <li><Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} >womens</Link></li>
-                                                    <li><Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} >clothing</Link></li>
-                                                    <li><Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} >accessories</Link></li>
-                                                    <li><Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} >featured</Link></li>
-                                                    <li><Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} >service</Link></li>
-                                                    <li><Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} >cart</Link></li>
-                                                    <li><Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} >my order</Link></li>
-                                                    <li><Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} >FAQ</Link></li>
-                                                    <li><Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} >new product</Link></li>
-                                                    <li><Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} >featured product</Link></li>
+                                                    <li><Link to={`/left-sidebar/collection`} >womens</Link></li>
+                                                    <li><Link to={`/left-sidebar/collection`} >clothing</Link></li>
+                                                    <li><Link to={`/left-sidebar/collection`} >accessories</Link></li>
+                                                    <li><Link to={`/left-sidebar/collection`} >featured</Link></li>
+                                                    <li><Link to={`/left-sidebar/collection`} >service</Link></li>
+                                                    <li><Link to={`/left-sidebar/collection`} >cart</Link></li>
+                                                    <li><Link to={`/left-sidebar/collection`} >my order</Link></li>
+                                                    <li><Link to={`/left-sidebar/collection`} >FAQ</Link></li>
+                                                    <li><Link to={`/left-sidebar/collection`} >new product</Link></li>
+                                                    <li><Link to={`/left-sidebar/collection`} >featured product</Link></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -87,19 +87,19 @@ class FooterTwo extends Component {
                                     <div className="payment-card-bottom">
                                         <ul>
                                             <li>
-                                                <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/icon/visa.png`} alt="" /></a>
+                                                <a href="#"><img src={`/assets/images/icon/visa.png`} alt="" /></a>
                                             </li>
                                             <li>
-                                                <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/icon/mastercard.png`} alt="" /></a>
+                                                <a href="#"><img src={`/assets/images/icon/mastercard.png`} alt="" /></a>
                                             </li>
                                             <li>
-                                                <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/icon/paypal.png`} alt="" /></a>
+                                                <a href="#"><img src={`/assets/images/icon/paypal.png`} alt="" /></a>
                                             </li>
                                             <li>
-                                                <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/icon/american-express.png`} alt="" /></a>
+                                                <a href="#"><img src={`/assets/images/icon/american-express.png`} alt="" /></a>
                                             </li>
                                             <li>
-                                                <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/icon/discover.png`} alt="" /></a>
+                                                <a href="#"><img src={`/assets/images/icon/discover.png`} alt="" /></a>
                                             </li>
                                         </ul>
                                     </div>

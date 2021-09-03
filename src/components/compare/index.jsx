@@ -63,7 +63,7 @@ class Compare extends Component {
                                                     <span aria-hidden="true">×</span>
                                                 </button>
                                                 <div className="img-secton">
-                                                    <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${item.id}`}>
+                                                    <Link to={`/left-sidebar/product/${item.id}`}>
                                                     <img src={item.variants?
                                                                 item.variants[0].images
                                                                 :item.pictures[0]} className="img-fluid" alt="" />
@@ -129,7 +129,7 @@ class Compare extends Component {
                             <div className="col-sm-12">
                                 <div >
                                     <div className="col-sm-12 empty-cart-cls text-center">
-                                        <img src={`${process.env.PUBLIC_URL}/assets/images/empty-compare.png`} className="img-fluid mb-4" alt="" />
+                                        <img src={`/assets/images/empty-compare.png`} className="img-fluid mb-4" alt="" />
                                         <h3>
                                             <strong>Compare List is Empty</strong>
                                         </h3>

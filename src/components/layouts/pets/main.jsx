@@ -15,7 +15,7 @@ class Pets extends Component {
 	componentDidMount() {
 		document
 			.getElementById("color")
-			.setAttribute("href", `${process.env.PUBLIC_URL}/assets/css/color15.css`);
+			.setAttribute("href", `/assets/css/color15.css`);
 	}
 
 	render() {
@@ -81,7 +81,7 @@ class Pets extends Component {
 									<div className="collection-banner p-left">
 										<div className="img-part">
 											<img
-												src={`${process.env.PUBLIC_URL}/assets/images/pets/banner/1.jpg`}
+												src={`/assets/images/pets/banner/1.jpg`}
 												className="img-fluid blur-up lazyload bg-img"
 												alt=""
 											/>
@@ -99,7 +99,7 @@ class Pets extends Component {
 									<div className="collection-banner p-right text-right">
 										<div className="img-part">
 											<img
-												src={`${process.env.PUBLIC_URL}/assets/images/pets/banner/2.jpg`}
+												src={`/assets/images/pets/banner/2.jpg`}
 												className="img-fluid blur-up lazyload bg-img"
 												alt=""
 											/>
@@ -117,7 +117,7 @@ class Pets extends Component {
 									<div className="collection-banner p-left">
 										<div className="img-part">
 											<img
-												src={`${process.env.PUBLIC_URL}/assets/images/pets/banner/3.jpg`}
+												src={`/assets/images/pets/banner/3.jpg`}
 												className="img-fluid blur-up lazyload bg-img"
 												alt=""
 											/>
@@ -137,7 +137,7 @@ class Pets extends Component {
 									<div className="collection-banner p-right">
 										<div className="img-part">
 											<img
-												src={`${process.env.PUBLIC_URL}/assets/images/pets/banner/4.jpg`}
+												src={`/assets/images/pets/banner/4.jpg`}
 												className="img-fluid blur-up lazyload bg-img"
 												alt=""
 											/>
@@ -155,7 +155,7 @@ class Pets extends Component {
 									<div className="collection-banner p-right text-right">
 										<div className="img-part">
 											<img
-												src={`${process.env.PUBLIC_URL}/assets/images/pets/banner/5.jpg`}
+												src={`/assets/images/pets/banner/5.jpg`}
 												className="img-fluid blur-up lazyload bg-img"
 												alt=""
 											/>
@@ -173,7 +173,7 @@ class Pets extends Component {
 									<div className="collection-banner p-right">
 										<div className="img-part">
 											<img
-												src={`${process.env.PUBLIC_URL}/assets/images/pets/banner/6.jpg`}
+												src={`/assets/images/pets/banner/6.jpg`}
 												className="img-fluid blur-up lazyload bg-img"
 												alt=""
 											/>
@@ -228,7 +228,7 @@ class Pets extends Component {
 						</div>
 						<div className="pet-decor">
 							<img
-								src={`${process.env.PUBLIC_URL}/assets/images/dog.png`}
+								src={`/assets/images/dog.png`}
 								alt=""
 								className="img-fluid blur-up lazyload"
 							/>

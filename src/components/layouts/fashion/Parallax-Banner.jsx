@@ -8,7 +8,7 @@ const main = () => {
 					<div className="row">
 						<div className="col">
 							<div className="banner-contain">
-								<h2>2018</h2>
+								
 								<h3>fashion trends</h3>
 								<h4>special offer</h4>
 							</div>

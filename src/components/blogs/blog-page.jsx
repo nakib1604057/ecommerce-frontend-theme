@@ -26,7 +26,7 @@ class BlogPage extends Component {
                                         <ul className="recent-blog">
                                             <li>
                                                 <div className="media">
-                                                    <img className="img-fluid" src={`${process.env.PUBLIC_URL}/assets/images/blog/1.jpg`}
+                                                    <img className="img-fluid" src={`/assets/images/blog/1.jpg`}
                                                          alt="Generic placeholder image" />
                                                         <div className="media-body align-self-center">
                                                             <h6>25 Dec 2018</h6>
@@ -36,7 +36,7 @@ class BlogPage extends Component {
                                             </li>
                                             <li>
                                                 <div className="media">
-                                                    <img className="img-fluid" src={`${process.env.PUBLIC_URL}/assets/images/blog/2.jpg`}
+                                                    <img className="img-fluid" src={`/assets/images/blog/2.jpg`}
                                                          alt="Generic placeholder image" />
                                                         <div className="media-body align-self-center">
                                                             <h6>25 Dec 2018</h6>
@@ -46,7 +46,7 @@ class BlogPage extends Component {
                                             </li>
                                             <li>
                                                 <div className="media">
-                                                    <img className="img-fluid" src={`${process.env.PUBLIC_URL}/assets/images/blog/3.jpg`}
+                                                    <img className="img-fluid" src={`/assets/images/blog/3.jpg`}
                                                          alt="Generic placeholder image" />
                                                         <div className="media-body align-self-center">
                                                             <h6>25 Dec 2018</h6>
@@ -56,7 +56,7 @@ class BlogPage extends Component {
                                             </li>
                                             <li>
                                                 <div className="media">
-                                                    <img className="img-fluid" src={`${process.env.PUBLIC_URL}/assets/images/blog/4.jpg`}
+                                                    <img className="img-fluid" src={`/assets/images/blog/4.jpg`}
                                                          alt="Generic placeholder image" />
                                                         <div className="media-body align-self-center">
                                                             <h6>25 Dec 2018</h6>
@@ -66,7 +66,7 @@ class BlogPage extends Component {
                                             </li>
                                             <li>
                                                 <div className="media">
-                                                    <img className="img-fluid" src={`${process.env.PUBLIC_URL}/assets/images/blog/5.jpg`}
+                                                    <img className="img-fluid" src={`/assets/images/blog/5.jpg`}
                                                          alt="Generic placeholder image" />
                                                         <div className="media-body align-self-center">
                                                             <h6>25 Dec 2018</h6>
@@ -140,8 +140,8 @@ class BlogPage extends Component {
                                 <div className="row blog-media">
                                     <div className="col-xl-6">
                                         <div className="blog-left">
-                                            <Link to={`${process.env.PUBLIC_URL}/blog/details`} >
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/blog/1.jpg`} className="img-fluid" alt=""/>
+                                            <Link to={`/blog/details`} >
+                                                <img src={`/assets/images/blog/1.jpg`} className="img-fluid" alt=""/>
                                             </Link>
                                         </div>
                                     </div>
@@ -149,7 +149,7 @@ class BlogPage extends Component {
                                         <div className="blog-right">
                                             <div>
                                                 <h6>25 January 2018</h6>
-                                                <Link to={`${process.env.PUBLIC_URL}/blog/details`} ><h4>you how all this mistaken idea of denouncing pleasure
+                                                <Link to={`/blog/details`} ><h4>you how all this mistaken idea of denouncing pleasure
                                                     and praising pain was born.</h4></Link>
                                                 <ul className="post-social">
                                                     <li>Posted By : Admin Admin</li>
@@ -167,8 +167,8 @@ class BlogPage extends Component {
                                 <div className="row blog-media">
                                     <div className="col-xl-6">
                                         <div className="blog-left">
-                                            <Link to={`${process.env.PUBLIC_URL}/blog/details`} >
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/blog/2.jpg`} className="img-fluid"
+                                            <Link to={`/blog/details`} >
+                                                <img src={`/assets/images/blog/2.jpg`} className="img-fluid"
                                                              alt=""/></Link>
                                         </div>
                                     </div>
@@ -176,7 +176,7 @@ class BlogPage extends Component {
                                         <div className="blog-right">
                                             <div>
                                                 <h6>25 January 2018</h6>
-                                                <Link to={`${process.env.PUBLIC_URL}/blog/details`} >
+                                                <Link to={`/blog/details`} >
                                                     <h4>you how all this mistaken idea of denouncing pleasure
                                                     and praising pain was born.</h4></Link>
                                                 <ul className="post-social">
@@ -195,7 +195,7 @@ class BlogPage extends Component {
                                 <div className="row blog-media">
                                     <div className="col-xl-6">
                                         <div className="blog-left">
-                                            <Link to={`${process.env.PUBLIC_URL}/blog/details`} ><img src={`${process.env.PUBLIC_URL}/assets/images/blog/3.jpg`} className="img-fluid"
+                                            <Link to={`/blog/details`} ><img src={`/assets/images/blog/3.jpg`} className="img-fluid"
                                                              alt=""/></Link>
                                         </div>
                                     </div>
@@ -203,7 +203,7 @@ class BlogPage extends Component {
                                         <div className="blog-right">
                                             <div>
                                                 <h6>25 January 2018</h6>
-                                                <Link to={`${process.env.PUBLIC_URL}/blog/details`} ><h4>you how all this mistaken idea of denouncing pleasure
+                                                <Link to={`/blog/details`} ><h4>you how all this mistaken idea of denouncing pleasure
                                                     and praising pain was born.</h4></Link>
                                                 <ul className="post-social">
                                                     <li>Posted By : Admin Admin</li>
@@ -221,8 +221,8 @@ class BlogPage extends Component {
                                 <div className="row blog-media">
                                     <div className="col-xl-6">
                                         <div className="blog-left">
-                                            <Link to={`${process.env.PUBLIC_URL}/blog/details`} >
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/blog/4.jpg`} className="img-fluid"
+                                            <Link to={`/blog/details`} >
+                                                <img src={`/assets/images/blog/4.jpg`} className="img-fluid"
                                                              alt=""/></Link>
                                         </div>
                                     </div>
@@ -230,7 +230,7 @@ class BlogPage extends Component {
                                         <div className="blog-right">
                                             <div>
                                                 <h6>25 January 2018</h6>
-                                                <Link to={`${process.env.PUBLIC_URL}/blog/details`} >
+                                                <Link to={`/blog/details`} >
                                                     <h4>you how all this mistaken idea of denouncing pleasure
                                                     and praising pain was born.</h4></Link>
                                                 <ul className="post-social">

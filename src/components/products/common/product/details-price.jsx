@@ -200,7 +200,7 @@ class DetailsWithPrice extends Component {
               <h4>
                 <del>TK {this.state.regularPrice}</del>
                 <span>
-                  {100 - (this.state.price / this.state.regularPrice) * 100}%
+                  {(100 - (this.state.price / this.state.regularPrice) * 100).toFixed(0)}%
                   off
                 </span>
               </h4>
@@ -280,7 +280,7 @@ class DetailsWithPrice extends Component {
               add to cart
             </a>
             <Link
-              to={`${process.env.PUBLIC_URL}/checkout`}
+              to={`/checkout`}
               className="btn btn-solid"
               onClick={() => BuynowClicked(item, this.state.quantity)}
             >

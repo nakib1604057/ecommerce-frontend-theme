@@ -41,12 +41,12 @@ class SmallImages extends Component {
                 <img
                   src={
                     vari.file_name
-                      ? "https://dlgb.bayofstyle.com/uploads/" + vari.file_name
+                      ? urls.IMAGE_URL + vari.file_name
                       : defaultImage
                   }
                   key={index}
                   alt=""
-                  className="img-fluid"
+                  className="img-fluid blur-up lazyload"
                 />
               </div>
             ))}

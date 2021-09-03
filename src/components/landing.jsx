@@ -120,7 +120,7 @@ class Landing extends Component {
 									<div className="logo pl-2">
 										<a className="navbar-brand" href="#">
 											<img
-												src={`${process.env.PUBLIC_URL}/assets/images/landing-page/header/logo.png`}
+												src={`/assets/images/landing-page/header/logo.png`}
 												alt="logo"
 											/>
 										</a>
@@ -217,7 +217,7 @@ class Landing extends Component {
 									The <span>BEST SELLING</span> Minimal Theme
 								</h3>
 								<img
-									src={`${process.env.PUBLIC_URL}/assets/images/landing-page/text.png`}
+									src={`/assets/images/landing-page/text.png`}
 									alt=""
 									className="img-fluid"
 								/>
@@ -226,77 +226,77 @@ class Landing extends Component {
 						<div className="home-decor">
 							<div className="decor-1 decor wow zoomIn" id="img-1">
 								<img
-									src={`${process.env.PUBLIC_URL}/assets/images/landing-page/slider/1.png`}
+									src={`/assets/images/landing-page/slider/1.png`}
 									alt=""
 									className="img-fluid lazyload"
 								/>
 							</div>
 							<div className="decor-2 decor wow zoomIn" id="img-2">
 								<img
-									src={`${process.env.PUBLIC_URL}/assets/images/landing-page/slider/5.png`}
+									src={`/assets/images/landing-page/slider/5.png`}
 									alt=""
 									className=" img-fluid lazyload"
 								/>
 							</div>
 							<div className="decor-3 decor wow zoomIn" id="img-3">
 								<img
-									src={`${process.env.PUBLIC_URL}/assets/images/landing-page/slider/2.png`}
+									src={`/assets/images/landing-page/slider/2.png`}
 									alt=""
 									className=" img-fluid lazyload"
 								/>
 							</div>
 							<div className="decor-4 decor wow zoomIn" id="img-4">
 								<img
-									src={`${process.env.PUBLIC_URL}/assets/images/landing-page/slider/4.png`}
+									src={`/assets/images/landing-page/slider/4.png`}
 									alt=""
 									className=" img-fluid lazyload"
 								/>
 							</div>
 							<div className="decor-5 decor wow zoomIn" id="img-5">
 								<img
-									src={`${process.env.PUBLIC_URL}/assets/images/landing-page/slider/3.png`}
+									src={`/assets/images/landing-page/slider/3.png`}
 									alt=""
 									className=" img-fluid lazyload"
 								/>
 							</div>
 							<div className="decor-6 decor wow zoomIn" id="img-6">
 								<img
-									src={`${process.env.PUBLIC_URL}/assets/images/landing-page/slider/6.png`}
+									src={`/assets/images/landing-page/slider/6.png`}
 									alt=""
 									className=" img-fluid lazyload"
 								/>
 							</div>
 							<div className="decor-7 decor wow zoomIn" id="img-7">
 								<img
-									src={`${process.env.PUBLIC_URL}/assets/images/landing-page/slider/11.png`}
+									src={`/assets/images/landing-page/slider/11.png`}
 									alt=""
 									className=" img-fluid lazyload"
 								/>
 							</div>
 							<div className="decor-8 decor wow zoomIn" id="img-8">
 								<img
-									src={`${process.env.PUBLIC_URL}/assets/images/landing-page/slider/7.png`}
+									src={`/assets/images/landing-page/slider/7.png`}
 									alt=""
 									className=" img-fluid lazyload"
 								/>
 							</div>
 							<div className="decor-9 decor wow zoomIn" id="img-9">
 								<img
-									src={`${process.env.PUBLIC_URL}/assets/images/landing-page/slider/8.png`}
+									src={`/assets/images/landing-page/slider/8.png`}
 									alt=""
 									className=" img-fluid lazyload"
 								/>
 							</div>
 							<div className="decor-10 decor wow zoomIn" id="img-10">
 								<img
-									src={`${process.env.PUBLIC_URL}/assets/images/landing-page/slider/10.png`}
+									src={`/assets/images/landing-page/slider/10.png`}
 									alt=""
 									className=" img-fluid lazyload"
 								/>
 							</div>
 							<div className="decor-11 decor wow zoomIn" id="img-11">
 								<img
-									src={`${process.env.PUBLIC_URL}/assets/images/landing-page/slider/9.png`}
+									src={`/assets/images/landing-page/slider/9.png`}
 									alt=""
 									className=" img-fluid lazyload"
 								/>
@@ -333,7 +333,7 @@ class Landing extends Component {
 									<div className="feature-image">
 										<img
 											className="img-fluid lazyload"
-											src={`${process.env.PUBLIC_URL}/assets/images/landing-page/main-features/demo.png`}
+											src={`/assets/images/landing-page/main-features/demo.png`}
 											alt="img"
 										/>
 									</div>
@@ -356,7 +356,7 @@ class Landing extends Component {
 									<div className="feature-image">
 										<img
 											className="img-fluid lazyload"
-											src={`${process.env.PUBLIC_URL}/assets/images/landing-page/main-features/dashboard.png`}
+											src={`/assets/images/landing-page/main-features/dashboard.png`}
 											alt="img"
 										/>
 									</div>
@@ -380,7 +380,7 @@ class Landing extends Component {
 									<div className="feature-image">
 										<img
 											className="img-fluid lazyload"
-											src={`${process.env.PUBLIC_URL}/assets/images/landing-page/main-features/email.png`}
+											src={`/assets/images/landing-page/main-features/email.png`}
 											alt="img"
 										/>
 									</div>
@@ -403,7 +403,7 @@ class Landing extends Component {
 									<div className="feature-image">
 										<img
 											className="img-fluid lazyload"
-											src={`${process.env.PUBLIC_URL}/assets/images/landing-page/main-features/portfoio.png`}
+											src={`/assets/images/landing-page/main-features/portfoio.png`}
 											alt="img"
 										/>
 									</div>
@@ -426,7 +426,7 @@ class Landing extends Component {
 									<div className="feature-image">
 										<img
 											className="img-fluid lazyload"
-											src={`${process.env.PUBLIC_URL}/assets/images/landing-page/main-features/lazy.png`}
+											src={`/assets/images/landing-page/main-features/lazy.png`}
 											alt="img"
 										/>
 									</div>
@@ -450,7 +450,7 @@ class Landing extends Component {
 									<div className="feature-image">
 										<img
 											className="img-fluid lazyload"
-											src={`${process.env.PUBLIC_URL}/assets/images/landing-page/main-features/Unlimited-product-size.png`}
+											src={`/assets/images/landing-page/main-features/Unlimited-product-size.png`}
 											alt="img"
 										/>
 									</div>
@@ -474,7 +474,7 @@ class Landing extends Component {
 									<div className="feature-image">
 										<img
 											className="img-fluid lazyload"
-											src={`${process.env.PUBLIC_URL}/assets/images/landing-page/main-features/Dark-light.png`}
+											src={`/assets/images/landing-page/main-features/Dark-light.png`}
 											alt="img"
 										/>
 									</div>
@@ -497,7 +497,7 @@ class Landing extends Component {
 									<div className="feature-image">
 										<img
 											className="img-fluid lazyload"
-											src={`${process.env.PUBLIC_URL}/assets/images/landing-page/main-features/rtl.png`}
+											src={`/assets/images/landing-page/main-features/rtl.png`}
 											alt="img"
 										/>
 									</div>
@@ -552,11 +552,11 @@ class Landing extends Component {
 									<div className="row">
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/fashion`}
+												to={`/fashion`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/1.jpg`}
+													src={`/assets/images/landing-page/special features/1.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -564,11 +564,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/pets`}
+												to={`/pets`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/8.jpg`}
+													src={`/assets/images/landing-page/special features/8.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -578,11 +578,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/watch`}
+												to={`/watch`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/15.jpg`}
+													src={`/assets/images/landing-page/special features/15.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -592,11 +592,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/kids`}
+												to={`/kids`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/16.jpg`}
+													src={`/assets/images/landing-page/special features/16.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -606,11 +606,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/vegetables`}
+												to={`/vegetables`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/19.jpg`}
+													src={`/assets/images/landing-page/special features/19.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -621,11 +621,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/beauty`}
+												to={`/beauty`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/20.jpg`}
+													src={`/assets/images/landing-page/special features/20.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -635,11 +635,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/electronic`}
+												to={`/electronic`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/25.jpg`}
+													src={`/assets/images/landing-page/special features/25.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -650,11 +650,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/furniture`}
+												to={`/furniture`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/30.jpg`}
+													src={`/assets/images/landing-page/special features/30.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -671,11 +671,11 @@ class Landing extends Component {
 									<div className="row">
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/col-left/product/1`}
+												to={`/col-left/product/1`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/product/1.jpg`}
+													src={`/assets/images/landing-page/special features/product/1.jpg`}
 													className="img-fluid lazyload"
 												/>
 												<h3>3 col left</h3>
@@ -683,11 +683,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/col-left/product/1`}
+												to={`/col-left/product/1`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/product/2.jpg`}
+													src={`/assets/images/landing-page/special features/product/2.jpg`}
 													className="img-fluid lazyload"
 												/>
 												<h3>3 col right</h3>
@@ -695,11 +695,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/column/product/1`}
+												to={`/column/product/1`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/product/3.jpg`}
+													src={`/assets/images/landing-page/special features/product/3.jpg`}
 													className="img-fluid lazyload"
 												/>
 												<h3>3 column</h3>
@@ -707,11 +707,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/accordian/product/1`}
+												to={`/accordian/product/1`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/product/4.jpg`}
+													src={`/assets/images/landing-page/special features/product/4.jpg`}
 													className="img-fluid lazyload"
 												/>
 												<h3>accordian</h3>
@@ -719,11 +719,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/left-image/product/1`}
+												to={`/left-image/product/1`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/product/5.jpg`}
+													src={`/assets/images/landing-page/special features/product/5.jpg`}
 													className="img-fluid lazyload"
 												/>
 												<h3>left image</h3>
@@ -731,11 +731,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/left-sidebar/product/1`}
+												to={`/left-sidebar/product/1`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/product/6.jpg`}
+													src={`/assets/images/landing-page/special features/product/6.jpg`}
 													className="img-fluid lazyload"
 												/>
 												<h3>left sidebar</h3>
@@ -743,11 +743,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/no-sidebar/product/1`}
+												to={`/no-sidebar/product/1`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/product/7.jpg`}
+													src={`/assets/images/landing-page/special features/product/7.jpg`}
 													className="img-fluid lazyload"
 												/>
 												<h3>no sidebar</h3>
@@ -755,11 +755,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/right-image/product/1`}
+												to={`/right-image/product/1`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/product/8.jpg`}
+													src={`/assets/images/landing-page/special features/product/8.jpg`}
 													className="img-fluid lazyload"
 												/>
 												<h3>right image</h3>
@@ -767,11 +767,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/right-sidebar/product/1`}
+												to={`/right-sidebar/product/1`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/product/9.jpg`}
+													src={`/assets/images/landing-page/special features/product/9.jpg`}
 													className="img-fluid lazyload"
 												/>
 												<h3>right sidebar</h3>
@@ -779,11 +779,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/vertical/product/1`}
+												to={`/vertical/product/1`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/product/11.jpg`}
+													src={`/assets/images/landing-page/special features/product/11.jpg`}
 													className="img-fluid lazyload"
 												/>
 												<h3>vertical tab</h3>
@@ -797,11 +797,11 @@ class Landing extends Component {
 									<div className="row">
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/metro/collection`}
+												to={`/metro/collection`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/shop/6.jpg`}
+													src={`/assets/images/landing-page/special features/shop/6.jpg`}
 													className="img-fluid lazyload"
 												/>
 												<h3>
@@ -811,11 +811,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/full-width/collection`}
+												to={`/full-width/collection`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/shop/10.jpg`}
+													src={`/assets/images/landing-page/special features/shop/10.jpg`}
 													className="img-fluid lazyload"
 												/>
 												<h3>
@@ -826,11 +826,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}
+												to={`/left-sidebar/collection`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/shop/1.jpg`}
+													src={`/assets/images/landing-page/special features/shop/1.jpg`}
 													className="img-fluid lazyload"
 												/>
 												<h3>left sidebar</h3>
@@ -838,11 +838,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/no-sidebar/collection`}
+												to={`/no-sidebar/collection`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/shop/2.jpg`}
+													src={`/assets/images/landing-page/special features/shop/2.jpg`}
 													className="img-fluid lazyload"
 												/>
 												<h3>no sidebar</h3>
@@ -850,11 +850,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/right-sidebar/collection`}
+												to={`/right-sidebar/collection`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/shop/3.jpg`}
+													src={`/assets/images/landing-page/special features/shop/3.jpg`}
 													className="img-fluid lazyload"
 												/>
 												<h3>right sidebar</h3>
@@ -862,11 +862,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}
+												to={`/left-sidebar/collection`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/shop/4.jpg`}
+													src={`/assets/images/landing-page/special features/shop/4.jpg`}
 													className="img-fluid lazyload"
 												/>
 												<h3>sidebar popup</h3>
@@ -874,11 +874,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}
+												to={`/left-sidebar/collection`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/shop/5.jpg`}
+													src={`/assets/images/landing-page/special features/shop/5.jpg`}
 													className="img-fluid lazyload"
 												/>
 												<h3>infinite scroll</h3>
@@ -886,11 +886,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}
+												to={`/left-sidebar/collection`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/shop/7.jpg`}
+													src={`/assets/images/landing-page/special features/shop/7.jpg`}
 													className="img-fluid lazyload"
 												/>
 												<h3>3 grid</h3>
@@ -898,11 +898,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}
+												to={`/left-sidebar/collection`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/shop/8.jpg`}
+													src={`/assets/images/landing-page/special features/shop/8.jpg`}
 													className="img-fluid lazyload"
 												/>
 												<h3>6 grid</h3>
@@ -910,11 +910,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}
+												to={`/left-sidebar/collection`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/shop/9.jpg`}
+													src={`/assets/images/landing-page/special features/shop/9.jpg`}
 													className="img-fluid lazyload"
 												/>
 												<h3>list view</h3>
@@ -928,11 +928,11 @@ class Landing extends Component {
 									<div className="row">
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/wishlist`}
+												to={`/wishlist`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/other/1.jpg`}
+													src={`/assets/images/landing-page/special features/other/1.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -940,11 +940,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/cart`}
+												to={`/cart`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/other/2.jpg`}
+													src={`/assets/images/landing-page/special features/other/2.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -952,11 +952,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/pages/dashboard`}
+												to={`/pages/dashboard`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/other/3.jpg`}
+													src={`/assets/images/landing-page/special features/other/3.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -964,11 +964,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/pages/login`}
+												to={`/pages/login`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/other/4.jpg`}
+													src={`/assets/images/landing-page/special features/other/4.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -976,11 +976,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/pages/register`}
+												to={`/pages/register`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/other/5.jpg`}
+													src={`/assets/images/landing-page/special features/other/5.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -988,11 +988,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/pages/contact`}
+												to={`/pages/contact`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/other/6.jpg`}
+													src={`/assets/images/landing-page/special features/other/6.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -1000,11 +1000,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/pages/forgot-password`}
+												to={`/pages/forgot-password`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/other/7.jpg`}
+													src={`/assets/images/landing-page/special features/other/7.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -1012,11 +1012,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/checkout`}
+												to={`/checkout`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/other/9.jpg`}
+													src={`/assets/images/landing-page/special features/other/9.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -1024,11 +1024,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/pages/about-us`}
+												to={`/pages/about-us`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/other/10.jpg`}
+													src={`/assets/images/landing-page/special features/other/10.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -1036,11 +1036,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/pages/search`}
+												to={`/pages/search`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/other/11.jpg`}
+													src={`/assets/images/landing-page/special features/other/11.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -1048,11 +1048,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/compare`}
+												to={`/compare`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/other/15.jpg`}
+													src={`/assets/images/landing-page/special features/other/15.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -1060,11 +1060,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/pages/collection`}
+												to={`/pages/collection`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/other/17.jpg`}
+													src={`/assets/images/landing-page/special features/other/17.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -1072,11 +1072,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/pages/lookbook`}
+												to={`/pages/lookbook`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/other/18.jpg`}
+													src={`/assets/images/landing-page/special features/other/18.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -1084,11 +1084,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/pages/404`}
+												to={`/pages/404`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/other/20.jpg`}
+													src={`/assets/images/landing-page/special features/other/20.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -1096,11 +1096,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/pages/faq`}
+												to={`/pages/faq`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/other/22.jpg`}
+													src={`/assets/images/landing-page/special features/other/22.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -1114,11 +1114,11 @@ class Landing extends Component {
 									<div className="row">
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/blog/details`}
+												to={`/blog/details`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/blog/1.jpg`}
+													src={`/assets/images/landing-page/special features/blog/1.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -1126,11 +1126,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/blog/blog-page`}
+												to={`/blog/blog-page`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/blog/3.jpg`}
+													src={`/assets/images/landing-page/special features/blog/3.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -1138,11 +1138,11 @@ class Landing extends Component {
 										</div>
 										<div className="col-xl-3 col-sm-6 col-12 demo-box">
 											<Link
-												to={`${process.env.PUBLIC_URL}/blog/right-sidebar`}
+												to={`/blog/right-sidebar`}
 												target="_blank"
 											>
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/special features/blog/4.jpg`}
+													src={`/assets/images/landing-page/special features/blog/4.jpg`}
 													className="img-fluid lazyload"
 												/>
 											</Link>
@@ -1173,7 +1173,7 @@ class Landing extends Component {
 									target="_blank"
 								>
 									<img
-										src={`${process.env.PUBLIC_URL}/assets/images/landing-page/admin/1.jpg`}
+										src={`/assets/images/landing-page/admin/1.jpg`}
 										className="img-fluid lazyload"
 									/>
 								</a>
@@ -1185,7 +1185,7 @@ class Landing extends Component {
 									target="_blank"
 								>
 									<img
-										src={`${process.env.PUBLIC_URL}/assets/images/landing-page/admin/2.jpg`}
+										src={`/assets/images/landing-page/admin/2.jpg`}
 										className="img-fluid lazyload"
 									/>
 								</a>
@@ -1197,7 +1197,7 @@ class Landing extends Component {
 									target="_blank"
 								>
 									<img
-										src={`${process.env.PUBLIC_URL}/assets/images/landing-page/admin/3.jpg`}
+										src={`/assets/images/landing-page/admin/3.jpg`}
 										className="img-fluid lazyload"
 									/>
 								</a>
@@ -1209,7 +1209,7 @@ class Landing extends Component {
 									target="_blank"
 								>
 									<img
-										src={`${process.env.PUBLIC_URL}/assets/images/landing-page/admin/4.jpg`}
+										src={`/assets/images/landing-page/admin/4.jpg`}
 										className="img-fluid lazyload"
 									/>
 								</a>
@@ -1225,13 +1225,13 @@ class Landing extends Component {
 						<div className="row">
 							<div className="col-md-3 left-part">
 								<img
-									src={`${process.env.PUBLIC_URL}/assets/images/landing-page/email%20template/1.jpg`}
+									src={`/assets/images/landing-page/email%20template/1.jpg`}
 									alt=""
 									className="img-fluid lazyload email-img"
 								/>
 								<div className="sticker">
 									<img
-										src={`${process.env.PUBLIC_URL}/assets/images/landing-page/email%20template/sticker.png`}
+										src={`/assets/images/landing-page/email%20template/sticker.png`}
 										alt=""
 										className="img-fluid lazyload"
 									/>
@@ -1244,13 +1244,13 @@ class Landing extends Component {
 									order success template & two email template{" "}
 								</p>
 								<img
-									src={`${process.env.PUBLIC_URL}/assets/images/landing-page/email%20template/2.jpg`}
+									src={`/assets/images/landing-page/email%20template/2.jpg`}
 									alt=""
 									className="img-fluid lazyload email-img full-img"
 								/>
 								<div className="res-img">
 									<img
-										src={`${process.env.PUBLIC_URL}/assets/images/landing-page/email%20template/1.png`}
+										src={`/assets/images/landing-page/email%20template/1.png`}
 										alt=""
 										className="img-fluid lazyload"
 									/>
@@ -1258,7 +1258,7 @@ class Landing extends Component {
 							</div>
 							<div className="col-md-3 offset-md-1 right-part">
 								<img
-									src={`${process.env.PUBLIC_URL}/assets/images/landing-page/email%20template/3.jpg`}
+									src={`/assets/images/landing-page/email%20template/3.jpg`}
 									alt=""
 									className="img-fluid lazyload email-img"
 								/>
@@ -1285,7 +1285,7 @@ class Landing extends Component {
 										<div className="image-contain">
 											<div className="set-image">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/icon/1.png`}
+													src={`/assets/images/landing-page/icon/1.png`}
 													alt="fetures"
 												/>
 											</div>
@@ -1300,7 +1300,7 @@ class Landing extends Component {
 										<div className="image-contain">
 											<div className="set-image">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/icon/2.png`}
+													src={`/assets/images/landing-page/icon/2.png`}
 													alt="fetures"
 												/>
 											</div>
@@ -1315,7 +1315,7 @@ class Landing extends Component {
 										<div className="image-contain">
 											<div className="set-image">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/icon/3.png`}
+													src={`/assets/images/landing-page/icon/3.png`}
 													alt="fetures"
 												/>
 											</div>
@@ -1330,7 +1330,7 @@ class Landing extends Component {
 										<div className="image-contain">
 											<div className="set-image">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/icon/4.png`}
+													src={`/assets/images/landing-page/icon/4.png`}
 													alt="fetures"
 												/>
 											</div>
@@ -1345,7 +1345,7 @@ class Landing extends Component {
 										<div className="image-contain">
 											<div className="set-image">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/icon/5.png`}
+													src={`/assets/images/landing-page/icon/5.png`}
 													alt="fetures"
 												/>
 											</div>
@@ -1360,7 +1360,7 @@ class Landing extends Component {
 										<div className="image-contain">
 											<div className="set-image">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/icon/6.png`}
+													src={`/assets/images/landing-page/icon/6.png`}
 													alt="fetures"
 												/>
 											</div>
@@ -1375,7 +1375,7 @@ class Landing extends Component {
 										<div className="image-contain">
 											<div className="set-image">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/icon/9.png`}
+													src={`/assets/images/landing-page/icon/9.png`}
 													alt="fetures"
 												/>
 											</div>
@@ -1390,7 +1390,7 @@ class Landing extends Component {
 										<div className="image-contain">
 											<div className="set-image">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/icon/11.png`}
+													src={`/assets/images/landing-page/icon/11.png`}
 													alt="fetures"
 												/>
 											</div>
@@ -1405,7 +1405,7 @@ class Landing extends Component {
 										<div className="image-contain">
 											<div className="set-image">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/icon/12.png`}
+													src={`/assets/images/landing-page/icon/12.png`}
 													alt="fetures"
 												/>
 											</div>
@@ -1420,7 +1420,7 @@ class Landing extends Component {
 										<div className="image-contain">
 											<div className="set-image">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/icon/13.png`}
+													src={`/assets/images/landing-page/icon/13.png`}
 													alt="fetures"
 												/>
 											</div>
@@ -1435,7 +1435,7 @@ class Landing extends Component {
 										<div className="image-contain">
 											<div className="set-image">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/icon/14.png`}
+													src={`/assets/images/landing-page/icon/14.png`}
 													alt="fetures"
 												/>
 											</div>
@@ -1450,7 +1450,7 @@ class Landing extends Component {
 										<div className="image-contain">
 											<div className="set-image">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/icon/15.png`}
+													src={`/assets/images/landing-page/icon/15.png`}
 													alt="fetures"
 												/>
 											</div>
@@ -1465,7 +1465,7 @@ class Landing extends Component {
 										<div className="image-contain">
 											<div className="set-image">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/icon/16.png`}
+													src={`/assets/images/landing-page/icon/16.png`}
 													alt="fetures"
 												/>
 											</div>
@@ -1480,7 +1480,7 @@ class Landing extends Component {
 										<div className="image-contain">
 											<div className="set-image">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/icon/17.png`}
+													src={`/assets/images/landing-page/icon/17.png`}
 													alt="fetures"
 												/>
 											</div>
@@ -1495,7 +1495,7 @@ class Landing extends Component {
 										<div className="image-contain">
 											<div className="set-image">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/icon/19.png`}
+													src={`/assets/images/landing-page/icon/19.png`}
 													alt="fetures"
 												/>
 											</div>
@@ -1510,7 +1510,7 @@ class Landing extends Component {
 										<div className="image-contain">
 											<div className="set-image">
 												<img
-													src={`${process.env.PUBLIC_URL}/assets/images/landing-page/icon/21.png`}
+													src={`/assets/images/landing-page/icon/21.png`}
 													alt="fetures"
 												/>
 											</div>

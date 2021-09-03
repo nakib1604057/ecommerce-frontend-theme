@@ -48,7 +48,7 @@ class CollectionLeftSidebar extends Component {
 											<NewProduct />
 											{/* <div className="collection-sidebar-banner">
                                                 <a href="#">
-                                                    <img src={`${process.env.PUBLIC_URL}/assets/images/side-banner.png`} className="img-fluid" alt="" />
+                                                    <img src={`/assets/images/side-banner.png`} className="img-fluid" alt="" />
                                                 </a>
                                             </div> */}
 										</div>

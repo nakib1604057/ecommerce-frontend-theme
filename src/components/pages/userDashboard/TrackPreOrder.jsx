@@ -33,7 +33,7 @@ const TrackPreOrder = () => {
 					<td>#{item.id}</td>
 					<td>
 						<Link
-						// to={`${process.env.PUBLIC_URL}/product/${item.slug}`}
+						// to={`/product/${item.slug}`}
 						>
 							{item.product_name}
 						</Link>

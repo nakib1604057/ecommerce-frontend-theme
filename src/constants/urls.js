@@ -17,4 +17,8 @@ export const urls = {
   UPDATE_PASSWORD:`api/userinfo/update/password`,
   UPDATE_ADDRESS:`api/userinfo/update/address`,
   PANDING_PREORDER:`api/ecommrece/pre-order/pending/`,
+  GET_DISCOUNTED_PRODUCTS:`api/discounted-products`,
+  GET_RATINGS:`api/ratings/`,
+  POST_RATINGS:`api/rating/`,
+  POST_ORDER:'http://localhost:5000/api/ecommrece/order'
 };

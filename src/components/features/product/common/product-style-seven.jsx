@@ -22,7 +22,7 @@ class ProductStyleSeven extends Component {
                         {(product.sale == true)? <span className="lable4">on sale</span> : ''}
                     </div>
                     <div className="front">
-                        <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${product.id}`} ><img
+                        <Link to={`/left-sidebar/product/${product.id}`} ><img
                             src={product.variants?
                                 product.variants[0].images
                                 :product.pictures[0]}
@@ -38,7 +38,7 @@ class ProductStyleSeven extends Component {
                                title="Quick View">
                             <i className="fa fa-search" aria-hidden="true"></i>
                         </a>
-                        <Link to={`${process.env.PUBLIC_URL}/compare`} title="Compare" onClick={onAddToCompareClicked}>
+                        <Link to={`/compare`} title="Compare" onClick={onAddToCompareClicked}>
                             <i className="fa fa-refresh" aria-hidden="true"></i></Link>
                     </div>
                     <div className="add-button" title="Add to cart" onClick={() => onAddToCartClicked(product, 1)}>
@@ -50,7 +50,7 @@ class ProductStyleSeven extends Component {
                         <div className="rating">
                             {RatingStars}
                         </div>
-                        <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${product.id}`}>
+                        <Link to={`/left-sidebar/product/${product.id}`}>
                             <h6>{product.name}</h6>
                         </Link>
                         <h4>{symbol}{product.price-(product.price*product.discount/100)}</h4>

@@ -47,18 +47,18 @@ class cartComponent extends Component {
 											</tr>
 										</thead>
 										{cartItems.map((item, index) => {
-											console.log(item.price);
+											console.log(item);
 											return (
 												<tbody key={index}>
 													<tr>
 														<td>
 															<Link
-																to={`${process.env.PUBLIC_URL}/product/${item.slug}`}
+																to={`/product/${item.slug}`}
 															>
 																<img
 																	src={
-																		item.img
-																			? urls.IMAGE_URL + item.img.file_name
+																		item.image
+																			? urls.IMAGE_URL + item.image.file_name
 																			: defaultImage
 																	}
 																	alt=""
@@ -67,7 +67,7 @@ class cartComponent extends Component {
 														</td>
 														<td>
 															<Link
-																to={`${process.env.PUBLIC_URL}/product/${item.slug}`}
+																to={`/product/${item.slug}`}
 															>
 																{item.name}
 															</Link>
@@ -175,7 +175,7 @@ class cartComponent extends Component {
 							<div className="row cart-buttons">
 								<div className="col-6">
 									<Link
-										to={`${process.env.PUBLIC_URL}/shop`}
+										to={`/shop`}
 										className="btn btn-solid"
 									>
 										continue shopping
@@ -183,7 +183,7 @@ class cartComponent extends Component {
 								</div>
 								<div className="col-6">
 									<Link
-										to={`${process.env.PUBLIC_URL}/checkout`}
+										to={`/checkout`}
 										className="btn btn-solid"
 									>
 										check out
@@ -200,7 +200,7 @@ class cartComponent extends Component {
 									<div>
 										<div className="col-sm-12 empty-cart-cls text-center">
 											<img
-												src={`${process.env.PUBLIC_URL}/assets/images/icon-empty-cart.png`}
+												src={`/assets/images/icon-empty-cart.png`}
 												className="img-fluid mb-4"
 												alt=""
 											/>

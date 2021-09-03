@@ -36,7 +36,7 @@ class CollectionNoSideBar extends Component {
                                             <div className="row">
                                                 <div className="col-sm-12">
                                                     <div className="top-banner-wrapper">
-                                                        <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/mega-menu/2.jpg`}
+                                                        <a href="#"><img src={`/assets/images/mega-menu/2.jpg`}
                                                                          className="img-fluid" alt=""/></a>
                                                         <div className="top-banner-content small-section">
                                                             <h4>fashion</h4>

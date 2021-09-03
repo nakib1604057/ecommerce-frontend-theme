@@ -1,8 +1,9 @@
 import axiosInstance from "../../api/axiosInstance";
 import { urls } from "../../constants/urls";
+export async function getUserInfo(){
+
 const userData = JSON.parse(localStorage.getItem("userInfo"));
 const email = userData.email ? userData.email : "";
-export async function getUserInfo(){
     const res = await axiosInstance().get(`${urls.GET_USER_INFO}12`)
     return res
 }
@@ -15,6 +16,8 @@ export async function updateGeneralInfo(data) {
 }
 
 export async function updatePassword(data) {
+	const userData = JSON.parse(localStorage.getItem("userInfo"));
+	const email = userData.email ? userData.email : "";
 	const res = await axiosInstance().post(
 		`${urls.updatePassword}`,
 		data
@@ -23,6 +26,8 @@ export async function updatePassword(data) {
 }
 
 export async function updateAddress(data) {
+	const userData = JSON.parse(localStorage.getItem("userInfo"));
+	const email = userData.email ? userData.email : "";
 	const res = await axiosInstance().post(
 		`${urls.updateAddress}`,
 		data
@@ -39,6 +44,8 @@ export async function updateAddress(data) {
 // 	return res;
 // }
 export async function pandingOrders() {
+	const userData = JSON.parse(localStorage.getItem("userInfo"));
+	const email = userData.email ? userData.email : "";
 	// const userData = JSON.parse(localStorage.getItem("userData"));
 	// const email = userData.email ? userData.email : "";
 	const res = await axiosInstance().get(
@@ -48,6 +55,8 @@ export async function pandingOrders() {
 }
 export async function ApipandingPreOrders() {
 	
+const userData = JSON.parse(localStorage.getItem("userInfo"));
+const email = userData.email ? userData.email : "";
 	const res = await axiosInstance().get(
 		`${urls.PANDING_PREORDER}${email}`
 	);

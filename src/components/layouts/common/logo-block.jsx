@@ -15,56 +15,56 @@ class LogoBlock extends Component {
                                 <div>
                                     <div className="logo-block">
                                         <a href={null}>
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/logos/1.png`} alt="" />
+                                            <img src={`/assets/images/logos/1.png`} alt="" />
                                         </a>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="logo-block">
                                         <a href={null}>
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/logos/2.png`} alt="" />
+                                            <img src={`/assets/images/logos/2.png`} alt="" />
                                         </a>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="logo-block">
                                         <a href={null}>
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/logos/3.png`} alt="" />
+                                            <img src={`/assets/images/logos/3.png`} alt="" />
                                         </a>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="logo-block">
                                         <a href={null}>
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/logos/4.png`} alt="" />
+                                            <img src={`/assets/images/logos/4.png`} alt="" />
                                         </a>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="logo-block">
                                         <a href={null}>
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/logos/5.png`} alt="" />
+                                            <img src={`/assets/images/logos/5.png`} alt="" />
                                         </a>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="logo-block">
                                         <a href={null}>
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/logos/6.png`} alt="" />
+                                            <img src={`/assets/images/logos/6.png`} alt="" />
                                         </a>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="logo-block">
                                         <a href={null}>
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/logos/7.png`} alt="" />
+                                            <img src={`/assets/images/logos/7.png`} alt="" />
                                         </a>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="logo-block">
                                         <a href={null}>
-                                            <img src={`${process.env.PUBLIC_URL}/assets/images/logos/8.png`} alt="" />
+                                            <img src={`/assets/images/logos/8.png`} alt="" />
                                         </a>
                                     </div>
                                 </div>

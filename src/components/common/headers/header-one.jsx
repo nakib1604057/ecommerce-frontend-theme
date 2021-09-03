@@ -112,11 +112,11 @@ class HeaderOne extends Component {
 											<div className="icon-nav">
 												<ul>
 													<li className="onhover-div mobile-search">
-														<div><img src={`${process.env.PUBLIC_URL}/assets/images/icon/search.png`} onClick={this.openSearch} className="img-fluid" alt="" />
+														<div><img src={`/assets/images/icon/search.png`} onClick={this.openSearch} className="img-fluid" alt="" />
 															<i className="fa fa-search" onClick={this.openSearch}></i></div>
 													</li>
 													{/* <li className="onhover-div mobile-setting">
-														<div><img src={`${process.env.PUBLIC_URL}/shop`} className="img-fluid" alt="" />
+														<div><img src={`/shop`} className="img-fluid" alt="" />
 															<i className="fa fa-cog"></i>
 															<i className="fa fa-shopify"></i>
 															</div>

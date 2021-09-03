@@ -21,7 +21,7 @@ import {
 
 const Fashion = () => {
     useEffect(() => {
-        // document.getElementById("color").setAttribute("href", `${process.env.PUBLIC_URL}/assets/css/color5.css` );
+        // document.getElementById("color").setAttribute("href", `/assets/css/color5.css` );
     
     }, [])
 	return (
