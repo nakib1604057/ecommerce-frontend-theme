@@ -7,12 +7,14 @@ import SimpleReactValidator from "simple-react-validator";
 import Breadcrumb from "../common/breadcrumb";
 import { removeFromWishlist } from "../../actions";
 import { getCartTotal } from "../../services";
+
 import {
 	defaultImage,
 	bkashImage,
 	rocketImage,
 	nogodImage,
 } from "../../constants/defaultImage";
+import classNames from "classnames";
 
 class checkOut extends Component {
 	constructor(props) {
@@ -29,6 +31,12 @@ class checkOut extends Component {
 			state: "",
 			pincode: "",
 			create_account: "",
+			payment_medium: "Bkash",
+			payment_medium_bkash_number:'0171111101',
+			payment_medium_rocket_number:'0162222202',
+			payment_medium_nogod_number:'0193333303',
+            // payment_option_number:'',
+
 		};
 		this.validator = new SimpleReactValidator();
 	}
@@ -48,7 +56,11 @@ class checkOut extends Component {
 			this.validator.showMessages();
 		}
 	};
-
+	handlePaymentOption(e, value) {
+		e.preventDefault();
+		// console.log(value)
+		this.setState({ payment_medium: value });
+	}
 	checkhandle(value) {
 		this.setState({
 			payment: value,
@@ -65,11 +77,11 @@ class checkOut extends Component {
 				city: this.state.city,
 				houseNo: this.state.address,
 				postCode: this.state.postCode,
-				// "payOption":"1",
-				// "payMedium":"1",
-				// "message":"order",
-				// "payPhnNumber":"01323131",
-				// "transId":"afdwad",
+				payOption:this.state.payment,
+				payMedium:this.state.payment_medium,
+				message:"order",
+				payPhnNumber:"01323131",
+				transId:"afdwad",
 			};
 		} else {
 			this.validator.showMessages();
@@ -383,7 +395,19 @@ class checkOut extends Component {
 																<div className="borderd">
 																	<div className="row">
 																		<div className="col-lg-4 text-center">
-																			<button className="btn w-75 rounded">
+																			<button
+																				className=" w-75 rounded btn"
+																				style={{
+																					border:
+																						this.state.payment_medium ===
+																						"Bkash"
+																							? "1px solid"
+																							: "0px",
+																				}}
+																				onClick={(e) =>
+																					this.handlePaymentOption(e, "Bkash")
+																				}
+																			>
 																				<img
 																					src={bkashImage}
 																					alt=""
@@ -393,7 +417,19 @@ class checkOut extends Component {
 																			</button>
 																		</div>
 																		<div className="col-lg-4 text-center">
-																			<button className="btn w-75 rounded">
+																			<button
+																				className="btn w-75 rounded"
+																				style={{
+																					border:
+																					this.state.payment_medium ===
+																						"Rocket"
+																							? "1px solid"
+																							: "0px",
+																				}}
+																				onClick={(e) =>
+																					this.handlePaymentOption(e, "Rocket")
+																				}
+																			>
 																				<img
 																					src={rocketImage}
 																					alt=""
@@ -404,7 +440,19 @@ class checkOut extends Component {
 																		</div>
 
 																		<div className="col-lg-4 text-center">
-																			<button className="btn w-75 rounded">
+																			<button
+																				className="btn w-75 rounded"
+																				style={{
+																					border:
+																					this.state.payment_medium ===
+																						"Nogod"
+																							? "1px solid"
+																							: "0px",
+																				}}
+																				onClick={(e) =>
+																					this.handlePaymentOption(e, "Nogod")
+																				}
+																			>
 																				<img
 																					src={nogodImage}
 																					alt=""
@@ -414,10 +462,17 @@ class checkOut extends Component {
 																			</button>
 																		</div>
 																	</div>
-																	<div className="text-danger text-center " style={{marginTop:'6px',marginBottom:"6px"}}>
+																	<div
+																		className="text-danger text-center "
+																		style={{
+																			marginTop: "6px",
+																			marginBottom: "6px",
+																		}}
+																	></div>
+																	<div style={{margin:"20px 0px"}} className="text-center text-danger">
 																		<strong>
-																			Please send money to this number 012313212
-																		</strong>{" "}
+																			Please send money to this number {this.state.payment_medium==='Bkash'?(this.state.payment_medium_bkash_number):this.state.payment_medium=='Nogod'?(this.state.payment_medium_nogod_number):(this.state.payment_medium_rocket_number)}
+																		</strong>
 																	</div>
 																	<div className="form-group ">
 																		<div className="field-label">
@@ -425,8 +480,8 @@ class checkOut extends Component {
 																		</div>
 																		<input
 																			type="text"
-																			name="phone"
-																			value={this.state.phone}
+																			name="payphone"
+																			value={this.state.paymentPhoneNumber}
 																			onChange={this.setStateFromInput}
 																		/>
 																	</div>
@@ -435,7 +490,7 @@ class checkOut extends Component {
 																			Transaction Id
 																		</div>
 
-																		<input type="text" />
+																		<input type="text" name="textId" />
 																	</div>
 																</div>
 															) : (
@@ -443,7 +498,7 @@ class checkOut extends Component {
 																	<div className="field-label">
 																		Please write a message
 																	</div>
-																	<textarea name="" id="" rows="10"></textarea>
+																	<textarea name="payment_message" id="" rows="10"></textarea>
 																</div>
 															)}
 															<button

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { pandingOrders } from "../../../services/api/ecommerce";
+import { pandingOrders } from "../../../services/api/userApi";
 const main = () => {
 	const [orderDettails, setOrderDeatils] = useState(false);
 	const [orderedItems, setOrderedItems] = useState([]);
@@ -13,6 +13,9 @@ const main = () => {
 	};
 	console.log(orderedItems);
 	return (
+		<div className="w-100">
+			<h3>Your Orders </h3>
+		
 		<table className="table cart-table table-responsive-xs">
 			<thead>
 				<tr className="table-head">
@@ -25,11 +28,11 @@ const main = () => {
 				</tr>
 			</thead>
 			{orderedItems.map((item, index) => {
-				console.log(item.price);
+				// console.log(item.price);
 				return (
 					<tbody>
 						<tr>
-							<td>#12313</td>
+							<td>#{item.id}</td>
 							<td>
 								<Link
 								// to={`${process.env.PUBLIC_URL}/product/${item.slug}`}
@@ -46,6 +49,7 @@ const main = () => {
 				);
 			})}
 		</table>
+		</div>
 	);
 };
 
