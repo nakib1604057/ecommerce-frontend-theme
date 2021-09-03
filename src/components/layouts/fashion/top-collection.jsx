@@ -1,4 +1,4 @@
-import React, { Component,useEffect, useState } from "react";
+import React, { Component, useEffect, useState } from "react";
 import Slider from "react-slick";
 import { connect } from "react-redux";
 
@@ -18,19 +18,17 @@ function TopCollection({
 }) {
   var properties = Product4;
 
-  const [items,setItems] = useState([])
-  useEffect(()=>{
-    loadDiscount()
-  },[])
+  const [items, setItems] = useState([]);
+  useEffect(() => {
+    loadDiscount();
+  }, []);
 
-  const loadDiscount = async()=>{
-      try{
-        const res = await axiosInstance().get(urls.GET_DISCOUNTED_PRODUCTS)
-        setItems([...res.data.products])
-      }catch(error){
-
-      }
-  }
+  const loadDiscount = async () => {
+    try {
+      const res = await axiosInstance().get(urls.GET_DISCOUNTED_PRODUCTS);
+      setItems([...res.data.products]);
+    } catch (error) {}
+  };
   return (
     <div>
       {/*Paragraph*/}
@@ -48,6 +46,7 @@ function TopCollection({
                   <div key={index}>
                     <ProductItem
                       product={product}
+                      type="discount"
                       symbol={symbol}
                       onAddToCompareClicked={() => addToCompare(product)}
                       onAddToWishlistClicked={() => addToWishlist(product)}

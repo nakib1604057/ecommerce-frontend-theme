@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import axiosInstance from "../../../api/axiosInstance";
 import { urls } from "../../../constants/urls";
+import { isUserLoggedIn } from "../../../constants/utils";
 
 const PreOrderForm = ({ onCloseModal }) => {
   const initialStateForProducts = {
@@ -44,9 +45,10 @@ const PreOrderForm = ({ onCloseModal }) => {
     const { productName, productDetails, qty, phoneNumber } = state;
 
     setIsLoading(true);
+    const user = isUserLoggedIn();
     try {
       const res = await axiosInstance().post(urls.PRE_ORDER, {
-        email: "ratul@gmail.com",
+        email: user.email,
         productName: productName,
         productDetails: productDetails,
         qty: qty,

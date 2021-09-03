@@ -12,5 +12,7 @@ export const urls = {
   REGISTER_URL: `api/auth/register`,
   PRE_ORDER:`api/ecommrece/pre-order`,
   GET_INFO:`api/admin/admin-info`,
-  GET_DISCOUNTED_PRODUCTS:`api/discounted-products`
+  GET_DISCOUNTED_PRODUCTS:`api/discounted-products`,
+  GET_RATINGS:`api/ratings/`,
+  POST_RATINGS:`api/rating/`,
 };

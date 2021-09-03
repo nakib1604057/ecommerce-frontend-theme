@@ -69,40 +69,17 @@ import Contact from "./components/pages/contact";
 import Dashboard from "./components/pages/dashboard";
 import Faq from "./components/pages/faq";
 
-// Blog Pages
-import RightSide from "./components/blogs/right-sidebar";
-import Details from "./components/blogs/details";
-import BlogPage from "./components/blogs/blog-page";
-
-// Theme Element
-import ElementTitle from "./components/features/theme/element-title";
-import ElementBanner from "./components/features/theme/element-banner";
-import ElementSlider from "./components/features/theme/element-slider";
-import ElementCategory from "./components/features/theme/element-category";
-import ElementService from "./components/features/theme/element-service";
-import ElementRatio from "./components/features/theme/element-ratio";
-
-// Product Elements
-import ElementProductBox from "./components/features/product/element-product-box";
-import ElementProductSlider from "./components/features/product/element-product-slider";
-import ElementProductNoSlider from "./components/features/product/element-product-no-slider";
-import ElementMultipleSlider from "./components/features/product/element-multiple-slider";
-import ElementProductTab from "./components/features/product/element-product-tab";
-
-// Portfolio Features
-import GridCols from "./components/features/portfolio/grid-cols";
-import MasonaryGridCols from "./components/features/portfolio/masonary-grid-cols";
 import { consoleLog } from "./console";
 import { ToastContainer } from "react-toastify";
 import { isUserLoggedIn } from "./constants/utils";
-import PrivateRoute from './routes/PrivateRoute'
+import PrivateRoute from "./routes/PrivateRoute";
 
 class Root extends React.Component {
   render() {
+    store.dispatch(getAllProducts());
     store.dispatch(filterCategory("-1"));
     store.dispatch(getInfo());
     store.dispatch(getCategories());
-    consoleLog("isd");
     consoleLog(isUserLoggedIn());
     return (
       <>
@@ -127,14 +104,13 @@ class Root extends React.Component {
                         path={`${process.env.PUBLIC_URL}/shop`}
                         component={CollectionLeftSidebar}
                       />
-                     
+
                       {/*Routes For Single Product*/}
-                    
+
                       <Route
                         path={`${process.env.PUBLIC_URL}/product/:slug`}
                         component={NoSideBar}
                       />
-                      
 
                       {/*Routes For custom Features*/}
                       <Route
@@ -145,7 +121,7 @@ class Root extends React.Component {
                         path={`${process.env.PUBLIC_URL}/wishlist`}
                         component={wishList}
                       />
-                    
+
                       <PrivateRoute
                         path={`${process.env.PUBLIC_URL}/checkout`}
                         component={checkOut}

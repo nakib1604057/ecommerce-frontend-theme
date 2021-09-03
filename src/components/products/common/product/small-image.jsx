@@ -46,7 +46,7 @@ class SmallImages extends Component {
                   }
                   key={index}
                   alt=""
-                  className="img-fluid"
+                  className="img-fluid blur-up lazyload"
                 />
               </div>
             ))}
