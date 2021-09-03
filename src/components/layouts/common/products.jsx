@@ -53,7 +53,7 @@ const SpecialProducts = ({
 
 						<TabPanel>
 							<div className="no-slider row">
-								{newProduct.map((product, index) => (
+								{newProduct.slice(0,8).map((product, index) => (
 									<ProductItem
 									// products={prod}
 										product={product}
@@ -68,7 +68,7 @@ const SpecialProducts = ({
 						</TabPanel>
 						<TabPanel>
 							<div className=" no-slider row">
-								{featuredProduct.map((product, index) => (
+								{featuredProduct.slice(0,8).map((product, index) => (
 									<ProductItem
 										product={product}
 										symbol={symbol}
@@ -82,7 +82,7 @@ const SpecialProducts = ({
 						</TabPanel>
 						<TabPanel>
 							<div className="no-slider row">
-								{popularProduct.map((product, index) => (
+								{popularProduct.slice(0,8).map((product, index) => (
 									<ProductItem
 										product={product}
 										symbol={symbol}
