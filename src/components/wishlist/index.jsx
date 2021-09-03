@@ -48,6 +48,8 @@ class wishList extends Component {
                       const image =
                         item.image === undefined
                           ? JSON.parse(item.featured_img)
+                          : typeof item.image === "string"
+                          ? JSON.parse(item.image )
                           : item.image;
 
                       return (

@@ -33,7 +33,9 @@ export function isUserLoggedIn() {
   const usr = userInfo ? JSON.parse(userInfo) : null;
   return usr;
 }
-
+export function removeLogOut(){
+  localStorage.removeItem('userInfo')
+}
 export function timeToDate(timestamp) {
   var date = new Date(timestamp);
 

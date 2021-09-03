@@ -63,12 +63,11 @@ class ProductItem extends Component {
 
     // if(product.image.file_name && product.image.product_id){
     const image =
-      typeof product.image === 'string'
+      typeof product.image === "string"
         ? JSON.parse(product.image)
         : product.image;
 
     // }
-
 
     return (
       <div

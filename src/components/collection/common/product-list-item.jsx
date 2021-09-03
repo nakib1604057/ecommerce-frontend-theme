@@ -94,7 +94,6 @@ class ProductListItem extends Component {
               <i className="fa fa-shopping-cart" aria-hidden="true"></i>
             </button>
             <Link
-              to="javascript:void(0)"
               title="Add to Wishlist"
               onClick={() => this.props.onAddToWishlistClicked(product)}
             >
