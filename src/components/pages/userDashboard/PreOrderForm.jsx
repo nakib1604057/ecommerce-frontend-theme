@@ -45,8 +45,10 @@ const PreOrderForm = ({ onCloseModal }) => {
 
     setIsLoading(true);
     try {
+      const userData= JSON.parse(localStorage.getItem('userInfo'))
+      const email = userData.email
       const res = await axiosInstance().post(urls.PRE_ORDER, {
-        email: "ratul@gmail.com",
+        email: email,
         productName: productName,
         productDetails: productDetails,
         qty: qty,

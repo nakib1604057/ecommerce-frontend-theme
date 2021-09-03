@@ -101,7 +101,7 @@ class Root extends React.Component {
     store.dispatch(filterCategory("-1"));
     store.dispatch(getInfo());
     store.dispatch(getCategories());
-    consoleLog("isd");
+    // consoleLog("isd");
     consoleLog(isUserLoggedIn());
     return (
       <>
