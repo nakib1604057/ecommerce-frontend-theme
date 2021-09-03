@@ -12,8 +12,8 @@ import translations from "./constants/translations";
 import {
   filterCategory,
   getAllProducts,
-  getCategories,
-  getInfo,
+  
+
 } from "./actions";
 import Landing from "./components/landing";
 

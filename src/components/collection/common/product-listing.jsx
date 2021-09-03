@@ -47,9 +47,6 @@ const ProductListing = props => {
   const addCart = (product, qty) => {
     dispatch(addToCart(product, qty));
   };
-  const addWishList = (product) =>{
-    dispatch(addToWishlist(product))
-  }
 
   return (
     <div>
@@ -64,13 +61,13 @@ const ProductListing = props => {
                       ? "col-xl-3 col-md-6 col-grid-box"
                       : "col-lg-" + props.colSize
                   }`}
-                  key={index} style={{marginBottom: "30px"}}
+                  key={index}
+                  style={{marginBottom:'20px'}}
                 >
                   <ProductListItem
                     product={product}
-                    // onAddToCompareClicked={() => addToCompare(product)}
+                    onAddToCompareClicked={() => addToCompare(product)}
                     onAddToCartClicked={addCart}
-                    onAddToWishlistClicked={addWishList}
                     key={index}
                   />
                 </div>
@@ -79,7 +76,7 @@ const ProductListing = props => {
           </div>
           {isLoading && <div className="loading-cls"></div>}
           {lastPageProductTotal > 0 && (
-            <div onClick={() => loadProducts(page)}>Load More</div>
+           <div className="m-auto text-center">  <button class="btn btn-outline-danger btn-lg rounded" onClick={() => loadProducts(page)}>Load More</button></div>   
           )}
           {/* {productList.length > 0 ? (
             <InfiniteScroll

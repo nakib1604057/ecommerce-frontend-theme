@@ -1,4 +1,4 @@
-
+import { consoleLog } from "../console";
 import * as types from "../constants/ActionTypes";
 
 const filtersReducerDefaultState = {
@@ -33,6 +33,7 @@ const filtersReducer = (state = filtersReducerDefaultState, action) => {
         sortBy: action.sort_by,
       };
     case types.FILTER_CATEGORIES:
+      consoleLog(action.category)
       return {
         ...state,
         categories: action.category,

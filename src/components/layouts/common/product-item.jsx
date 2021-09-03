@@ -99,10 +99,9 @@ class ProductItem extends Component {
 						>
 							<i className="fa fa-heart" aria-hidden="true"></i>
 						</a>
-					
-					
+						
 					</div>
-					{/* {product.variants ? (
+					{product.variants ? (
 						<ul className="product-thumb-list">
 							{product.variants.map((vari, i) => (
 								<li
@@ -122,7 +121,7 @@ class ProductItem extends Component {
 						</ul>
 					) : (
 						""
-					)} */}
+					)}
 				</div>
 				<div className="product-detail" style={{padding:"12px"}}>
 					<div>
@@ -130,7 +129,7 @@ class ProductItem extends Component {
                                 {RatingStars}
                             </div> */}
 						<Link to={`${process.env.PUBLIC_URL}/product/${product.slug}`}>
-							<h6 >{product.name}</h6>
+							<h6>{product.name}</h6>
 						</Link>
 						<h4>
 						    Tk {product.price}

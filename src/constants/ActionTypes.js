@@ -39,11 +39,3 @@ export const CHECKOUT_REQUEST = 'CHECKOUT_REQUEST'
 export const CHECKOUT_SUCCESS = 'CHECKOUT_SUCCESS'
 export const CHECKOUT_FAILURE = 'CHECKOUT_FAILURE'
 
-// Company Info
-export const ADD_INFO = 'ADD_INFO'
-
-
-// Categories
-export const ADD_CATEGORY = 'ADD_CATEGORY'
-
-

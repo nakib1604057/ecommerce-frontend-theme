@@ -4,17 +4,22 @@ import { connect } from "react-redux";
 import { Link, Redirect } from "react-router-dom";
 import PaypalExpressBtn from "react-paypal-express-checkout";
 import SimpleReactValidator from "simple-react-validator";
-
 import Breadcrumb from "../common/breadcrumb";
 import { removeFromWishlist } from "../../actions";
 import { getCartTotal } from "../../services";
+import {
+	defaultImage,
+	bkashImage,
+	rocketImage,
+	nogodImage,
+} from "../../constants/defaultImage";
 
 class checkOut extends Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			payment: "stripe",
+			payment: "Online Payment",
 			first_name: "",
 			last_name: "",
 			phone: "",
@@ -344,9 +349,13 @@ class checkOut extends Component {
 																			name="payment-group"
 																			id="payment-2"
 																			defaultChecked={true}
-																			onClick={() => this.checkhandle("stripe")}
+																			onClick={() =>
+																				this.checkhandle("Online Payment")
+																			}
 																		/>
-																		<label htmlFor="payment-2">Stripe</label>
+																		<label htmlFor="payment-2">
+																			Online Payment
+																		</label>
 																	</div>
 																</li>
 																<li>
@@ -355,43 +364,95 @@ class checkOut extends Component {
 																			type="radio"
 																			name="payment-group"
 																			id="payment-1"
-																			onClick={() => this.checkhandle("paypal")}
+																			onClick={() =>
+																				this.checkhandle("Cash On Delivery")
+																			}
 																		/>
 																		<label htmlFor="payment-1">
-																			PayPal
-																			<span className="image">
-																				<img
-																					src={`${process.env.PUBLIC_URL}/assets/images/paypal.png`}
-																					alt=""
-																				/>
-																			</span>
+																			Cash On Delivery
 																		</label>
 																	</div>
 																</li>
 															</ul>
 														</div>
 													</div>
+													<hr />
 													{total !== 0 ? (
-														<div className="text-right">
-															{this.state.payment === "stripe" ? (
-																<button
-																	type="button"
-																	className="btn-solid btn"
-																	onClick={this.onPlaceOrder}
-																>
-																	Place Order
-																</button>
+														<div className="">
+															{this.state.payment === "Online Payment" ? (
+																<div className="borderd">
+																	<div className="row">
+																		<div className="col-lg-4 text-center">
+																			<button className="btn w-75 rounded">
+																				<img
+																					src={bkashImage}
+																					alt=""
+																					width="40px"
+																				/>
+																				<strong> Bkash</strong>
+																			</button>
+																		</div>
+																		<div className="col-lg-4 text-center">
+																			<button className="btn w-75 rounded">
+																				<img
+																					src={rocketImage}
+																					alt=""
+																					width="45px"
+																				/>
+																				<strong> Rocket</strong>
+																			</button>
+																		</div>
+
+																		<div className="col-lg-4 text-center">
+																			<button className="btn w-75 rounded">
+																				<img
+																					src={nogodImage}
+																					alt=""
+																					width="40px"
+																				/>
+																				<strong> Nogod</strong>
+																			</button>
+																		</div>
+																	</div>
+																	<div className="text-danger text-center " style={{marginTop:'6px',marginBottom:"6px"}}>
+																		<strong>
+																			Please send money to this number 012313212
+																		</strong>{" "}
+																	</div>
+																	<div className="form-group ">
+																		<div className="field-label">
+																			Your Payment Phone Number
+																		</div>
+																		<input
+																			type="text"
+																			name="phone"
+																			value={this.state.phone}
+																			onChange={this.setStateFromInput}
+																		/>
+																	</div>
+																	<div className="form-group ">
+																		<div className="field-label">
+																			Transaction Id
+																		</div>
+
+																		<input type="text" />
+																	</div>
+																</div>
 															) : (
-																<PaypalExpressBtn
-																	env={"sandbox"}
-																	client={client}
-																	currency={"USD"}
-																	total={total}
-																	onError={onError}
-																	onSuccess={onSuccess}
-																	onCancel={onCancel}
-																/>
+																<div className="form-group">
+																	<div className="field-label">
+																		Please write a message
+																	</div>
+																	<textarea name="" id="" rows="10"></textarea>
+																</div>
 															)}
+															<button
+																type="button"
+																className="btn-solid btn"
+																onClick={this.onPlaceOrder}
+															>
+																Place Order
+															</button>
 														</div>
 													) : (
 														""
