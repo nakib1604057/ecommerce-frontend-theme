@@ -44,7 +44,10 @@ class wishList extends Component {
                     </thead>
                     {Items.map((item, index) => {
                       console.log(item);
-                      const image = item.featured_img !== undefined ? JSON.parse(item.featured_img): JSON.parse(item.image);
+                      const image =
+                        item.featured_img !== undefined
+                          ? JSON.parse(item.featured_img)
+                          : JSON.parse(item.image);
 
                       return (
                         <tbody key={index}>
@@ -55,8 +58,7 @@ class wishList extends Component {
                               >
                                 <img
                                   src={
-                                    image.file_name &&
-                                    process.env.NODE_ENV !== "development"
+                                    image.file_name
                                       ? urls.IMAGE_URL + image.file_name
                                       : defaultImage
                                   }

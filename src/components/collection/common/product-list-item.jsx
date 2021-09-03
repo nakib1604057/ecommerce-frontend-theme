@@ -80,7 +80,7 @@ class ProductListItem extends Component {
             <Link to={`${process.env.PUBLIC_URL}/product/${product.slug}`}>
               <img
                 src={
-                  image.file_name && process.env.NODE_ENV !== "development"
+                  image.file_name
                     ? urls.IMAGE_URL + image.file_name
                     : defaultImage
                 }
