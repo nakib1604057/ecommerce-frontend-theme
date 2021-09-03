@@ -1,12 +1,16 @@
 import React, { Component, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import axiosInstance from "../../../api/axiosInstance";
 import { consoleLog } from "../../../console";
+import { ADD_INFO } from "../../../constants/ActionTypes";
+import { urls } from "../../../constants/urls";
 
 import { SlideUpDown } from "../../../services/script";
 import LogoImage from "../headers/common/logo";
 
 const FooterOne = props => {
+  const dispatch = useDispatch();
   const store = useSelector(store => store.companyInfo);
   const info = store.info.info;
   useEffect(() => {
@@ -20,7 +24,18 @@ const FooterOne = props => {
         el.style = "display: block";
       });
     }
+    if (store.info.length === 0) {
+      loadInfo();
+    }
   }, []);
+
+  const loadInfo = async () => {
+    try {
+      const res = await axiosInstance().get(urls.GET_INFO);
+      // res.data.results
+      dispatch({ type: ADD_INFO, data: res.data.results });
+    } catch (error) {}
+  };
   consoleLog(info);
   return (
     <footer className="footer-light">
@@ -179,17 +194,17 @@ const FooterOne = props => {
                   <ul className="contact-list">
                     <li>
                       <i className="fa fa-map-marker"></i>
-                      {info.address}
+                      {info !==undefined &&  info.address}
                     </li>
                     <li>
-                      <i className="fa fa-phone"></i>Call Us: {info.contact_no}
+                      <i className="fa fa-phone"></i>Call Us: {info !==undefined && info.contact_no}
                     </li>
                     <li>
                       <i className="fa fa-envelope-o"></i>Email Us:{" "}
-                      <a href="#">{info.email}</a>
+                      <a href="#">{info !==undefined && info.email}</a>
                     </li>
                     <li>
-                      <i className="fa fa-fax"></i>Schedule: {info.schedule}
+                      <i className="fa fa-fax"></i>Schedule: {info !==undefined &&info.schedule}
                     </li>
                   </ul>
                 </div>

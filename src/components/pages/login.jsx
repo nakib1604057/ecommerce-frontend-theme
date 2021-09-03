@@ -4,7 +4,11 @@ import { toast } from "react-toastify";
 import axiosInstance from "../../api/axiosInstance";
 import { consoleLog } from "../../console";
 import { urls } from "../../constants/urls";
-import { isEmailValid, isValidPassword } from "../../constants/utils";
+import {
+  isEmailValid,
+  isValidPassword,
+  storeInLocalStorage,
+} from "../../constants/utils";
 // import {useForm} from "rea
 
 import Breadcrumb from "../common/breadcrumb";
@@ -71,7 +75,8 @@ const Login = () => {
         password: password,
       });
       toast.success(`${res.data.message}`);
-	  history.replace('/')
+      storeInLocalStorage(res.data);
+      history.replace("/");
       setIsLoading(false);
     } catch (error) {
       setIsLoading(false);

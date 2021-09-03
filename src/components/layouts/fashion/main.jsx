@@ -3,7 +3,7 @@ import "../../common/index.scss";
 import { Link } from "react-router-dom";
 
 // Import custom components
-import TopCollection from "./top-collection";
+import TopCollection from "./top-collection"
 import SpecialProducts from "../common/products";
 import Instagram from "../common/instagram";
 import LogoBlock from "../common/logo-block";
