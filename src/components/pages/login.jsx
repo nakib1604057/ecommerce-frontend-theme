@@ -28,8 +28,8 @@ const Login = () => {
   };
   const handlePasswordChange = e => {
     setPassword(e.target.value);
-    valErrors["password"] = null;
-    setValErrors(valErrors);
+      valErrors["password"] = null;
+      setValErrors(valErrors);
   };
 
   const onSubmit = async e => {

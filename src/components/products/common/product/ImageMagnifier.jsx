@@ -9,7 +9,7 @@ const Imagemagnifier = ({smallImage, largeImage}) => {
 		<div>
 			<SideBySideMagnifier
 				imageSrc={smallImage}
-				imageAlt="Product A"
+				// imageAlt="Product A"
 				largeImageSrc={largeImage}
 				// fillAvailableSpace="false"
 				alwaysInPlace={true}

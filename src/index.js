@@ -101,6 +101,7 @@ class Root extends React.Component {
 
                       {/*Routes For Features (Product Collection) */}
                       <Route
+                       exact
                         path={`/shop`}
                         component={CollectionLeftSidebar}
                       />
@@ -111,7 +112,7 @@ class Root extends React.Component {
                         path={`/product/:slug`}
                         component={NoSideBar}
                       />
-
+                     
                       {/*Routes For custom Features*/}
                       <Route
                         path={`/cart`}

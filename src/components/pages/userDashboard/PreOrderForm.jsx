@@ -48,6 +48,7 @@ const PreOrderForm = ({ onCloseModal }) => {
     const user = isUserLoggedIn();
     try {
       const res = await axiosInstance().post(urls.PRE_ORDER, {
+        userId:user.id,
         email: user.email,
         productName: productName,
         productDetails: productDetails,

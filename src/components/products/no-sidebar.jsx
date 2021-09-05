@@ -4,6 +4,7 @@ import "../common/index.scss";
 import { connect } from "react-redux";
 import { withRouter } from "react-router";
 
+import {productImg} from "../../constants/image"
 // import custom Components
 import RelatedProduct from "../common/related-product";
 import Breadcrumb from "../common/breadcrumb";
@@ -78,12 +79,13 @@ class NoSideBar extends Component {
                   <div className="col-lg-1"></div>
                   <div className="col-lg-4 product-thumbnail">
                     <Slider
-                      {...products}
+                      // {...products}
                       asNavFor={this.state.nav2}
                       ref={slider => (this.slider1 = slider)}
                       className="product-slick"
                     >
-                      {item.images.map((vari, index) => {
+                      {productImg.map((vari, index) => {
+                      
                         return (
                           <div key={index}>
                             <ImageZoom

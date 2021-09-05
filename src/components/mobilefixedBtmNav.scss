@@ -1,0 +1,41 @@
+.mobile-bottom-nav {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+
+	//give nav it's own compsite layer
+	will-change: transform;
+	transform: translateZ(0);
+
+	display: flex;
+
+	height: 62px;
+
+	box-shadow: 0 -2px 5px -2px #333;
+	background-color: #ff4c3b;
+	color: white;
+	a {
+		color: inherit;
+	}
+	&__item {
+		flex:1;
+		// flex-grow: 1;
+		text-align: center;
+		font-size: 12px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	&__item--active {
+		//dev
+		color: white;
+	}
+	&__item-content {
+		display: flex;
+		flex-direction: column;
+		line-height: 16px;
+	}
+}

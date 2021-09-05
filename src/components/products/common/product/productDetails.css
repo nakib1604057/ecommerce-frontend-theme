@@ -1,0 +1,36 @@
+.product-details-right{
+    border: 1px solid #e2e2e2;
+    padding-top: 19px;
+    padding-bottom: 31px;
+    border-radius: 4px;
+    box-shadow: 0px 10px 16px 3px rgb(208 201 201 / 40%);
+}
+
+.attribute {
+	padding: 5px;
+	margin-right: 10px;
+	border: 1px solid gray;
+	border-radius: 4px;
+	margin-bottom: 17px;
+	font-size: 15px;
+}
+.attribute:hover {
+	box-shadow: 0px 5px 10px 0px rgb(29 27 27 / 20%);
+}
+.attribute-selected {
+	background: #ff4c3b;
+	color: white;
+	border: 1px solid #ff4c3b;
+}
+
+a {
+	color: inherit;
+}
+a:hover {
+	color: inherit;
+}
+.product-right h4 {
+	font-size: 16px;
+	margin-bottom: 7px;
+	font-weight: 800;
+}

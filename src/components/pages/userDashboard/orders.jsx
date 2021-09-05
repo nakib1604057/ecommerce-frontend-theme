@@ -3,52 +3,83 @@ import { Link } from "react-router-dom";
 import { pandingOrders } from "../../../services/api/userApi";
 const main = () => {
 	const [orderDettails, setOrderDeatils] = useState(false);
+	const [loading, setLoading] = useState(false);
 	const [orderedItems, setOrderedItems] = useState([]);
 	useEffect(async () => {
 		await fetchPandingOrders();
 	}, []);
 	const fetchPandingOrders = async () => {
+		setLoading(true);
+
 		const res = await pandingOrders();
 		setOrderedItems(res.data.allOrders);
+		setLoading(false);
 	};
-	console.log(orderedItems);
+	// console.log(orderedItems);
+	const showOrders = (item) => {
+		return (
+			<>
+				{item.length>0?(
+					<>
+					<h3>Your Orders </h3>
+				<table className="table cart-table table-responsive-xs">
+					<thead>
+						<tr className="table-head">
+							<th scope="col">Order Id</th>
+							<th scope="col">product name</th>
+							<th scope="col">price</th>
+							<th scope="col">quantity</th>
+							<th scope="col">Status</th>
+							<th scope="col">time</th>
+						</tr>
+					</thead>
+					{orderedItems.map((item, index) => {
+						// console.log(item.price);
+						return (
+							<tbody>
+								<tr>
+									<td>#{item.id}</td>
+									<td>
+										<Link
+										// to={`/product/${item.slug}`}
+										>
+											{item.product_name}
+										</Link>
+									</td>
+									<td>{item.price}</td>
+									<td>{item.qty}</td>
+									<td>
+										<span class="badge badge-info">{item.status}</span>
+									</td>
+									<td>
+										{item.order_date.replace(/T/, " ").replace(/\..+/, "")}
+									</td>
+								</tr>
+							</tbody>
+						);
+					})}
+				</table></>
+				):(
+					<div className="text-center">
+						<Link to="/shop">
+						<button className="btn btn-lg rounded btn-outline " style={{background:"#ff4c3b",color:"white"}}>Start Shopping </button>
+
+						</Link>
+					</div>
+				)}
+				
+			</>
+		);
+	};
 	return (
 		<div className="w-100">
-			<h3>Your Orders </h3>
-		
-		<table className="table cart-table table-responsive-xs">
-			<thead>
-				<tr className="table-head">
-					<th scope="col">Order Id</th>
-					<th scope="col">product name</th>
-					<th scope="col">price</th>
-					<th scope="col">quantity</th>
-					<th scope="col">Status</th>
-					<th scope="col">time</th>
-				</tr>
-			</thead>
-			{orderedItems.map((item, index) => {
-				// console.log(item.price);
-				return (
-					<tbody>
-						<tr>
-							<td>#{item.id}</td>
-							<td>
-								<Link
-								// to={`/product/${item.slug}`}
-								>
-									{item.product_name}
-								</Link>
-							</td>
-							<td>{item.price}</td>
-							<td>{item.qty}</td>
-							<td><span class="badge badge-info">{item.status}</span></td>
-							<td>{item.order_date.replace(/T/, " ").replace(/\..+/, "")}</td>
-						</tr>
-					</tbody>
-				);
-			})}
-		</table>
+			{loading ? (
+				<div>
+					<div className="loading-cls"></div>
+				</div>
+			) : (
+				showOrders(orderedItems)
+			)}
 		</div>
 	);
 };
