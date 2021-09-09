@@ -86,7 +86,7 @@ class ProductItem extends Component {
             )}
           </div>
           <div className="front">
-            <Link to={`/product/${product.slug}`}>
+            <a href={`/product/${product.slug}`}>
               {image ? (
                 <img
                   src={
@@ -98,7 +98,7 @@ class ProductItem extends Component {
                   alt=""
                 />
               ) : null}
-            </Link>
+            </a>
           </div>
           <div
             className="cart-info cart-wrap"
@@ -147,9 +147,9 @@ class ProductItem extends Component {
             {/* <div className="rating">
                                 {RatingStars}
                             </div> */}
-            <Link to={`/product/${product.slug}`}>
+            <a href={`/product/${product.slug}`}>
               <h6>{product.name}</h6>
-            </Link>
+            </a>
             <h4>
               Tk {product.price}
               {product.regularPrice ? (

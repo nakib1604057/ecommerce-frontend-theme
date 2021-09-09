@@ -87,8 +87,8 @@ class HeaderOne extends Component {
 					<div className="mobile-fix-option"></div>
 					{/*Top Header Component*/}
 					<TopBar/>
-
-					<div className="container">
+                   <div className="headerOneMainMenu">
+				   <div className="container">
 						<div className="row">
 							<div className="col-sm-12">
 								<div className="main-menu">
@@ -100,7 +100,7 @@ class HeaderOne extends Component {
 											{/* SideBar Navigation Component */}
 											{/* <SideBar/> */}
 										{/* </div> */}
-										<div className="brand-logo">
+										<div className="brand-logo" style={{padding:"0px"}}>
 											<LogoImage logo={this.props.logoName} />
 										</div>
 									</div>
@@ -132,6 +132,8 @@ class HeaderOne extends Component {
 							</div>
 						</div>
 					</div>
+				   </div>
+					
 				</header>
 
                 <div id="search-overlay" className="search-overlay">

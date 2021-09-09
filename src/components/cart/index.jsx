@@ -8,7 +8,7 @@ import { getCartTotal } from "../../services";
 import { removeFromCart, incrementQty, decrementQty } from "../../actions";
 import { defaultImage } from "../../constants/defaultImage";
 import { urls } from "../../constants/urls";
-
+import "./cart.css";
 class cartComponent extends Component {
 	constructor(props) {
 		super(props);
@@ -35,15 +35,27 @@ class cartComponent extends Component {
 						<div className="container">
 							<div className="row">
 								<div className="col-sm-12">
-									<table className="table cart-table table-responsive-xs">
-										<thead>
-											<tr className="table-head">
-												<th scope="col">image</th>
-												<th scope="col">product name</th>
-												<th scope="col">price</th>
-												<th scope="col">quantity</th>
-												<th scope="col">action</th>
-												<th scope="col">total</th>
+									<table className="table cart-table table-responsive-xs cartTable">
+										<thead className="tableHead">
+											<tr className="">
+												<th scope="col" style={{ padding: "0.7rem" }}>
+													image
+												</th>
+												<th scope="col " style={{ padding: "0.7rem" }}>
+													product name
+												</th>
+												<th scope="col " style={{ padding: "0.7rem" }}>
+													price
+												</th>
+												<th scope="col " style={{ padding: "0.7rem" }}>
+													quantity
+												</th>
+												<th scope="col " style={{ padding: "0.7rem" }}>
+													action
+												</th>
+												<th scope="col" style={{ padding: "0.7rem" }}>
+													total
+												</th>
 											</tr>
 										</thead>
 										{cartItems.map((item, index) => {
@@ -52,9 +64,7 @@ class cartComponent extends Component {
 												<tbody key={index}>
 													<tr>
 														<td>
-															<Link
-																to={`/product/${item.slug}`}
-															>
+															<Link to={`/product/${item.slug}`}>
 																<img
 																	src={
 																		item.image
@@ -65,12 +75,18 @@ class cartComponent extends Component {
 																/>
 															</Link>
 														</td>
-														<td>
-															<Link
-																to={`/product/${item.slug}`}
-															>
+														<td  >
+															<Link to={`/product/${item.slug}`} id="tableProductName">
 																{item.name}
 															</Link>
+															<br />
+															{item.attributes
+																? item.attributes.map((item) => (
+																		<span className="pr-1 text-danger border-bottom mr-2">
+																			<strong>{item.name} </strong>
+																		</span>
+																  ))
+																: null}
 															<div className="mobile-cart-content row">
 																<div className="col-xs-3">
 																	<div className="qty-box">
@@ -174,18 +190,12 @@ class cartComponent extends Component {
 							</div>
 							<div className="row cart-buttons">
 								<div className="col-6">
-									<Link
-										to={`/shop`}
-										className="btn btn-solid"
-									>
+									<Link to={`/shop`} className="btn btn-solid">
 										continue shopping
 									</Link>
 								</div>
 								<div className="col-6">
-									<Link
-										to={`/checkout`}
-										className="btn btn-solid"
-									>
+									<Link to={`/checkout`} className="btn btn-solid">
 										check out
 									</Link>
 								</div>

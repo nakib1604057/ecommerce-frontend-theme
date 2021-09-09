@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { withTranslate } from "react-redux-multilingual";
 import { useSelector } from "react-redux";
 import { isUserLoggedIn, removeLogOut } from "../../../../constants/utils";
-
+import "./header.css"
 function TopBar({ translate }) {
   const store = useSelector(store => store.companyInfo);
   const info = store.info.info;
@@ -11,7 +11,7 @@ function TopBar({ translate }) {
     removeLogOut()
   }
   return (
-    <div className="top-header">
+    <div className="top-header" >
       <div className="container">
         <div className="row">
           <div className="col-lg-6">
@@ -40,13 +40,14 @@ function TopBar({ translate }) {
               <li className="onhover-dropdown mobile-account">
                 <i className="fa fa-user" aria-hidden="true"></i>{" "}
                 {translate("my_account")}
-                <ul className="onhover-show-div">
+                <ul className="onhover-show-div " id="accDropDown" >
                   {isUserLoggedIn() ? (
                     <>
-                      <li>
+                      <li >
                         <Link
-                          to={`/pages/dashboard`}
+                          to={`/user/dashboard`}
                           data-lng="en"
+                          id="dorpdownItem"
                         >
                           Dashboard
                         </Link>

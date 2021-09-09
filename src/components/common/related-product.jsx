@@ -6,12 +6,13 @@ import {Link} from 'react-router-dom'
 import {getBestSeller} from "../../services";
 import {addToCart, addToWishlist, addToCompare} from "../../actions";
 import ProductItem from '../layouts/common/product-item';
+import { consoleLog } from '../../console';
 
 
 class RelatedProduct extends Component {
     render (){
-        const {items, symbol, addToCart, addToWishlist, addToCompare} = this.props;
-
+        const {relatedProducts,items, symbol, addToCart, addToWishlist, addToCompare} = this.props;
+        // consoleLog(products)
 
         return (
             <section className="section-b-space">
@@ -22,16 +23,24 @@ class RelatedProduct extends Component {
                         </div>
                     </div>
                     <div className="row search-product">
-                        { items.slice(0, 6).map((product, index ) =>
-                            <div key={index} className="col-xl-2 col-md-4 col-sm-6">
+                    
+
+                        { relatedProducts.map((product, index ) =>
+                            <div key={index} className="col-xl-3 col-md-4 col-sm-6">
+
                                 <ProductItem product={product} symbol={symbol}
                                              onAddToCompareClicked={() => addToCompare(product)}
                                              onAddToWishlistClicked={() => addToWishlist(product)}
                                              onAddToCartClicked={() => addToCart(product, 1)} key={index} />
+
                             </div>)
                         }
+                          
+
                     </div>
+                    
                 </div>
+                
             </section>
         )
     }

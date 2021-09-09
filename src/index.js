@@ -175,7 +175,7 @@ class Root extends React.Component {
                         component={Contact}
                       />
                       <PrivateRoute
-                        path={`/pages/dashboard`}
+                        path={`/user/dashboard`}
                         component={Dashboard}
                       />
                       <Route

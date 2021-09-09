@@ -1,0 +1,24 @@
+.cartTable{
+   
+    /* border: 1px solid #e4d3d3; */
+    box-shadow: 0px 2px 4px #e8ecf3, 0px 0px 13px #e2e4e8;
+    /* padding-top: 13px;
+    padding-bottom: 53px; */
+    border-radius: 4px;
+}
+.tableHead{
+  
+  background-color: #ededed;
+  box-shadow: 0 5px 0px #9e9fa0
+}
+#tableProductName{
+    color: #040304;
+    font-weight: 800;
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-bottom: 0;
+    font-family: 'Lato';
+}
+#tableProductName:hover{
+color: #ff3616;
+}

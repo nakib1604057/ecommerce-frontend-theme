@@ -23,6 +23,8 @@ import axiosInstance from "../../api/axiosInstance";
 import { countries } from "../../constants/SelectTag";
 import axios from "axios";
 import { checkoutOrders } from "../../services/api/ecommerce";
+import { getPaymentGetwayNumbers } from "../../services/api/themeApi";
+
 
 class checkOut extends Component {
 	constructor(props) {
@@ -47,6 +49,7 @@ class checkOut extends Component {
 			payPhnNumberError: "",
 			transIdError: "",
 			// payment_option_number:'',
+			
 		};
 		this.validator = new SimpleReactValidator();
 	}
@@ -152,6 +155,9 @@ class checkOut extends Component {
 
 			const res = await checkoutOrders(data);
 			toast.success(res.data.message);
+			this.props.history.push({
+				pathname:"/user/dashboard"
+			})
 			// this.props.history.push({
 			// 	pathname: "/order-success",
 			// 	state: {

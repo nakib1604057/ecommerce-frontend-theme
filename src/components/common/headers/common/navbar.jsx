@@ -1,13 +1,19 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { withTranslate } from "react-redux-multilingual";
+import store from "../../../../store";
+import {
+	filterCategory,
 
+  } from "../../../../actions";
+import { Link,withRouter} from "react-router-dom";
+import { withTranslate } from "react-redux-multilingual";
+import { getCategories } from "../../../../services/api/ecommerce";
 class NavBar extends Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
 			navClose: { right: "0px" },
+			categories: [],
 		};
 	}
 
@@ -18,6 +24,13 @@ class NavBar extends Component {
 		if (window.innerWidth < 1199) {
 			this.setState({ navClose: { right: "-300px" } });
 		}
+		const categoryData = getCategories();
+		categoryData.then((res) => {
+			// console.log("cat", res);
+			this.setState({
+				categories: res.data.data.categories,
+			});
+		});
 	}
 
 	openNav() {
@@ -49,18 +62,24 @@ class NavBar extends Component {
 			event.target.nextElementSibling.classList.add("opensubmenu");
 		}
 	};
+    handleCategoryClick=(e,categoryId)=>{
+		e.preventDefault()
+		store.dispatch(filterCategory(categoryId));
+		// this.props.history.push('/');
+		
 
+	}
 	handleMegaSubmenu = (event) => {
 		if (event.target.classList.contains("sub-arrow")) return;
 
-		if (
-			event.target.parentNode.nextElementSibling.classList.contains(
-				"opensubmegamenu"
-			)
-		)
-			event.target.parentNode.nextElementSibling.classList.remove(
-				"opensubmegamenu"
-			);
+		// if (
+		// 	event.target.parentNode.nextElementSibling.classList.contains(
+		// 		"opensubmegamenu"
+		// 	)
+		// )
+		// 	event.target.parentNode.nextElementSibling.classList.remove(
+		// 		"opensubmegamenu"
+		// 	);
 		else {
 			document.querySelectorAll(".menu-content").forEach(function(value) {
 				value.classList.remove("opensubmegamenu");
@@ -108,14 +127,14 @@ class NavBar extends Component {
                                 </ul> */}
 							</li>
 							<li>
-								<Link
-									to="/shop"
+								<a
+									href="/shop"
 									className="nav-link"
 									// onClick={(e) => this.handleSubmenu(e)}
 								>
 									{translate("shop")}
 									{/* <span className="sub-arrow"></span> */}
-								</Link>
+								</a>
 								{/* <ul className="nav-submenu">
                                     <li><Link to={`/left-sidebar/collection`} >{translate('category_left_sidebar')}</Link></li>
                                     <li><Link to={`/right-sidebar/collection`} >{translate('category_right_sidebar')}</Link></li>
@@ -124,24 +143,40 @@ class NavBar extends Component {
                                     <li><Link to={`/full-width/collection`} >{translate('category_full_width')}</Link></li>
                                 </ul> */}
 							</li>
-							{/* <li >
-                                <Link to="#" className="nav-link" onClick={(e) => this.handleSubmenu(e)}>
-                                    {translate('products')}
-                                    <span className="sub-arrow"></span>
-                                </Link>
-                                <ul className="nav-submenu">
-                                    <li><Link to={`/left-sidebar/product/1`} >{translate('left_sidebar')}</Link></li>
-                                    <li><Link to={`/right-sidebar/product/1`} >{translate('right_sidebar')}</Link></li>
+							<li>
+								<Link
+									to="#"
+									className="nav-link"
+									onClick={(e) => this.handleSubmenu(e)}
+								>
+									{/* {translate('products')} */}
+									Category
+									<span className="sub-arrow"></span>
+								</Link>
+								<ul className="nav-submenu">
+									{this.state.categories.map((item) => (
+										<li key={item.category_id}>
+											<Link to={`${process.env.PUBLIC_URL}/shop`} onClick={(e)=>this.handleCategoryClick(e,item.category_id)} >
+												{item.name}
+											</Link>
+										</li>
+									))}
+									{/* <li><Link to={`/right-sidebar/product/1`} >{translate('right_sidebar')}</Link></li>
                                     <li><Link to={`/no-sidebar/product/1`} >{translate('no_sidebar')}</Link></li>
                                     <li><Link to={`/col-left/product/1`} >{translate('three_col_thumbnail_left')}</Link></li>
                                     <li><Link to={`/col-right/product/1`} >{translate('three_col_thumbnail_right')}</Link></li>
                                     <li><Link to={`/column/product/1`} >{translate('thumbnail_below')}</Link></li>
                                     <li><Link to={`/left-image/product/1`} >{translate('thumbnail_left')}</Link></li>
-                                    <li><Link to={`/right-image/product/1`} >{translate('thumbnail_right')}</Link></li>
-                                </ul>
-                            </li> */}
-						
-							
+                                    <li><Link to={`/right-image/product/1`} >{translate('thumbnail_right')}</Link></li> */}
+								</ul>
+							</li>
+							<li className="mega-menu">
+                                
+                                <div className="mega-menu-container" >
+                                   
+                                   
+                                </div>
+                            </li>
 						</ul>
 					</div>
 				</div>
