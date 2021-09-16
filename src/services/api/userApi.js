@@ -40,6 +40,12 @@ export async function pandingOrders() {
 	const res = await axiosInstance().get(`${urls.GET_PANDING_ORDERS}${userId}`);
 	return res;
 }
+export async function getUserAllOrders(){
+	const userData = JSON.parse(localStorage.getItem("userInfo"));
+	const userId = userData.id ? userData.id : "";
+	const res = await axiosInstance().get(`${urls.GET_USER_ALL_ORDERS}${userId}`);
+	return res;
+}
 export async function ApipandingPreOrders() {
 	const userData = JSON.parse(localStorage.getItem("userInfo"));
 	const userId = userData.id ? userData.id : "";

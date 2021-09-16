@@ -4,7 +4,7 @@ import axiosInstance from "../../../api/axiosInstance";
 import { urls } from "../../../constants/urls";
 import { isUserLoggedIn } from "../../../constants/utils";
 
-const PreOrderForm = ({ onCloseModal }) => {
+const PreOrderForm = ({ onCloseModal,setPreOrderSuccess }) => {
   const initialStateForProducts = {
     productName: "",
     productDetails: "",
@@ -57,9 +57,11 @@ const PreOrderForm = ({ onCloseModal }) => {
       });
       setIsLoading(false);
       onCloseModal();
+      setPreOrderSuccess(true)
       toast.success("Wait for admin approval.");
     } catch (error) {
       toast.error(error.data.error.message);
+      console.log(error)
       setIsLoading(false);
     }
   };
