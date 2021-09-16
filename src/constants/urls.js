@@ -23,4 +23,7 @@ export const urls = {
   POST_ORDER:'http://localhost:5000/api/ecommrece/checkout',
   GET_RELATED_PRODUCTS:`api/related-products`,
   GET_PAYMENT_GETWAY_NUMBERS :`api/admin/admin-info`,
+
+   // Facebook Pixel
+   FACEBOOK_PIXEL: `api/marketing/fb-pixel`,
 };

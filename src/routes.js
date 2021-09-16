@@ -68,38 +68,66 @@ import ForgetPassword from "./components/pages/forget-password";
 import Contact from "./components/pages/contact";
 import Dashboard from "./components/pages/dashboard";
 import Faq from "./components/pages/faq";
-import Routes from './routes'
+import parse from "html-react-parser";
 import { consoleLog } from "./console";
 import { ToastContainer } from "react-toastify";
 import { isUserLoggedIn } from "./constants/utils";
 import PrivateRoute from "./routes/PrivateRoute";
+import axiosInstance from "./api/axiosInstance";
+import { urls } from "./constants/urls";
 
-const Root = () => {
+const Routes = () => {
+  const location = useLocation();
   useEffect(() => {
-    store.dispatch(getAllProducts());
-    store.dispatch(filterCategory("-1"));
-    store.dispatch(getInfo());
-    store.dispatch(getCategories());
-    consoleLog(isUserLoggedIn());
-  }, []);
+    loadPixelValue();
+  }, [location]);
+
+  const loadPixelValue = async () => {
+    const res = await axiosInstance().get(urls.FACEBOOK_PIXEL);
+    console.log('asdsad',parse(res.data.description))
+    console.log((res.data.description));
 
 
+    document.head.innerHTML += res.data.description;
+  };
   return (
-    <>
-      <ToastContainer />
-      <Provider store={store}>
-        <PersistGate persistor={persistStore(store)}>
-          <IntlProvider translations={translations} locale="en">
-            <BrowserRouter basename={"/"}>
-              <ScrollContext>
-              <Routes/>
-               </ScrollContext>
-            </BrowserRouter>
-          </IntlProvider>
-        </PersistGate>
-      </Provider>
-    </>
+    <Switch>
+      <Layout>
+        {/*Routes For Layouts*/}
+        {/* <Route path={`/fashion`} /> */}
+        <Route exact path={`/`} component={Fashion} />
+
+        {/*Routes For Features (Product Collection) */}
+        <Route exact path={`/shop`} component={CollectionLeftSidebar} />
+
+        {/*Routes For Single Product*/}
+
+        <Route path={`/product/:slug`} component={NoSideBar} />
+
+        {/*Routes For custom Features*/}
+        <Route path={`/cart`} component={Cart} />
+        <Route path={`/wishlist`} component={wishList} />
+
+        <PrivateRoute path={`/checkout`} component={checkOut} />
+        <PrivateRoute path={`/order-success`} component={orderSuccess} />
+
+        <PrivateRoute path={`/sales/orders`} component={aboutUs} />
+
+        {/*Routes For Extra Pages*/}
+        <Route path={`/pages/about-us`} component={aboutUs} />
+        <Route path={`/pages/404`} component={PageNotFound} />
+        <Route path={`/pages/lookbook`} component={lookbook} />
+        <Route path={`/pages/login`} component={Login} />
+        <Route path={`/register`} component={Register} />
+        <Route path={`/pages/search`} component={Search} />
+        <Route path={`/pages/collection`} component={Collection} />
+        <Route path={`/pages/forget-password`} component={ForgetPassword} />
+        <Route path={`/pages/contact`} component={Contact} />
+        <PrivateRoute path={`/user/dashboard`} component={Dashboard} />
+        <Route path={`/pages/faq`} component={Faq} />
+      </Layout>
+    </Switch>
   );
 };
 
-ReactDOM.render(<Root />, document.getElementById("root"));
+export default Routes;
