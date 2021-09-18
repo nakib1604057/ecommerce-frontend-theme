@@ -21,7 +21,7 @@ export const urls = {
   GET_DISCOUNTED_PRODUCTS:`api/discounted-products`,
   GET_RATINGS:`api/ratings/`,
   POST_RATINGS:`api/rating/`,
-  POST_ORDER:'http://localhost:5000/api/ecommrece/checkout',
+  POST_ORDER:'api/ecommrece/checkout',
   GET_RELATED_PRODUCTS:`api/related-products`,
   GET_PAYMENT_GETWAY_NUMBERS :`api/admin/admin-info`,
 

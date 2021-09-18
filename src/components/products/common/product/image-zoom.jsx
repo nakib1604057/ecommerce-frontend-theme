@@ -12,8 +12,8 @@ export default class ImageZoom extends Component {
 			<ImageMgnifier
 				// smallImage={`${urls.IMAGE_URL}${image}`}
 				// largeImage={`${urls.IMAGE_URL}${image}`}
-				smallImage={`${image}`}
-				largeImage={`${image}`}
+				smallImage={`https://dlgb.bayofstyle.com/uploads/${image}`}
+				largeImage={`https://dlgb.bayofstyle.com/uploads/${image}`}
 				style={{ height: "660px" }}
 			/>
 		);
