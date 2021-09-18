@@ -61,7 +61,7 @@ const PreOrderForm = ({ onCloseModal,setPreOrderSuccess }) => {
       toast.success("Wait for admin approval.");
     } catch (error) {
       toast.error(error.data.error.message);
-      console.log(error)
+  
       setIsLoading(false);
     }
   };

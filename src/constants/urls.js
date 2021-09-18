@@ -27,5 +27,9 @@ export const urls = {
 
    // Facebook Pixel
    FACEBOOK_PIXEL: `api/marketing/fb-pixel`,
-  GET_SHIPPING_COST:`api/ecommrece/shippingCost/`
+  GET_SHIPPING_COST:`api/ecommrece/shippingCost/`,
+
+  LOGIN_API:`api/auth/login`
+
+
 };

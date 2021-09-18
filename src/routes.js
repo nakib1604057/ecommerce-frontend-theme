@@ -84,9 +84,6 @@ const Routes = () => {
 
   const loadPixelValue = async () => {
     const res = await axiosInstance().get(urls.FACEBOOK_PIXEL);
-    console.log('asdsad',parse(res.data.description))
-    console.log((res.data.description));
-
 
     document.head.innerHTML += res.data.description;
   };

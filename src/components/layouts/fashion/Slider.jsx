@@ -9,7 +9,6 @@ const main = () => {
         // console.log(resData.data.images)
         setSliderImages(resData.data.images)
     },[])
-    console.log('images',sliderImages.image)
     return (
         <div>
               <Slider  className="slide-1 home-slider">

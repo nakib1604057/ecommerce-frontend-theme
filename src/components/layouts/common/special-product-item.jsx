@@ -34,7 +34,6 @@ class SpecialProductItem extends Component {
             this.setState({quantity: this.state.quantity - 1})
             this.props.onDecrementClicked()
         }else{
-            console.log('removefromcart')
             this.setState({openQuantity:false})
             this.props.onRemoveFromCart()
         }

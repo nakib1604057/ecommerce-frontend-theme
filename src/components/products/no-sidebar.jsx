@@ -44,7 +44,7 @@ class NoSideBar extends Component {
 	loadProductDetails = async (slug) => {
 		try {
 			const res = await axiosInstance().get(`${urls.GET_PRODUCTS}/${slug}`);
-			consoleLog(res);
+		
 			this.setState({ item: res.data.product, loading: false });
 
 			const categoryId = this.state.item.categories[0].category_id;

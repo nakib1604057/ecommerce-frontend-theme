@@ -48,7 +48,7 @@ class ProductListItem extends Component {
   };
 
   onAddCart = product => {
-    console.log("sdsd");
+  
     this.props.onAddToCartClicked(
       {
         id: product.id,
@@ -72,7 +72,6 @@ class ProductListItem extends Component {
     const { open } = this.state;
 
     const image = JSON.parse(product.image);
-    console.log(urls.IMAGE_URL + image.file_name);
     return (
       <div className="product-box mb-2"style={{boxShadow: "0px 0px 12px rgb(132 124 124 / 30%)" ,marginBottom:'20px'}} >
         <div className="img-wrapper">

@@ -56,7 +56,7 @@ class ThemeSettings extends Component {
 		});
 
 		event.target.classList.add("active");
-		console.log(color);
+	
 		document
 			.getElementById("color")
 			.setAttribute(
