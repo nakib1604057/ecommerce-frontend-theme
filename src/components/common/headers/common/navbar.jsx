@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import store from "../../../../store";
-import {
-	filterCategory,
-
-  } from "../../../../actions";
-import { Link,withRouter} from "react-router-dom";
+import { filterCategory } from "../../../../actions";
+import { Link, withRouter } from "react-router-dom";
 import { withTranslate } from "react-redux-multilingual";
 import { getCategories } from "../../../../services/api/ecommerce";
 class NavBar extends Component {
@@ -62,16 +59,13 @@ class NavBar extends Component {
 			event.target.nextElementSibling.classList.add("opensubmenu");
 		}
 	};
-    handleCategoryClick=(e,categoryId)=>{
-		e.preventDefault()
+	handleCategoryClick = (e, categoryId) => {
+		e.preventDefault();
 		store.dispatch(filterCategory(categoryId));
 		// this.props.history.push('/');
-		
-
-	}
+	};
 	handleMegaSubmenu = (event) => {
 		if (event.target.classList.contains("sub-arrow")) return;
-
 		// if (
 		// 	event.target.parentNode.nextElementSibling.classList.contains(
 		// 		"opensubmegamenu"
@@ -126,23 +120,54 @@ class NavBar extends Component {
                                     <li><Link to={`/watch`} >{translate('watch')}</Link></li>
                                 </ul> */}
 							</li>
-							<li>
-								<a
-									href="/shop"
+							<li >
+								<Link
+									to="/shop"
 									className="nav-link"
-									// onClick={(e) => this.handleSubmenu(e)}
+									onClick={(e) => this.handleSubmenu(e)}
 								>
 									{translate("shop")}
-									{/* <span className="sub-arrow"></span> */}
-								</a>
-								{/* <ul className="nav-submenu">
-                                    <li><Link to={`/left-sidebar/collection`} >{translate('category_left_sidebar')}</Link></li>
-                                    <li><Link to={`/right-sidebar/collection`} >{translate('category_right_sidebar')}</Link></li>
-                                    <li><Link to={`/no-sidebar/collection`} >{translate('category_no_sidebar')}</Link></li>
-                                    <li><Link to={`/metro/collection`} >{translate('category_metro')}</Link></li>
-                                    <li><Link to={`/full-width/collection`} >{translate('category_full_width')}</Link></li>
-                                </ul> */}
+									<span className="sub-arrow"></span>
+								</Link>
+								<ul className="nav-submenu">
+									<li>
+										<Link to={`/left-sidebar/collection`}>
+											{translate("category_left_sidebar")}
+										</Link>
+									</li>
+									<li>
+										<Link to={`/right-sidebar/collection`}>
+											{translate("category_right_sidebar")}
+										</Link>
+									</li>
+									<li>
+										<Link to={`/no-sidebar/collection`}>
+											{translate("category_no_sidebar")}
+										</Link>
+									</li>
+									<li  className="subCategory">
+										<Link to="#" onClick={(e) => this.handleSubmenu(e)}>
+											{translate("category_metro")}
+											<span className="sub-arrow"></span>
+										</Link>
+										<ul>
+											<li>
+												<Link to={`/metro/collection`}>new</Link>
+											</li>
+											<li>
+												<Link to={`/metro/collection`}>First Product</Link>
+											</li>
+										</ul>
+									</li>
+
+									<li>
+										<Link to={`/full-width/collection`}>
+											{translate("category_full_width")}
+										</Link>
+									</li>
+								</ul>
 							</li>
+
 							<li>
 								<Link
 									to="#"
@@ -156,7 +181,12 @@ class NavBar extends Component {
 								<ul className="nav-submenu">
 									{this.state.categories.map((item) => (
 										<li key={item.category_id}>
-											<Link to={`${process.env.PUBLIC_URL}/shop`} onClick={(e)=>this.handleCategoryClick(e,item.category_id)} >
+											<Link
+												to={`${process.env.PUBLIC_URL}/shop`}
+												onClick={(e) =>
+													this.handleCategoryClick(e, item.category_id)
+												}
+											>
 												{item.name}
 											</Link>
 										</li>
@@ -171,12 +201,8 @@ class NavBar extends Component {
 								</ul>
 							</li>
 							<li className="mega-menu">
-                                
-                                <div className="mega-menu-container" >
-                                   
-                                   
-                                </div>
-                            </li>
+								<div className="mega-menu-container"></div>
+							</li>
 						</ul>
 					</div>
 				</div>
