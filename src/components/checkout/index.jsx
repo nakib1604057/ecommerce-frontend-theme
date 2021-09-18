@@ -22,9 +22,8 @@ import { toast } from "react-toastify";
 import axiosInstance from "../../api/axiosInstance";
 import { countries } from "../../constants/SelectTag";
 import axios from "axios";
-import { checkoutOrders } from "../../services/api/ecommerce";
+import { checkoutOrders, getShippingCost } from "../../services/api/ecommerce";
 import { getPaymentGetwayNumbers } from "../../services/api/themeApi";
-
 
 class checkOut extends Component {
 	constructor(props) {
@@ -48,10 +47,26 @@ class checkOut extends Component {
 			transId: "",
 			payPhnNumberError: "",
 			transIdError: "",
+			totalCost: this.props.total,
+			shippingDetails: [],
+			shippingCost:0,
 			// payment_option_number:'',
-			
 		};
 		this.validator = new SimpleReactValidator();
+	}
+	componentDidMount() {
+		let productIds = [];
+		this.props.cartItems.map((item) => {
+			productIds = [...productIds, item.id];
+		});
+		const strProductIds = productIds.join();
+		getShippingCost(strProductIds).then((data) => {
+			const shippingCostData = data.data.data;
+			this.setState({
+				shippingDetails:shippingCostData,
+			});
+
+		});
 	}
 
 	setStateFromInput = (event) => {
@@ -80,7 +95,7 @@ class checkOut extends Component {
 		});
 	}
 	checkPayNumberTranId = () => {
-		if (this.state.payPhnNumber=='' || this.state.payPhnNumber.length < 11) {
+		if (this.state.payPhnNumber == "" || this.state.payPhnNumber.length < 11) {
 			this.setState({
 				payPhnNumberError:
 					"Please give valid phonenumber you transfering amount.",
@@ -93,7 +108,7 @@ class checkOut extends Component {
 			});
 			return false;
 		}
-		return true
+		return true;
 	};
 	onPlaceOrder = async (e) => {
 		if (this.validator.allValid()) {
@@ -137,11 +152,11 @@ class checkOut extends Component {
 							price: item.price,
 					  }))
 					: [],
-				totalCost: 1200,
+				totalCost: this.state.totalCost,
 				shippingCost: 0,
 			};
 			this.placeOrder(data);
-			console.log(data);
+			// console.log(data);
 		} else {
 			this.validator.showMessages();
 			// rerender to show messages for the first time
@@ -151,13 +166,13 @@ class checkOut extends Component {
 
 	placeOrder = async (data) => {
 		try {
-			console.log(data);
+			// console.log(data);
 
 			const res = await checkoutOrders(data);
 			toast.success(res.data.message);
 			this.props.history.push({
-				pathname:"/user/dashboard"
-			})
+				pathname: "/user/dashboard",
+			});
 			// this.props.history.push({
 			// 	pathname: "/order-success",
 			// 	state: {
@@ -174,8 +189,27 @@ class checkOut extends Component {
 	};
 
 	render() {
+		// console.log(this.state.shippingDetails);
 		const { cartItems, symbol, total, info } = this.props;
-
+		// const highestShippingCost = this.state.shippingDetails.length
+		// 	? this.state.shippingDetails.reduce(function(prev, curr) {
+		// 			if (+curr.shipping_rate > +prev.shipping_rate) {
+		// 				return curr;
+		// 			} else {
+		// 				return prev;
+		// 			}
+		// 	  })
+		// 	: null;
+		
+		// if (highestShippingCost) {
+		// 	if (highestShippingCost.shipping_type == "Flat Rate") {
+		// 		this.setState({
+		// 			shippingCost: highestShippingCost.shipping_rate,
+		// 		});
+		// 	}
+			
+		// }
+		// console.log(highestShippingCost);
 		// Paypal Integration
 
 		return (
@@ -383,11 +417,14 @@ class checkOut extends Component {
 														<li>
 															Subtotal <span className="count">{total} TK</span>
 														</li>
+														<li>
+															Shipping Cost <span className="count">{this.state.shippingCost} TK</span>
+														</li>
 													</ul>
 
 													<ul className="total">
 														<li>
-															Total <span className="count">{total} TK</span>
+															Total <span className="count">{this.state.totalCost} TK</span>
 														</li>
 													</ul>
 												</div>
@@ -534,11 +571,15 @@ class checkOut extends Component {
 																			onChange={(e) =>
 																				this.setState({
 																					payPhnNumber: e.target.value,
-																					payPhnNumberError:null,
+																					payPhnNumberError: null,
 																				})
 																			}
 																		/>
-																		{this.state.payPhnNumberError?(<p className="text-danger">{this.state.payPhnNumberError}</p>):(null)}
+																		{this.state.payPhnNumberError ? (
+																			<p className="text-danger">
+																				{this.state.payPhnNumberError}
+																			</p>
+																		) : null}
 																	</div>
 																	<div className="form-group ">
 																		<div className="field-label">
@@ -552,13 +593,16 @@ class checkOut extends Component {
 																			onChange={(e) =>
 																				this.setState({
 																					transId: e.target.value,
-																					transIdError:null,
+																					transIdError: null,
 																				})
 																			}
 																		/>
-																		{this.state.transIdError?(<p className="text-danger">{this.state.transIdError} </p>):(null)}
+																		{this.state.transIdError ? (
+																			<p className="text-danger">
+																				{this.state.transIdError}{" "}
+																			</p>
+																		) : null}
 																	</div>
-																	
 																</div>
 															) : (
 																<div className="form-group">

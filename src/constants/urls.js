@@ -6,6 +6,7 @@ export const urls = {
   GET_FEATURED_PRODUCT: "api/featureProducts",
   GET_POPULAR_PRODUCT: `api/popularProducts`,
   GET_PANDING_ORDERS: `api/ecommrece/user-order/pending/`,
+  GET_USER_ALL_ORDERS:`api/ecommrece/user-order/all/`,
   IMAGE_URL: `${process.env.API_URL}uploads/`,
   GET_USER_INFO:`api/users/`,
   LOGIN_UTL: `api/auth/login`,
@@ -26,4 +27,5 @@ export const urls = {
 
    // Facebook Pixel
    FACEBOOK_PIXEL: `api/marketing/fb-pixel`,
+  GET_SHIPPING_COST:`api/ecommrece/shippingCost/`
 };

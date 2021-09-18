@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ApipandingPreOrders } from "../../../services/api/userApi";
+import { orderStatus } from "../../../constants/orderStatusBtn";
+
 const TrackPreOrder = () => {
 	const [pendingPreOrder, setPendingPreOrder] = useState([]);
 
@@ -42,7 +44,16 @@ const TrackPreOrder = () => {
 								  {/* <td>{item.price}</td> */}
 								  <td>{item.qty}</td>
 								  <td>
-									  <span class="badge badge-info">{item.status}</span>
+								  {orderStatus.map((data) => (
+													<>
+														{data.name === item.status ? (
+															<span class={`badge ${data.badge}`}>
+																{item.status}
+															</span>
+														) : null}
+													</>
+												))}
+									  {/* <span class="badge badge-info">{item.status}</span> */}
 								  </td>
 								  <td>{item.order_date.replace(/T/, " ").replace(/\..+/, "")}</td>
 							  </tr>

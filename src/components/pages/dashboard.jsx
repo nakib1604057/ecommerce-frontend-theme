@@ -14,6 +14,7 @@ const Dashboard = () => {
 	const [open, setOpen] = useState(false);
 	const [isLoading, setIsLoading] = useState(false);
 	const [userData, setUserData] = useState([]);
+	const [preOrderSuccess , setPreOrderSuccess] = useState(false)
 	useEffect(async () => {
 		try {
 			setIsLoading(true);
@@ -93,7 +94,7 @@ const Dashboard = () => {
 												</div>
 											</TabPanel>
 											<TabPanel>
-												<TrackPreOrder />
+												<TrackPreOrder  />
 											</TabPanel>
 											<TabPanel>
 												<UpdateGeneralInfo  userData={userData}/>
@@ -125,7 +126,7 @@ const Dashboard = () => {
 							<div className="container">
 								<div className="row">
 									<div className="col-lg-12 ">
-										<PreOrderForm onCloseModal={onCloseModal} />
+										<PreOrderForm onCloseModal={onCloseModal} setPreOrderSuccess={setPreOrderSuccess} />
 									</div>
 								</div>
 							</div>
