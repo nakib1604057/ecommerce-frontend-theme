@@ -128,7 +128,7 @@ class NavBar extends Component {
 									{translate("shop")}
 									<span className="sub-arrow"></span>
 								</Link>
-								<ul className="nav-submenu">
+								{/* <ul className="nav-submenu">
 									<li>
 										<Link to={`/left-sidebar/collection`}>
 											{translate("category_left_sidebar")}
@@ -164,12 +164,12 @@ class NavBar extends Component {
 											{translate("category_full_width")}
 										</Link>
 									</li>
-								</ul>
+								</ul> */}
 							</li>
 
 							<li>
 								<Link
-									to="#"
+									// to="#"
 									className="nav-link"
 									onClick={(e) => this.handleSubmenu(e)}
 								>

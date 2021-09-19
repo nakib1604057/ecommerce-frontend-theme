@@ -95,7 +95,7 @@ class NoSideBar extends Component {
 											ref={(slider) => (this.slider1 = slider)}
 											className="product-slick"
 										>
-											{productImg.map((vari, index) => {
+											{item.images.map((vari, index) => {
 												return (
 													<div key={index}>
 														<ImageZoom
