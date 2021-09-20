@@ -14,15 +14,14 @@ const main = () => {
 
   return (
     <div>
-      <Slider
-        className="slide-1 home-slider"
-      >
-        <div>
-          {/* add image in this div  */}
-          {sliderImages.map(item => {
-            const imageUrl = `${urls.IMAGE_URL}${item.image}`;
-            console.log(imageUrl);
-            return (
+      <Slider className="slide-1 home-slider">
+        {sliderImages.map(item => {
+          // const imageUrl = ${urls.IMAGE_URL}${item.image};
+          // console.log(imageUrl);
+          return (
+            <div>
+              {/* add image in this div  */}
+
               <div
                 className="text-center"
                 style={{
@@ -45,26 +44,9 @@ const main = () => {
                   </div>
                 </div>
               </div>
-            );
-          })}
-        </div>
-        {/* <div>
-                    <div className="home home2 text-center">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col">
-                                    <div className="slider-contain">
-                                        <div>
-                                            <h4>welcome to fashion</h4>
-                                            <h1>women fashion</h1>
-                                            <Link to={`/left-sidebar/collection`} className="btn btn-solid">shop now</Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
+            </div>
+          );
+        })}
       </Slider>
     </div>
   );
