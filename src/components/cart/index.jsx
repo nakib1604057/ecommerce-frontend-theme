@@ -16,6 +16,13 @@ class cartComponent extends Component {
 
 	render() {
 		const { cartItems, symbol, total } = this.props;
+		const cartList = cartItems
+		
+		cartList.map(item=>{
+			const id=JSON.stringify(item.image)
+			console.log(JSON.parse(id))
+		})
+        console.log("cart items", cartList);
 		return (
 			<div>
 				{/*SEO Support*/}
@@ -59,7 +66,7 @@ class cartComponent extends Component {
 											</tr>
 										</thead>
 										{cartItems.map((item, index) => {
-											console.log(item);
+											
 											return (
 												<tbody key={index}>
 													<tr>
@@ -75,8 +82,11 @@ class cartComponent extends Component {
 																/>
 															</Link>
 														</td>
-														<td  >
-															<Link to={`/product/${item.slug}`} id="tableProductName">
+														<td>
+															<Link
+																to={`/product/${item.slug}`}
+																id="tableProductName"
+															>
 																{item.name}
 															</Link>
 															<br />
