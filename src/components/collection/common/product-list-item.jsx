@@ -48,14 +48,17 @@ class ProductListItem extends Component {
   };
 
   onAddCart = product => {
-  
     this.props.onAddToCartClicked(
       {
         id: product.id,
         name: product.name,
         price: product.price,
         slug: product.slug,
-        img: product.featured_img ? JSON.parse(product.featured_img) : null,
+        image: product.featured_img
+          ? JSON.parse(product.featured_img)
+          : product.image
+          ? JSON.parse(product.image)
+          : null,
         attributes: null,
       },
       1
@@ -73,7 +76,13 @@ class ProductListItem extends Component {
 
     const image = JSON.parse(product.image);
     return (
-      <div className="product-box mb-2"style={{boxShadow: "0px 0px 12px rgb(132 124 124 / 30%)" ,marginBottom:'20px'}} >
+      <div
+        className="product-box mb-2"
+        style={{
+          boxShadow: "0px 0px 12px rgb(132 124 124 / 30%)",
+          marginBottom: "20px",
+        }}
+      >
         <div className="img-wrapper">
           <div className="front">
             <Link to={`/product/${product.slug}`}>
@@ -88,7 +97,15 @@ class ProductListItem extends Component {
               />
             </Link>
           </div>
-          <div className="cart-info cart-wrap" style={{background: "rgb(255 255 255 / 90%)",borderRadius:"20px",marginRight: "10px",marginBottom: "20px"}}>
+          <div
+            className="cart-info cart-wrap"
+            style={{
+              background: "rgb(255 255 255 / 90%)",
+              borderRadius: "20px",
+              marginRight: "10px",
+              marginBottom: "20px",
+            }}
+          >
             <button title="Add to cart" onClick={() => this.onAddCart(product)}>
               <i className="fa fa-shopping-cart" aria-hidden="true"></i>
             </button>
@@ -100,7 +117,7 @@ class ProductListItem extends Component {
             </Link>
           </div>
         </div>
-        <div className="product-detail" style={{padding:"12px"}}>
+        <div className="product-detail" style={{ padding: "12px" }}>
           <div>
             <Link to={`/product/${product.slug}`}>
               <h6>{product.name}</h6>
