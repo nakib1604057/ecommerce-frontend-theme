@@ -6,7 +6,6 @@ export default class ImageZoom extends Component {
 	render() {
 		const { image } = this.props;
 
-		console.log(image)
 		return (
 			// <img src={`${image}`}  className="img-fluid image_zoom_cls-0" />
 			<ImageMgnifier
@@ -14,6 +13,8 @@ export default class ImageZoom extends Component {
 				// largeImage={`${urls.IMAGE_URL}${image}`}
 				smallImage={`${urls.IMAGE_URL}${image}`}
 				largeImage={`${urls.IMAGE_URL}${image}`}
+				// smallImage={`${image}`}
+				// largeImage={`${image}`}
 				style={{ height: "660px" }}
 			/>
 		);

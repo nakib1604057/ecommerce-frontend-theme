@@ -9,7 +9,7 @@ const CartHeader = ({ item, total, symbol, removeFromCart }) => {
   return (
     <li>
       <div className="media">
-        <Link to={`/product/${item.slug}`}>
+        <a href={`/product/${item.slug}`}>
           <img
             alt=""
             className="mr-3"
@@ -17,11 +17,11 @@ const CartHeader = ({ item, total, symbol, removeFromCart }) => {
               item.image ? urls.IMAGE_URL + image.file_name : defaultImage
             }
           />
-        </Link>
+        </a>
         <div className="media-body">
-          <Link to={`/product/${item.slug}`}>
+          <a href={`/product/${item.slug}`}>
             <h4>{item.name}</h4>
-          </Link>
+          </a>
           <h4>
             <span>
               {item.qty} x TK {item.price}
