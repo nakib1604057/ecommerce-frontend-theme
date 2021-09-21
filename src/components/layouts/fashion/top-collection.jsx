@@ -8,7 +8,7 @@ import { addToCart, addToWishlist, addToCompare } from "../../../actions/index";
 import ProductItem from "../common/product-item";
 import axiosInstance from "../../../api/axiosInstance";
 import { urls } from "../../../constants/urls";
-
+import "./fashion-layout.css"
 function TopCollection({
   symbol,
   addToCart,
@@ -16,7 +16,7 @@ function TopCollection({
   addToCompare,
   type,
 }) {
-  var properties = Product4;
+  var properties = Product5;
 
   const [items, setItems] = useState([]);
   useEffect(() => {
@@ -38,12 +38,12 @@ function TopCollection({
       </div>
       {/*Paragraph End*/}
       <section className="section-b-space p-t-0">
-        <div className="container">
+        <div className="container-fluid">
           <div className="row">
             <div className="col">
-              <Slider {...properties} className="product-4 product-m no-arrow">
+              <Slider {...properties} className="product-4 product-m home-slider">
                 {items.map((product, index) => (
-                  <div key={index}>
+                  <div key={index} className="product-slider">
                     <ProductItem
                       product={product}
                       type="discount"

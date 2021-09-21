@@ -14,12 +14,12 @@ const main = () => {
 
   return (
     <div>
-      <Slider className="slide-1 home-slider">
+      <Slider className="slide-1 home-slider ">
         {sliderImages.map(item => {
           // const imageUrl = ${urls.IMAGE_URL}${item.image};
           // console.log(imageUrl);
           return (
-            <div>
+            <div >
               {/* add image in this div  */}
 
               <div

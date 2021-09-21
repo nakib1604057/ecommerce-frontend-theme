@@ -6,7 +6,7 @@ import Filter from "./common/filter";
 import FilterBar from "./common/filter-bar";
 import ProductListing from "./common/product-listing";
 import StickyBox from "react-sticky-box";
-
+import "./common/shop-products.css"
 class CollectionLeftSidebar extends Component {
 	state = {
 		layoutColumns: 4,
@@ -41,7 +41,7 @@ class CollectionLeftSidebar extends Component {
 					<div className="collection-wrapper">
 						<div className="container">
 							<div className="row">
-								<div className="col-sm-3 collection-filter" style={{ boxShadow:"0px 0px 42px rgb(158 157 157 / 30%)",padding: "20px",borderRadius: "5px"}}>
+								<div className="col-sm-3 collection-filter shop-sidebar" >
 									<StickyBox offsetTop={20} offsetBottom={20}>
 										<div>
 											<Filter />

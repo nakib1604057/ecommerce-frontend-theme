@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Modal from "react-responsive-modal";
 import { defaultImage } from "../../../constants/defaultImage";
 import { urls } from "../../../constants/urls";
+import "./common.css"
 class ProductItem extends Component {
   constructor(props) {
     super(props);
@@ -71,8 +72,8 @@ class ProductItem extends Component {
 
     return (
       <div
-        className="product-box"
-        style={{ boxShadow: "0px 0px 12px rgb(132 124 124 / 30%)" }}
+        className="product-box product-card"
+        
       >
         <div className="img-wrapper">
           <div className="lable-block">
@@ -94,17 +95,18 @@ class ProductItem extends Component {
                       ? urls.IMAGE_URL + image.file_name
                       : defaultImage
                   }
-                  className="img-fluid"
+                  className="img-fluid fixed-img-height"
+				 
                   alt=""
+				 
                 />
               ) : null}
             </a>
           </div>
           <div
-            className="cart-info cart-wrap"
+            className="cart-info cart-wrap cart-wishlist-icon"
             style={{
-              background: "rgb(255 255 255 / 90%)",
-              borderRadius: "20px",
+             
               marginRight: "10px",
               marginBottom: "20px",
             }}
@@ -148,7 +150,7 @@ class ProductItem extends Component {
                                 {RatingStars}
                             </div> */}
             <a href={`/product/${product.slug}`}>
-              <h6>{product.name}</h6>
+              <h6 className="product-name">{product.name}</h6>
             </a>
             <h4>
               Tk {product.price}

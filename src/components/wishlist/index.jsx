@@ -25,7 +25,7 @@ class wishList extends Component {
   };
   render() {
     const { Items, symbol } = this.props;
-
+    console.log('s',Items)
     return (
       <div>
         <Breadcrumb title={"Wishlist"} />
@@ -73,7 +73,7 @@ class wishList extends Component {
                               <Link
                                 to={`/product/${item.slug}`}
                               >
-                                {item.name}
+                                <h5>{item.name} </h5>
                               </Link>
                             </td>
 

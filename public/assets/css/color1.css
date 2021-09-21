@@ -332,7 +332,7 @@ del {
 	display: none;
 }
 .sticky.fixed .cart-qty-cls {
-	top: 13%;
+	top: 31%;
 	right: -11px;
 }
 
@@ -7171,7 +7171,7 @@ footer p {
 	font-size: 12px;
 	line-height: 14px;
 	font-weight: 600;
-	top: 20%;
+	top: 29%;
 	right: -8px;
 	padding: 3px;
 }

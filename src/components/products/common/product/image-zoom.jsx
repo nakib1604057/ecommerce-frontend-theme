@@ -8,7 +8,7 @@ export default class ImageZoom extends Component {
 
 		console.log(image)
 		return (
-			// <img src={`https://dlgb.bayofstyle.com/uploads/${image}`}  className="img-fluid image_zoom_cls-0" />
+			// <img src={`${image}`}  className="img-fluid image_zoom_cls-0" />
 			<ImageMgnifier
 				// smallImage={`${urls.IMAGE_URL}${image}`}
 				// largeImage={`${urls.IMAGE_URL}${image}`}
