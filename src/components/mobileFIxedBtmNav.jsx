@@ -35,7 +35,9 @@ const mobileFIxedBtmNav = () => {
         </div>
         <div class="mobile-bottom-nav__item">
           <div class="mobile-bottom-nav__item-content">
+          <div class="badge badge-light cart-badge">{cartList.length > 0 && cartList.length}</div>
             <a href="/cart">
+            
               <div className="m-auto mb-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -50,9 +52,7 @@ const mobileFIxedBtmNav = () => {
               </div>
 			  {/* please change here */}
               Cart 
-              <div className="cart-qty-cls">
-                {cartList.length > 0 && cartList.length}
-              </div>
+
             </a>
           </div>
         </div>
