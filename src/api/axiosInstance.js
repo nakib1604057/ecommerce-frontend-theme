@@ -36,9 +36,10 @@ const axiosInstance = (token = null) => {
       // Any status codes that falls outside the range of 2xx cause this function to trigger
       // Do something with response error
   
+      console.log(error.response)
       const errorObject = {
-        status: error.response.status,
-        data: error.response.data,
+        status: error.response === null ? 500:error.response.status,
+        data: error.response === null ? "Internal Server Error": error.response.status,
       };
       return Promise.reject(errorObject);
     }
