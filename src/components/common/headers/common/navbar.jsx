@@ -135,43 +135,6 @@ class NavBar extends Component {
                   {translate("shop")}
                   {/* <span className="sub-arrow"></span> */}
                 </a>
-                {/* <ul className="nav-submenu">
-									<li>
-										<Link to={`/left-sidebar/collection`}>
-											{translate("category_left_sidebar")}
-										</Link>
-									</li>
-									<li>
-										<Link to={`/right-sidebar/collection`}>
-											{translate("category_right_sidebar")}
-										</Link>
-									</li>
-									<li>
-										<Link to={`/no-sidebar/collection`}>
-											{translate("category_no_sidebar")}
-										</Link>
-									</li>
-									<li  className="subCategory">
-										<Link to="#" onClick={(e) => this.handleSubmenu(e)}>
-											{translate("category_metro")}
-											<span className="sub-arrow"></span>
-										</Link>
-										<ul>
-											<li>
-												<Link to={`/metro/collection`}>new</Link>
-											</li>
-											<li>
-												<Link to={`/metro/collection`}>First Product</Link>
-											</li>
-										</ul>
-									</li>
-
-									<li>
-										<Link to={`/full-width/collection`}>
-											{translate("category_full_width")}
-										</Link>
-									</li>
-								</ul> */}
               </li>
 
               <li>
@@ -186,41 +149,23 @@ class NavBar extends Component {
                 </Link>
                 <ul className="nav-submenu">
                   {this.state.categories.map(item => (
-                    <li key={item.category_id}>
-                      <a onClick={e => this.handleSubmenu(e)}>
+                    <li key={item.category_id} className="subCategory">
+                      <a>
                         {item.name}
-
-                        <span className="sub-arrow"></span>
+                        {item.categories.length > 0 && (
+                          <span className="sub-arrow"></span>
+                        )}
                       </a>
-
-                      <ul className="nav-submenu">
-                        {item.categories.map(sub_category => {
-                          return (
+                      {item.categories.length > 0 &&
+                        item.categories.map(sub_cat => (
+                          <ul>
                             <li>
-                              <a
-                                href="/shop"
-                                onClick={e =>
-                                  this.handleCategoryClick(
-                                    e,
-                                    sub_category.category_id
-                                  )
-                                }
-                              >
-                                {sub_category.name}
-                              </a>
+                              <a href={`/shop`}  onClick={e => this.handleCategoryClick(e,sub_cat.category_id)}>{sub_cat.name}</a>
                             </li>
-                          );
-                        })}
-                      </ul>
+                          </ul>
+                        ))}
                     </li>
                   ))}
-                  {/* <li><Link to={`/right-sidebar/product/1`} >{translate('right_sidebar')}</Link></li>
-                                    <li><Link to={`/no-sidebar/product/1`} >{translate('no_sidebar')}</Link></li>
-                                    <li><Link to={`/col-left/product/1`} >{translate('three_col_thumbnail_left')}</Link></li>
-                                    <li><Link to={`/col-right/product/1`} >{translate('three_col_thumbnail_right')}</Link></li>
-                                    <li><Link to={`/column/product/1`} >{translate('thumbnail_below')}</Link></li>
-                                    <li><Link to={`/left-image/product/1`} >{translate('thumbnail_left')}</Link></li>
-                                    <li><Link to={`/right-image/product/1`} >{translate('thumbnail_right')}</Link></li> */}
                 </ul>
               </li>
               <li className="mega-menu">
