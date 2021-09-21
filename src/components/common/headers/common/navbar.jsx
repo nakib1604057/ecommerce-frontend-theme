@@ -25,10 +25,27 @@ class NavBar extends Component {
     categoryData.then(res => {
       // console.log("cat", res);
       this.setState({
-        categories: res.data.data.categories,
+        categories: this.formatCategories(res.data.data.categories),
       });
     });
   }
+
+  formatCategories = categories => {
+    const parentCategories = [];
+
+    categories.map(category => {
+      if (!category.parent_id) {
+        const subCategories = categories.filter(
+          item => category.category_id === item.parent_id
+        );
+        parentCategories.push({
+          ...category,
+          categories: subCategories,
+        });
+      }
+    });
+    return parentCategories;
+  };
 
   openNav() {
     this.setState({ navClose: { right: "0px" } });
@@ -46,89 +63,79 @@ class NavBar extends Component {
   handleSubmenu = event => {
     if (event.target.classList.contains("sub-arrow")) return;
 
-		if (event.target.nextElementSibling.classList.contains("opensubmenu"))
-			event.target.nextElementSibling.classList.remove("opensubmenu");
-		else {
-			document.querySelectorAll(".nav-submenu").forEach(function(value) {
-				value.classList.remove("opensubmenu");
-			});
-			document
-				.querySelector(".mega-menu-container")
-				.classList.remove("opensubmenu");
-			event.target.nextElementSibling.classList.add("opensubmenu");
-		}
-	};
-	handleCategoryClick = (e, categoryId) => {
-		e.preventDefault();
-		store.dispatch(filterCategory(categoryId));
-		// this.props.history.push('/');
-	};
-	handleMegaSubmenu = (event) => {
-		if (event.target.classList.contains("sub-arrow")) return;
-		// if (
-		// 	event.target.parentNode.nextElementSibling.classList.contains(
-		// 		"opensubmegamenu"
-		// 	)
-		// )
-		// 	event.target.parentNode.nextElementSibling.classList.remove(
-		// 		"opensubmegamenu"
-		// 	);
-		else {
-			document.querySelectorAll(".menu-content").forEach(function(value) {
-				value.classList.remove("opensubmegamenu");
-			});
-			event.target.parentNode.nextElementSibling.classList.add(
-				"opensubmegamenu"
-			);
-		}
-	};
+    if (event.target.nextElementSibling.classList.contains("opensubmenu"))
+      event.target.nextElementSibling.classList.remove("opensubmenu");
+    else {
+      document.querySelectorAll(".nav-submenu").forEach(function(value) {
+        value.classList.remove("opensubmenu");
+      });
+      document
+        .querySelector(".mega-menu-container")
+        .classList.remove("opensubmenu");
+      event.target.nextElementSibling.classList.add("opensubmenu");
+    }
+  };
+  handleCategoryClick = (e, categoryId) => {
+    e.preventDefault();
+    store.dispatch(filterCategory(categoryId));
+    // this.props.history.push('/');
+  };
+  handleMegaSubmenu = event => {
+    if (event.target.classList.contains("sub-arrow")) return;
+    // if (
+    // 	event.target.parentNode.nextElementSibling.classList.contains(
+    // 		"opensubmegamenu"
+    // 	)
+    // )
+    // 	event.target.parentNode.nextElementSibling.classList.remove(
+    // 		"opensubmegamenu"
+    // 	);
+    else {
+      document.querySelectorAll(".menu-content").forEach(function(value) {
+        value.classList.remove("opensubmegamenu");
+      });
+      event.target.parentNode.nextElementSibling.classList.add(
+        "opensubmegamenu"
+      );
+    }
+  };
 
-	render() {
-		const { translate } = this.props;
-		return (
-			<div>
-				<div className="main-navbar">
-					<div id="mainnav">
-						<div className="toggle-nav" onClick={this.openNav.bind(this)}>
-							<i className="fa fa-bars sidebar-bar"></i>
-						</div>
-						<ul className="nav-menu" style={this.state.navClose}>
-							<li className="back-btn" onClick={this.closeNav.bind(this)}>
-								<div className="mobile-back text-right">
-									<span>Back</span>
-									<i className="fa fa-angle-right pl-2" aria-hidden="true"></i>
-								</div>
-							</li>
-							<li>
-								<Link
-									to="/"
-									className="nav-link"
-									// onClick={(e) => this.handleSubmenu(e)}
-								>
-									{translate("home")}
-									{/* <span className="sub-arrow"></span> */}
-								</Link>
-								{/* <ul className="nav-submenu" >
-                                    <li><Link to={`/fashion`} >{translate('fashion')}</Link></li>
-                                    <li><Link to={`/beauty`} >{translate('beauty')}</Link></li>
-                                    <li><Link to={`/electronic`} >{translate('electronic')}</Link></li>
-                                    <li><Link to={`/furniture`} >{translate('furniture')}</Link></li>
-                                    <li><Link to={`/kids`} >{translate('kids')}</Link></li>
-                                    <li><Link to={`/pets`} >{translate('pets')}</Link></li>
-                                    <li><Link to={`/vegetables`} >{translate('vegetables')}</Link></li>
-                                    <li><Link to={`/watch`} >{translate('watch')}</Link></li>
-                                </ul> */}
-							</li>
-							<li >
-								<Link
-									to="/shop"
-									className="nav-link"
-									onClick={(e) => this.handleSubmenu(e)}
-								>
-									{translate("shop")}
-									<span className="sub-arrow"></span>
-								</Link>
-								{/* <ul className="nav-submenu">
+  render() {
+    const { translate } = this.props;
+    return (
+      <div>
+        <div className="main-navbar">
+          <div id="mainnav">
+            <div className="toggle-nav" onClick={this.openNav.bind(this)}>
+              <i className="fa fa-bars sidebar-bar"></i>
+            </div>
+            <ul className="nav-menu" style={this.state.navClose}>
+              <li className="back-btn" onClick={this.closeNav.bind(this)}>
+                <div className="mobile-back text-right">
+                  <span>Back</span>
+                  <i className="fa fa-angle-right pl-2" aria-hidden="true"></i>
+                </div>
+              </li>
+              <li>
+                <Link
+                  to="/"
+                  className="nav-link"
+                  // onClick={(e) => this.handleSubmenu(e)}
+                >
+                  {translate("home")}
+                  {/* <span className="sub-arrow"></span> */}
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="/shop"
+                  className="nav-link"
+                  // onClick={(e) => this.handleSubmenu(e)}
+                >
+                  {translate("shop")}
+                  {/* <span className="sub-arrow"></span> */}
+                </a>
+                {/* <ul className="nav-submenu">
 									<li>
 										<Link to={`/left-sidebar/collection`}>
 											{translate("category_left_sidebar")}
@@ -165,49 +172,66 @@ class NavBar extends Component {
 										</Link>
 									</li>
 								</ul> */}
-							</li>
+              </li>
 
-							<li>
-								<Link
-									// to="#"
-									className="nav-link"
-									onClick={(e) => this.handleSubmenu(e)}
-								>
-									{/* {translate('products')} */}
-									Category
-									<span className="sub-arrow"></span>
-								</Link>
-								<ul className="nav-submenu">
-									{this.state.categories.map((item) => (
-										<li key={item.category_id}>
-											<Link
-												to={`${process.env.PUBLIC_URL}/shop`}
-												onClick={(e) =>
-													this.handleCategoryClick(e, item.category_id)
-												}
-											>
-												{item.name}
-											</Link>
-										</li>
-									))}
-									{/* <li><Link to={`/right-sidebar/product/1`} >{translate('right_sidebar')}</Link></li>
+              <li>
+                <Link
+                  // to="#"
+                  className="nav-link"
+                  onClick={e => this.handleSubmenu(e)}
+                >
+                  {/* {translate('products')} */}
+                  Category
+                  <span className="sub-arrow"></span>
+                </Link>
+                <ul className="nav-submenu">
+                  {this.state.categories.map(item => (
+                    <li key={item.category_id}>
+                      <a onClick={e => this.handleSubmenu(e)}>
+                        {item.name}
+
+                        <span className="sub-arrow"></span>
+                      </a>
+
+                      <ul className="nav-submenu">
+                        {item.categories.map(sub_category => {
+                          return (
+                            <li>
+                              <a
+                                href="/shop"
+                                onClick={e =>
+                                  this.handleCategoryClick(
+                                    e,
+                                    sub_category.category_id
+                                  )
+                                }
+                              >
+                                {sub_category.name}
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </li>
+                  ))}
+                  {/* <li><Link to={`/right-sidebar/product/1`} >{translate('right_sidebar')}</Link></li>
                                     <li><Link to={`/no-sidebar/product/1`} >{translate('no_sidebar')}</Link></li>
                                     <li><Link to={`/col-left/product/1`} >{translate('three_col_thumbnail_left')}</Link></li>
                                     <li><Link to={`/col-right/product/1`} >{translate('three_col_thumbnail_right')}</Link></li>
                                     <li><Link to={`/column/product/1`} >{translate('thumbnail_below')}</Link></li>
                                     <li><Link to={`/left-image/product/1`} >{translate('thumbnail_left')}</Link></li>
                                     <li><Link to={`/right-image/product/1`} >{translate('thumbnail_right')}</Link></li> */}
-								</ul>
-							</li>
-							<li className="mega-menu">
-								<div className="mega-menu-container"></div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		);
-	}
+                </ul>
+              </li>
+              <li className="mega-menu">
+                <div className="mega-menu-container"></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default withRouter(withTranslate(NavBar));

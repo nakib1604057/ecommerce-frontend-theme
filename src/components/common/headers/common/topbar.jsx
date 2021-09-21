@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 import { withTranslate } from "react-redux-multilingual";
 import { useSelector } from "react-redux";
 import { isUserLoggedIn, removeLogOut } from "../../../../constants/utils";
-import "./header.css"
+import "./header.css";
 function TopBar({ translate }) {
   const store = useSelector(store => store.companyInfo);
   const info = store.info.info;
-  const logOut = () =>{
-    removeLogOut()
-  }
+  const logOut = () => {
+    removeLogOut();
+  };
   return (
-    <div className="top-header" >
+    <div className="top-header">
       <div className="container">
         <div className="row">
           <div className="col-lg-6">
@@ -40,45 +40,35 @@ function TopBar({ translate }) {
               <li className="onhover-dropdown mobile-account">
                 <i className="fa fa-user" aria-hidden="true"></i>{" "}
                 {translate("my_account")}
-                <ul className="onhover-show-div " id="accDropDown" >
+                <ul className="onhover-show-div " id="accDropDown">
                   {isUserLoggedIn() ? (
                     <>
-                      <li >
-                        <Link
-                          to={`/user/dashboard`}
+                      <li>
+                        <a
+                          href={`/user/dashboard`}
                           data-lng="en"
                           id="dorpdownItem"
                         >
                           Dashboard
-                        </Link>
+                        </a>
                       </li>
                       <li>
-                        <Link
-                          to={`/`}
-                          data-lng="en"
-                          onClick={()=>logOut()}
-                        >
+                        <a href={`/`} data-lng="en" onClick={() => logOut()}>
                           Logout
-                        </Link>
+                        </a>
                       </li>
                     </>
                   ) : (
                     <>
                       <li>
-                        <Link
-                          to={`/pages/login`}
-                          data-lng="en"
-                        >
+                        <a href={`/pages/login`} data-lng="en">
                           Login
-                        </Link>
+                        </a>
                       </li>
                       <li>
-                        <Link
-                          to={`/pages/register`}
-                          data-lng="en"
-                        >
+                        <a href={`/pages/register`} data-lng="en">
                           Register
-                        </Link>
+                        </a>
                       </li>
                     </>
                   )}
