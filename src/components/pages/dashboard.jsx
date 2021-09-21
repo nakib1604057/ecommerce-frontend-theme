@@ -15,6 +15,7 @@ const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [userData, setUserData] = useState([]);
   const [preOrderSuccess, setPreOrderSuccess] = useState(false);
+  const [tabIndex, setTabIndex] = useState(0);
   useEffect(async () => {
     try {
       setIsLoading(true);
@@ -45,7 +46,7 @@ const Dashboard = () => {
       ) : (
         <section className="section-b-space">
           <div className="container">
-            <Tabs className="theme-tab">
+            <Tabs className="theme-tab" selectedIndex={tabIndex} onSelect={index => setTabIndex(index)}>
               <div className="row">
                 <div className="col-lg-3">
                   <div className="account-sidebar">
