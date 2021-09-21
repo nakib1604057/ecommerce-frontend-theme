@@ -44,7 +44,7 @@ class NoSideBar extends Component {
 	loadProductDetails = async (slug) => {
 		try {
 			const res = await axiosInstance().get(`${urls.GET_PRODUCTS}/${slug}`);
-			consoleLog(res);
+		
 			this.setState({ item: res.data.product, loading: false });
 
 			const categoryId = this.state.item.categories[0].category_id;
@@ -95,7 +95,7 @@ class NoSideBar extends Component {
 											ref={(slider) => (this.slider1 = slider)}
 											className="product-slick"
 										>
-											{productImg.map((vari, index) => {
+											{item.images.map((vari, index) => {
 												return (
 													<div key={index}>
 														<ImageZoom

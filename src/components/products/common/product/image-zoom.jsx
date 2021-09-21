@@ -6,6 +6,7 @@ export default class ImageZoom extends Component {
 	render() {
 		const { image } = this.props;
 
+		console.log(image)
 		return (
 			// <img src={`https://dlgb.bayofstyle.com/uploads/${image}`}  className="img-fluid image_zoom_cls-0" />
 			<ImageMgnifier

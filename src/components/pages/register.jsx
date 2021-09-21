@@ -90,7 +90,6 @@ const Register = () => {
       toast.error(error.data.error.message);
     }
   };
-  console.log(state);
   return (
     <div>
       <Breadcrumb title={"create account"} />

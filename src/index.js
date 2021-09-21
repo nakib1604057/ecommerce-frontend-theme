@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Provider, useDispatch } from "react-redux";
+import { BrowserRouter, Route, Switch, useLocation } from "react-router-dom";
 import { ScrollContext } from "react-router-scroll-4";
 import { IntlReducer as Intl, IntlProvider } from "react-redux-multilingual";
 import { PersistGate } from "redux-persist/lib/integration/react";
@@ -68,130 +68,38 @@ import ForgetPassword from "./components/pages/forget-password";
 import Contact from "./components/pages/contact";
 import Dashboard from "./components/pages/dashboard";
 import Faq from "./components/pages/faq";
-
+import Routes from './routes'
 import { consoleLog } from "./console";
 import { ToastContainer } from "react-toastify";
 import { isUserLoggedIn } from "./constants/utils";
 import PrivateRoute from "./routes/PrivateRoute";
 
-class Root extends React.Component {
-  render() {
+const Root = () => {
+  useEffect(() => {
     store.dispatch(getAllProducts());
     store.dispatch(filterCategory("-1"));
     store.dispatch(getInfo());
     store.dispatch(getCategories());
     consoleLog(isUserLoggedIn());
-    return (
-      <>
-        <ToastContainer />
-        <Provider store={store}>
-          <PersistGate persistor={persistStore(store)}>
-            <IntlProvider translations={translations} locale="en">
-              <BrowserRouter basename={"/"}>
-                <ScrollContext>
-                  <Switch>
-                    <Layout>
-                      {/*Routes For Layouts*/}
-                      {/* <Route path={`/fashion`} /> */}
-                      <Route
-                        exact
-                        path={`/`}
-                        component={Fashion}
-                      />
+  }, []);
 
-                      {/*Routes For Features (Product Collection) */}
-                      <Route
-                       exact
-                        path={`/shop`}
-                        component={CollectionLeftSidebar}
-                      />
 
-                      {/*Routes For Single Product*/}
-
-                      <Route
-                        path={`/product/:slug`}
-                        component={NoSideBar}
-                      />
-                     
-                      {/*Routes For custom Features*/}
-                      <Route
-                        path={`/cart`}
-                        component={Cart}
-                      />
-                      <Route
-                        path={`/wishlist`}
-                        component={wishList}
-                      />
-
-                      <PrivateRoute
-                        path={`/checkout`}
-                        component={checkOut}
-                      />
-                      <PrivateRoute
-                        path={`/order-success`}
-                        component={orderSuccess}
-                      />
-
-                      <PrivateRoute
-                        path={`/sales/orders`}
-                        component={aboutUs}
-                      />
-
-                      {/*Routes For Extra Pages*/}
-                      <Route
-                        path={`/pages/about-us`}
-                        component={aboutUs}
-                      />
-                      <Route
-                        path={`/pages/404`}
-                        component={PageNotFound}
-                      />
-                      <Route
-                        path={`/pages/lookbook`}
-                        component={lookbook}
-                      />
-                      <Route
-                        path={`/pages/login`}
-                        component={Login}
-                      />
-                      <Route
-                        path={`/register`}
-                        component={Register}
-                      />
-                      <Route
-                        path={`/pages/search`}
-                        component={Search}
-                      />
-                      <Route
-                        path={`/pages/collection`}
-                        component={Collection}
-                      />
-                      <Route
-                        path={`/pages/forget-password`}
-                        component={ForgetPassword}
-                      />
-                      <Route
-                        path={`/pages/contact`}
-                        component={Contact}
-                      />
-                      <PrivateRoute
-                        path={`/user/dashboard`}
-                        component={Dashboard}
-                      />
-                      <Route
-                        path={`/pages/faq`}
-                        component={Faq}
-                      />
-                    </Layout>
-                  </Switch>
-                </ScrollContext>
-              </BrowserRouter>
-            </IntlProvider>
-          </PersistGate>
-        </Provider>
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <ToastContainer />
+      <Provider store={store}>
+        <PersistGate persistor={persistStore(store)}>
+          <IntlProvider translations={translations} locale="en">
+            <BrowserRouter basename={"/"}>
+              <ScrollContext>
+              <Routes/>
+               </ScrollContext>
+            </BrowserRouter>
+          </IntlProvider>
+        </PersistGate>
+      </Provider>
+    </>
+  );
+};
 
 ReactDOM.render(<Root />, document.getElementById("root"));

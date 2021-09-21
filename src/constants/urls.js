@@ -24,5 +24,12 @@ export const urls = {
   POST_ORDER:'api/ecommrece/checkout',
   GET_RELATED_PRODUCTS:`api/related-products`,
   GET_PAYMENT_GETWAY_NUMBERS :`api/admin/admin-info`,
-  GET_SHIPPING_COST:`api/ecommrece/shippingCost/`
+
+   // Facebook Pixel
+   FACEBOOK_PIXEL: `api/marketing/fb-pixel`,
+  GET_SHIPPING_COST:`api/ecommrece/shippingCost/`,
+
+  LOGIN_API:`api/auth/login`
+
+
 };

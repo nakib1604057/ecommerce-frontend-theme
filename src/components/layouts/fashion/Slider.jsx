@@ -14,16 +14,14 @@ const main = () => {
 
   return (
     <div>
-      <Slider
-        className="slide-1 home-slider"
-      >
-           {sliderImages.map(item => {
-            // const imageUrl = ${urls.IMAGE_URL}${item.image};
-            // console.log(imageUrl);
-            return (
-        <div>
-          {/* add image in this div  */}
-         
+      <Slider className="slide-1 home-slider">
+        {sliderImages.map(item => {
+          // const imageUrl = ${urls.IMAGE_URL}${item.image};
+          // console.log(imageUrl);
+          return (
+            <div>
+              {/* add image in this div  */}
+
               <div
                 className="text-center"
                 style={{
@@ -46,11 +44,9 @@ const main = () => {
                   </div>
                 </div>
               </div>
-           
-        </div>
-         );
+            </div>
+          );
         })}
-        
       </Slider>
     </div>
   );

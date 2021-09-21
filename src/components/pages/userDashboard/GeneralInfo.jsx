@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 const GeneralInfo = ({ userData }) => {
-	console.log("userDaa", userData);
 	const empty = () => <span className="text-danger">empty</span>;
 	return (
 		<div>

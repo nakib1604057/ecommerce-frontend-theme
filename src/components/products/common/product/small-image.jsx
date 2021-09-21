@@ -26,7 +26,6 @@ class SmallImages extends Component {
       draggable: true,
       focusOnSelect: true,
     };
-    console.log(item);
     return (
       <div className="row">
         <div className="col-12 p-0">

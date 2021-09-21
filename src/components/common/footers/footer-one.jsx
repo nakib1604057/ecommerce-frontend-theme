@@ -84,11 +84,7 @@ const FooterOne = props => {
                 <div className="footer-logo">
                   <LogoImage logo={props.logoName} />
                 </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam,{" "}
-                </p>
+                <p>{info !== undefined && info.about_us}</p>
                 {/* <div className="footer-social">
                   <ul>
                     <li>
@@ -194,17 +190,19 @@ const FooterOne = props => {
                   <ul className="contact-list">
                     <li>
                       <i className="fa fa-map-marker"></i>
-                      {info !==undefined &&  info.address}
+                      {info !== undefined && info.address}
                     </li>
                     <li>
-                      <i className="fa fa-phone"></i>Call Us: {info !==undefined && info.contact_no}
+                      <i className="fa fa-phone"></i>Call Us:{" "}
+                      {info !== undefined && info.contact_no}
                     </li>
                     <li>
                       <i className="fa fa-envelope-o"></i>Email Us:{" "}
-                      <a href="#">{info !==undefined && info.email}</a>
+                      <a href="#">{info !== undefined && info.email}</a>
                     </li>
                     <li>
-                      <i className="fa fa-fax"></i>Schedule: {info !==undefined &&info.schedule}
+                      <i className="fa fa-fax"></i>Schedule:{" "}
+                      {info !== undefined && info.schedule}
                     </li>
                   </ul>
                 </div>

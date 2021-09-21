@@ -5,47 +5,46 @@ import { Link, withRouter } from "react-router-dom";
 import { withTranslate } from "react-redux-multilingual";
 import { getCategories } from "../../../../services/api/ecommerce";
 class NavBar extends Component {
-	constructor(props) {
-		super(props);
+  constructor(props) {
+    super(props);
 
-		this.state = {
-			navClose: { right: "0px" },
-			categories: [],
-		};
-	}
+    this.state = {
+      navClose: { right: "0px" },
+      categories: [],
+    };
+  }
 
-	componentWillMount() {
-		if (window.innerWidth < 750) {
-			this.setState({ navClose: { right: "-410px" } });
-		}
-		if (window.innerWidth < 1199) {
-			this.setState({ navClose: { right: "-300px" } });
-		}
-		const categoryData = getCategories();
-		categoryData.then((res) => {
-			// console.log("cat", res);
-			this.setState({
-				categories: res.data.data.categories,
-			});
-		});
-	}
+  componentWillMount() {
+    if (window.innerWidth < 750) {
+      this.setState({ navClose: { right: "-410px" } });
+    }
+    if (window.innerWidth < 1199) {
+      this.setState({ navClose: { right: "-300px" } });
+    }
+    const categoryData = getCategories();
+    categoryData.then(res => {
+      // console.log("cat", res);
+      this.setState({
+        categories: res.data.data.categories,
+      });
+    });
+  }
 
-	openNav() {
-		console.log("open");
-		this.setState({ navClose: { right: "0px" } });
-	}
-	closeNav() {
-		this.setState({ navClose: { right: "-410px" } });
-	}
+  openNav() {
+    this.setState({ navClose: { right: "0px" } });
+  }
+  closeNav() {
+    this.setState({ navClose: { right: "-410px" } });
+  }
 
-	onMouseEnterHandler() {
-		if (window.innerWidth > 1199) {
-			document.querySelector("#main-menu").classList.add("hover-unset");
-		}
-	}
+  onMouseEnterHandler() {
+    if (window.innerWidth > 1199) {
+      document.querySelector("#main-menu").classList.add("hover-unset");
+    }
+  }
 
-	handleSubmenu = (event) => {
-		if (event.target.classList.contains("sub-arrow")) return;
+  handleSubmenu = event => {
+    if (event.target.classList.contains("sub-arrow")) return;
 
 		if (event.target.nextElementSibling.classList.contains("opensubmenu"))
 			event.target.nextElementSibling.classList.remove("opensubmenu");
@@ -129,7 +128,7 @@ class NavBar extends Component {
 									{translate("shop")}
 									<span className="sub-arrow"></span>
 								</Link>
-								<ul className="nav-submenu">
+								{/* <ul className="nav-submenu">
 									<li>
 										<Link to={`/left-sidebar/collection`}>
 											{translate("category_left_sidebar")}
@@ -165,12 +164,12 @@ class NavBar extends Component {
 											{translate("category_full_width")}
 										</Link>
 									</li>
-								</ul>
+								</ul> */}
 							</li>
 
 							<li>
 								<Link
-									to="#"
+									// to="#"
 									className="nav-link"
 									onClick={(e) => this.handleSubmenu(e)}
 								>
@@ -211,4 +210,4 @@ class NavBar extends Component {
 	}
 }
 
-export default withTranslate(NavBar);
+export default withRouter(withTranslate(NavBar));

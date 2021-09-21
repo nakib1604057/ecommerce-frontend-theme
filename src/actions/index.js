@@ -26,6 +26,9 @@ export const fetchSingleProduct = productId => ({
   productId,
 });
 
+export const clearCart = () => ({
+  type: types.CLEAR_CART,
+});
 //it seems that I should probably use this as the basis for "Cart"
 export const addToCart = (product, qty) => dispatch => {
   toast.success("Item Added to Cart");
@@ -140,4 +143,3 @@ export const getCategories = () => {
       });
   };
 };
-
