@@ -60,7 +60,7 @@ class FilterBar extends Component {
                         </li>
                     </ul>
                 </div> */}
-                <div className="collection-grid-view">
+                {/* <div className="collection-grid-view">
                     <ul>
                         <li>
                             <img
@@ -87,7 +87,7 @@ class FilterBar extends Component {
                                 className="product-6-layout-view" onClick={() => this.LayoutView(2)} />
                         </li>
                     </ul>
-                </div>
+                </div> */}
                 {/* <div className="product-page-filter">
                     <select onChange={(e) => this.props.filterSort(e.target.value)}>
                         <option value="">Sorting items</option>
