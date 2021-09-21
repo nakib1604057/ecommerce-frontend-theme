@@ -32,9 +32,11 @@ export const Product4 = {
     ]
 }
 export const Product5 = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 300,
+    autoplay: true,
+    autoplaySpeed: 3000,
     slidesToShow: 5,
     slidesToScroll: 5,
     responsive: [

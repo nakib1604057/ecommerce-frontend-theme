@@ -14,7 +14,7 @@ import {
 import { consoleLog } from "../../../console";
 import axiosInstance from "../../../api/axiosInstance";
 import { urls } from "../../../constants/urls";
-
+import  '../../layouts/common/common.css';
 const Filter = () => {
   const [categories, setCategories] = useState([
     {
@@ -121,10 +121,10 @@ const Filter = () => {
                                 id={category.name}
                               />
                               <label
-                                className="custom-control-label"
+                                className="custom-control-label "
                                 htmlFor={category.name}
                               >
-                                {category.name}
+                                <span className="product-name">{category.name} </span>
                               </label>
                             </div>
                           );

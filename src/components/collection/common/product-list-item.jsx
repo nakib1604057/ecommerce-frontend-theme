@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Modal from "react-responsive-modal";
 import { defaultImage } from "../../../constants/defaultImage";
 import { urls } from "../../../constants/urls";
+import  '../../layouts/common/common.css';
 import { consoleLog } from "../../../console";
 
 class ProductListItem extends Component {
@@ -77,11 +78,8 @@ class ProductListItem extends Component {
     const image = JSON.parse(product.image);
     return (
       <div
-        className="product-box mb-2"
-        style={{
-          boxShadow: "0px 0px 12px rgb(132 124 124 / 30%)",
-          marginBottom: "20px",
-        }}
+        className="product-box mb-2 product-card"
+        
       >
         <div className="img-wrapper">
           <div className="front">
@@ -92,16 +90,15 @@ class ProductListItem extends Component {
                     ? urls.IMAGE_URL + image.file_name
                     : defaultImage
                 }
-                className="img-fluid"
+                className="img-fluid fixed-img-height"
                 alt=""
               />
             </Link>
           </div>
           <div
-            className="cart-info cart-wrap"
+            className="cart-info cart-wrap cart-wishlist-icon"
             style={{
-              background: "rgb(255 255 255 / 90%)",
-              borderRadius: "20px",
+              
               marginRight: "10px",
               marginBottom: "20px",
             }}
@@ -120,7 +117,7 @@ class ProductListItem extends Component {
         <div className="product-detail" style={{ padding: "12px" }}>
           <div>
             <Link to={`/product/${product.slug}`}>
-              <h6>{product.name}</h6>
+              <h6 className="product-name">{product.name}</h6>
             </Link>
             <h4>
               TK {product.discount || product.price}

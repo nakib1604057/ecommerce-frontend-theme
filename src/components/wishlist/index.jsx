@@ -73,7 +73,7 @@ class wishList extends Component {
                               <Link
                                 to={`/product/${item.slug}`}
                               >
-                                {item.name}
+                                <h5>{item.name} </h5>
                               </Link>
                             </td>
 
