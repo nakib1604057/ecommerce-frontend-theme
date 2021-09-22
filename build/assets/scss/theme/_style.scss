@@ -9548,8 +9548,10 @@ footer {
 			transition: all 0.5s ease;
 			&.active {
 				color: $theme-deafult;
+				
 				a {
 					color: $theme-deafult;
+					// border-bottom: 1px solid red;
 				}
 			}
 			&:before {

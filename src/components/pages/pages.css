@@ -1,17 +1,24 @@
-
-
 @media only screen and (min-width: 993px) {
-    .acc-dashboard-left{
-        display: block;
-        position: fixed;
-        height: 100vh;
-        top: 0;
-        left: -350px;
-        background-color: white;
-        z-index: 99;
-        padding: 0 35px 35px;
-        max-width: 350px;
-        transition: all 0.5s ease;
+	.acc-dashboard-left {
+		display: block;
+		position: fixed;
+		height: 100vh;
+		top: 0;
+		left: -350px;
+		background-color: white;
+		z-index: 99;
+		padding: 0 35px 35px;
+		max-width: 350px;
+		transition: all 0.5s ease;
+		text-align: left;
+	}
+   
+}
+
+@media only screen and (max-width:993px){
+    .account-sidebar{
+        box-shadow:0px 0px 12px rgb(195 195 195 / 30%);
         
     }
-  }
+	
+}

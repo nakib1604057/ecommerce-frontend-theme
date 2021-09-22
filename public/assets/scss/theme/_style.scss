@@ -9664,18 +9664,19 @@ footer {
 	text-align: center;
 	font-weight: 700;
 	margin-bottom: 20px;
-	
+
 	padding: 20px;
-    border: 1px solid #dadada;
-    border-radius: 5px;
-    padding-bottom: 0px;
-    // box-shadow: 0px 0px 12px rgb(183 183 183 / 20%);
-	
-	.block-content{
-     ul li{
-		 width:100%;
-		 border-bottom: 1px solid #e2e2e2;
-	 }		
+	border: 1px solid #dadada;
+	border-radius: 5px;
+	padding-bottom: 0px;
+	// box-shadow: 0px 0px 12px rgb(183 183 183 / 20%);
+
+	.block-content {
+		ul li {
+			width: 100%;
+			border-bottom: 1px solid #e2e2e2;
+			text-transform: capitalize;
+		}
 	}
 }
 

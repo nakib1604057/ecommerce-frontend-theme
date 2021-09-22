@@ -40,28 +40,51 @@ const Dashboard = () => {
 	return (
 		<div>
 			<Breadcrumb title={"Dashboard"} />
+			
 			{isLoading ? (
 				<div>
 					<div className="loading-cls"></div>
 				</div>
 			) : (
 				<section className="section-b-space">
+					
 					<div className="container">
 						<Tabs
 							className="theme-tab"
-							selectedIndex={tabIndex}
-							onSelect={(index) => setTabIndex(index)}
+							// selectedIndex={tabIndex}
+							// onSelect={(index) => setTabIndex(index)}
 						>
 							<div className="row">
-								<div className="col-lg-3 col-12">
+								<div className="col-lg-4 col-xl-4 col-md-12 col-12">
 									<div className="account-sidebar w-100">
-                  <div className="block-content " >
-											<TabList className="tabs tab-title">
+									<div className="block-content mx-auto mb-2">
+											<div className="mx-auto">
+												<button
+													type="button"
+													class="btn btn-danger pd-2 rounded  w-100"
+													onClick={onOpenModal}
+												>
+													PreOrder
+												</button>
+											</div>
+										</div>
+										<hr />
+										<div className="block-content">
+											<TabList className="tabs tab-title text-left ">
 												<Tab>DashBoard</Tab>
+												<hr className="m-0"/>
 												<Tab>Orders</Tab>
+												<hr className="m-0"/>
+
 												<Tab>Track PreOrders</Tab>
+												<hr className="m-0"/>
+
 												<Tab>Update General Info</Tab>
+												<hr className="m-0"/>
+
 												<Tab>Update Address</Tab>
+												<hr className="m-0"/>
+
 												<Tab>Change Password</Tab>
 											</TabList>
 										</div>
@@ -70,7 +93,6 @@ const Dashboard = () => {
 										className="dashboard-left "
 										style={{
 											boxShadow: "0px 0px 17px 3px rgba(210 206 206 / 30%)",
-                     
 										}}
 									>
 										<div className="collection-mobile-back">
@@ -91,7 +113,7 @@ const Dashboard = () => {
 												</button>
 											</div>
 										</div>
-										<div className="block-content " >
+										<div className="block-content ">
 											<TabList className="tabs tab-title">
 												<Tab>DashBoard</Tab>
 												<Tab>Orders</Tab>
@@ -103,7 +125,7 @@ const Dashboard = () => {
 										</div>
 									</div>
 								</div>
-								<div className="col-lg-9">
+								<div className="col-lg-8 col-xl-8 col-md-12">
 									<div
 										className="dashboard-right"
 										style={{
@@ -115,14 +137,14 @@ const Dashboard = () => {
 												<GeneralInfo userData={userData} />
 											</TabPanel>
 											<TabPanel>
-												<div className="no-slider row">
+												{/* <div className="no-slider row"> */}
 													<Order />
-												</div>
+												{/* </div> */}
 											</TabPanel>
 											<TabPanel>
-												<div className="no-slider row">
+												{/* <div className="no-slider row"> */}
 													<TrackPreOrder />
-												</div>
+												{/* </div> */}
 											</TabPanel>
 											<TabPanel>
 												<UpdateGeneralInfo userData={userData} />
