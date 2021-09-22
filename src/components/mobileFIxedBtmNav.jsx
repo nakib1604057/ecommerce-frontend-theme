@@ -16,7 +16,7 @@ const mobileFIxedBtmNav = () => {
         <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
           <div class="mobile-bottom-nav__item-content text-center">
             {/* <i class="material-icons">home</i> */}
-            <a href="/">
+            <Link to="/">
               <div className="m-auto mb-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ const mobileFIxedBtmNav = () => {
                 </svg>
               </div>
               Home
-            </a>
+            </Link>
           </div>
         </div>
         <div class="mobile-bottom-nav__item">

@@ -137,17 +137,17 @@ class NavBar extends Component {
                 </a>
               </li>
 
-              <li>
-                <Link
-                  // to="#"
-                  className="nav-link"
-                  onClick={e => this.handleSubmenu(e)}
-                >
+              {/* <> */}
+                {/* <Link */}
+{/* to="#"
+ className="nav-link"
+ onClick={e => this.handleSubmenu(e)}
+                > */}
                   {/* {translate('products')} */}
-                  Category
-                  <span className="sub-arrow"></span>
-                </Link>
-                <ul className="nav-submenu">
+                  {/* Category */}
+                  {/* <span className="sub-arrow"></span> */}
+                {/* </Link> */}
+                {/* <ul className="nav-submenu">
                   {this.state.categories.map(item => (
                     <li key={item.category_id} className="subCategory">
                       <a>
@@ -166,8 +166,8 @@ class NavBar extends Component {
                         ))}
                     </li>
                   ))}
-                </ul>
-              </li>
+                </ul> */}
+              {/* </li> */}
               <li className="mega-menu">
                 <div className="mega-menu-container"></div>
               </li>

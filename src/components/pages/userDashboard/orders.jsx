@@ -77,14 +77,14 @@ const main = () => {
           </>
         ) : (
           <div className="text-center">
-            <Link to="/shop">
+            <a href="/shop">
               <button
                 className="btn btn-lg rounded btn-outline "
                 style={{ background: "#ff4c3b", color: "white" }}
               >
                 Start Shopping{" "}
               </button>
-            </Link>
+            </a>
           </div>
         )}
       </>
