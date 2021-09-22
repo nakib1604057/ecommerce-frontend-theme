@@ -9656,15 +9656,27 @@ footer {
 .account-sidebar {
 	display: none;
 	cursor: pointer;
-	background-color: $theme-deafult;
-	color: $white;
+	background-color: white;
+	color: black;
 	width: 30%;
 	font-size: 16px;
 	text-transform: uppercase;
 	text-align: center;
 	font-weight: 700;
 	margin-bottom: 20px;
-	padding: 5px;
+	
+	padding: 20px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    padding-bottom: 0px;
+    // box-shadow: 0px 0px 12px rgb(183 183 183 / 20%);
+	
+	.block-content{
+     ul li{
+		 width:100%;
+		 border-bottom: 1px solid #e2e2e2;
+	 }		
+	}
 }
 
 // Order-success //

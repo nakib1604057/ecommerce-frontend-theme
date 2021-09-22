@@ -3,3 +3,16 @@
     padding: 20px;
     border-radius: 5px;
 }
+.filter-btn{
+    border-radius: 4px;
+}
+@media only screen and (max-width: 992px) {
+    .mobile-shop-sidevar{
+        left: -15px;
+        z-index: 10000;
+    }
+    .close-mobile-shop-sidevar{
+        left: -365px;
+        z-index: 0;
+    }
+}
