@@ -8,10 +8,14 @@
 .subCategory ul{
     display: none;
 }
-.subCategory:active > ul{
-    display: inherit;
+.text-color{
+    color: #ff4c3b;
+}
+.subCategory:hover > ul{
+    display: block;
  }
 
+ /* when screen size > 1200px  */
 @media screen and (min-width: 1200px) {
     .subCategory ul{
         display: none;
@@ -19,16 +23,22 @@
         top: 60px;
     }
     .subCategory:hover ul{
-       display: inherit;
+       display: block;
     }
-    .subCategory ul li{
+    .subCategory{
+        cursor: pointer;
+
+    }
+    .subCategory ul div{
         background-color: white;
         position: relative;
         top:-60px; 
-        left:200px;
+        left:198px;
         box-shadow: 0px 2px 1px rgb(191 178 178 / 30%);
         border: 2px solid #e6e3e3;
+
     }
+    
    
     
   }

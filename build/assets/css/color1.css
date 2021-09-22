@@ -10947,8 +10947,8 @@ footer p {
 	color: #ffffff;
 	width: 30%;
 	font-size: 16px;
-	text-transform: uppercase;
-	text-align: center;
+	
+	text-align: left;
 	font-weight: 700;
 	margin-bottom: 20px;
 	padding: 5px;

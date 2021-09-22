@@ -1,3 +1,6 @@
 .product-slider{
     margin:10px 0px;
 }
+.img-cover{
+    background-size: cover;
+}

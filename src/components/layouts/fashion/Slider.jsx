@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import { urls } from "../../../constants/urls";
 import { getSliderImages } from "../../../services/api/homePage";
-
+import './fashion-layout.css';
 const main = () => {
   const [sliderImages, setSliderImages] = useState([]);
   useEffect(async () => {
@@ -23,7 +23,7 @@ const main = () => {
               {/* add image in this div  */}
 
               <div
-                className="text-center"
+                className="text-center img-cover"
                 style={{
                   backgroundImage: `url("${urls.IMAGE_URL}${item.image}")`,
                 }}
