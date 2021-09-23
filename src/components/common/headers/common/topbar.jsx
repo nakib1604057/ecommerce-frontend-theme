@@ -18,7 +18,7 @@ function TopBar({ translate }) {
             <div className="header-contact">
               <ul>
                 <li>
-                  {translate("topbar_title", { theme_name: " Bay Of Style" })}
+                  {translate("topbar_title", { theme_name: " Notlens" })}
                 </li>
                 <li>
                   <i className="fa fa-phone" aria-hidden="true"></i>

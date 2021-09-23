@@ -732,15 +732,15 @@ class ThemeSettings extends Component {
 							</div>
 							<div className="buy_btn">
 								<a
-									href="https://themeforest.net/item/Bay Of Style-responsive-react-ecommerce-template/23067773?s_rank=1"
+									href="https://themeforest.net/item/Notlens-responsive-react-ecommerce-template/23067773?s_rank=1"
 									target="_blank"
 									className="btn btn-block purchase_btn"
 								>
 									<i className="fa fa-shopping-cart" aria-hidden="true"></i>{" "}
-									purchase Bay Of Style now!
+									purchase Notlens now!
 								</a>
 								<a
-									href="https://themeforest.net/item/Bay Of Style-responsive-angular-ecommerce-template/22905358?s_rank=3"
+									href="https://themeforest.net/item/Notlens-responsive-angular-ecommerce-template/22905358?s_rank=3"
 									target="_blank"
 									className="btn btn-block purchase_btn"
 								>
@@ -749,17 +749,17 @@ class ThemeSettings extends Component {
 										alt=""
 										className="img-fluid"
 									/>{" "}
-									Bay Of Style Angular
+									Notlens Angular
 								</a>
 								<a
-									href="https://themeforest.net/item/Bay Of Style-responsive-ecommerce-html-template/22809967"
+									href="https://themeforest.net/item/Notlens-responsive-ecommerce-html-template/22809967"
 									target="_blank"
 									className="btn btn-block purchase_btn"
 								>
-									<img src="" alt="" className="img-fluid" /> Bay Of Style HTML
+									<img src="" alt="" className="img-fluid" /> Notlens HTML
 								</a>
 								<a
-									href="https://themeforest.net/item/Bay Of Style-multipurpose-shopify-sections-theme/23093831?s_rank=1"
+									href="https://themeforest.net/item/Notlens-multipurpose-shopify-sections-theme/23093831?s_rank=1"
 									target="_blank"
 									className="btn btn-block purchase_btn"
 								>
@@ -768,7 +768,7 @@ class ThemeSettings extends Component {
 										alt=""
 										className="img-fluid"
 									/>{" "}
-									Bay Of Style Shopify
+									Notlens Shopify
 								</a>
 							</div>
 						</div>

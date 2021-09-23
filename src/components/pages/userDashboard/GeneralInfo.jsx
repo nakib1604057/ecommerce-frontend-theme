@@ -11,7 +11,7 @@ const GeneralInfo = ({ userData }) => {
 			</div>
 			<div className="welcome-msg">
 				<p>
-					Wellcome to <strong>BAY OF STYLE .</strong>
+					Wellcome to <strong>Notlens .</strong>
 				</p>
 			</div>
 			<div className="box-account box-info">

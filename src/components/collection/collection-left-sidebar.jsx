@@ -33,10 +33,10 @@ class CollectionLeftSidebar extends Component {
 			<div>
 				{/*SEO Support*/}
 				<Helmet>
-					<title>Bay Of Style | Collection of Products</title>
+					<title>Notlens | Collection of Products</title>
 					<meta
 						name="description"
-						content="Bay Of Style – Multipurpose eCommerce React Template is a multi-use React template. It is designed to go well with multi-purpose websites. Bay Of Style Bootstrap 4 Template will help you run multiple businesses."
+						content="Notlens – Multipurpose eCommerce React Template is a multi-use React template. It is designed to go well with multi-purpose websites. Notlens Bootstrap 4 Template will help you run multiple businesses."
 					/>
 				</Helmet>
 				{/*SEO Support End */}

@@ -170,7 +170,7 @@ class FooterFour extends Component {
 									<div className="footer-contant">
 										<ul className="contact-list">
 											<li>
-												<i className="fa fa-map-marker"></i>Bay Of Style Demo
+												<i className="fa fa-map-marker"></i>Notlens Demo
 												Store, Demo store India 345-659
 											</li>
 											<li>

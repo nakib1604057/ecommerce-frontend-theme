@@ -1,8 +1,8 @@
 {
-	"name": "Bay-Of-Style",
+	"name": "Notlens",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://bayofstyle.com/",
+	"homepage": "http://reactecommerce.diligite.com/",
 	"basename": "/",
 	"dependencies": {
 		"@babel/core": "7.1.0",

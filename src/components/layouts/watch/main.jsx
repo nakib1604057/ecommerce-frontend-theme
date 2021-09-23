@@ -32,7 +32,7 @@ class Watch extends Component {
 		return (
 			<div>
 				<Helmet>
-					<title>Bay Of Style | Watch Store</title>
+					<title>Notlens | Watch Store</title>
 				</Helmet>
 				<HeaderFive logoName={"layout4/logo.png"} />
 				<section className="p-0 small-slider">

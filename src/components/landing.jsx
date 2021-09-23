@@ -111,7 +111,7 @@ class Landing extends Component {
 
 	render() {
 		return (
-			<div className="landing-page-Bay Of Style">
+			<div className="landing-page-Notlens">
 				<header id="sticky" className="sticky">
 					<div className="container-fluid">
 						<div className="row">
@@ -192,7 +192,7 @@ class Landing extends Component {
 										<form
 											target="_blank"
 											className="form-inline my-lg-0"
-											action="https://themeforest.net/item/Bay Of Style-responsive-react-ecommerce-template/23067773"
+											action="https://themeforest.net/item/Notlens-responsive-react-ecommerce-template/23067773"
 										>
 											<button className="btn my-sm-0 purchase-btn">
 												PURCHASE
@@ -316,10 +316,10 @@ class Landing extends Component {
 								<div className="feature text-center">
 									<div>
 										<h5 className="title-landing">
-											Reasones to Buy Bay Of Style
+											Reasones to Buy Notlens
 										</h5>
 										<p className="pb-3">
-											Bay Of Style HTML template is an apparently simple but
+											Notlens HTML template is an apparently simple but
 											highly functional tempalate designed for creating a
 											flourisahing online business.
 										</p>
@@ -346,7 +346,7 @@ class Landing extends Component {
 										<h6>Frontend Template</h6>
 									</div>
 									<p className="para">
-										Bay Of Style is a clean and morfern responsive template.it
+										Notlens is a clean and morfern responsive template.it
 										will perfectly suit for any type of online store
 									</p>
 								</div>
@@ -369,7 +369,7 @@ class Landing extends Component {
 										<h6>Admin Template</h6>
 									</div>
 									<p className="para">
-										Bay Of Style has powerful backend admin panel to manage
+										Notlens has powerful backend admin panel to manage
 										products, sales, discount coupons, orders, user, vendor and
 										much more.
 									</p>
@@ -393,7 +393,7 @@ class Landing extends Component {
 										<h6>Email Template</h6>
 									</div>
 									<p className="para">
-										Bay Of Style comes with 4 email template which include two
+										Notlens comes with 4 email template which include two
 										order success template & two email template
 									</p>
 								</div>
@@ -416,7 +416,7 @@ class Landing extends Component {
 										<h6>portfolio pages</h6>
 									</div>
 									<p className="para">
-										Bay Of Style provides multiple portfolio pages which
+										Notlens provides multiple portfolio pages which
 										includes 3 grid view & 4 masonary view.
 									</p>
 								</div>
@@ -465,7 +465,7 @@ class Landing extends Component {
 									<p className="para">
 										Every store has different image size weather its tools or
 										fashion we have covered all image size for all your store
-										needs , it has auto resize image option in Bay Of Style
+										needs , it has auto resize image option in Notlens
 									</p>
 								</div>
 							</div>
@@ -510,7 +510,7 @@ class Landing extends Component {
 										<h6>Easy RTL Integration</h6>
 									</div>
 									<p className="para">
-										Design your website LTR or RTL , Bay Of Style supports
+										Design your website LTR or RTL , Notlens supports
 										multi-languages so its easy to design website on any layout
 										such as arabic , urdu..
 									</p>
@@ -1169,7 +1169,7 @@ class Landing extends Component {
 						<div className="row">
 							<div className="col-xl-3 col-sm-6 col-12 demo-box">
 								<a
-									href="https://react.pixelstrap.com/Bay Of Style-admin/dashboard"
+									href="https://react.pixelstrap.com/Notlens-admin/dashboard"
 									target="_blank"
 								>
 									<img
@@ -1181,7 +1181,7 @@ class Landing extends Component {
 							</div>
 							<div className="col-xl-3 col-sm-6 col-12 demo-box">
 								<a
-									href="https://react.pixelstrap.com/Bay Of Style-admin/products/physical/product-list"
+									href="https://react.pixelstrap.com/Notlens-admin/products/physical/product-list"
 									target="_blank"
 								>
 									<img
@@ -1193,7 +1193,7 @@ class Landing extends Component {
 							</div>
 							<div className="col-xl-3 col-sm-6 col-12 demo-box">
 								<a
-									href="https://react.pixelstrap.com/Bay Of Style-admin/reports/report"
+									href="https://react.pixelstrap.com/Notlens-admin/reports/report"
 									target="_blank"
 								>
 									<img
@@ -1205,7 +1205,7 @@ class Landing extends Component {
 							</div>
 							<div className="col-xl-3 col-sm-6 col-12 demo-box">
 								<a
-									href="https://react.pixelstrap.com/Bay Of Style-admin/media"
+									href="https://react.pixelstrap.com/Notlens-admin/media"
 									target="_blank"
 								>
 									<img
@@ -1240,7 +1240,7 @@ class Landing extends Component {
 							<div className="col-md-4 offset-md-1 text-center center-part">
 								<h5 className="title-landing">email template</h5>
 								<p className="pb-3">
-									Bay Of Style come with 4+ email template which include two
+									Notlens come with 4+ email template which include two
 									order success template & two email template{" "}
 								</p>
 								<img
@@ -1548,12 +1548,12 @@ class Landing extends Component {
 											</li>
 										</ul>
 										<h2>
-											purchase the Bay Of Style <br />& create beautiful online
+											purchase the Notlens <br />& create beautiful online
 											store
 										</h2>
 										<a
 											target="_blank"
-											href="https://themeforest.net/item/Bay Of Style-responsive-react-ecommerce-template/23067773?s_rank=3"
+											href="https://themeforest.net/item/Notlens-responsive-react-ecommerce-template/23067773?s_rank=3"
 											className="btn btn-primary"
 										>
 											purchase now

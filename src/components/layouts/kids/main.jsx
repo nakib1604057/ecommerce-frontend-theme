@@ -23,7 +23,7 @@ class Kids extends Component {
 		return (
 			<div>
 				<Helmet>
-					<title>Bay Of Style | Kids Store</title>
+					<title>Notlens | Kids Store</title>
 				</Helmet>
 				<HeaderOne logoName={"logo/6.png"} />
 

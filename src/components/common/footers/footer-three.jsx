@@ -64,7 +64,7 @@ class FooterThree extends Component {
 									</div>
 									<div className="footer-contant">
 										<ul className="contact-details">
-											<li>Bay Of Style Demo Store, Demo store India 345-659</li>
+											<li>Notlens Demo Store, Demo store India 345-659</li>
 											<li>Call Us: 123-456-7898</li>
 											<li>
 												Email Us: <a href="#">Support@Fiot.com</a>

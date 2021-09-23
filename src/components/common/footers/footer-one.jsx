@@ -48,7 +48,7 @@ const FooterOne = props => {
                   <div>
                     <h4>KNOW IT ALL FIRST!</h4>
                     <p>
-                      Never Miss Anything From Bay Of Style By Signing Up To Our
+                      Never Miss Anything From Notlens By Signing Up To Our
                       Newsletter.{" "}
                     </p>
                   </div>

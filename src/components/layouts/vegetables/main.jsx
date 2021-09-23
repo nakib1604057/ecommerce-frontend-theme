@@ -25,7 +25,7 @@ class Vegetables extends Component {
 		return (
 			<div>
 				<Helmet>
-					<title>Bay Of Style | Vegetable Store</title>
+					<title>Notlens | Vegetable Store</title>
 				</Helmet>
 				<HeaderTwo logoName={"logo.png"} />
 				<section className="p-0">

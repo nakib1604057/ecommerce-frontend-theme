@@ -15,7 +15,7 @@ class TopBarWhite extends Component {
 									<ul>
 										<li>
 											{translate("topbar_title", {
-												theme_name: " Bay Of Style",
+												theme_name: " Notlens",
 											})}
 										</li>
 										<li>

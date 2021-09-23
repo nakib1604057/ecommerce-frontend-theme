@@ -33,7 +33,7 @@ const main = () => {
                     <div className="col">
                       <div className="slider-contain">
                         <div>
-                          <h4>welcome to bay Of Style</h4>
+                          <h4>welcome to Notlens</h4>
                           {/* <h1>men fashion</h1> */}
                           <Link to={`/shop`} className="btn btn-solid">
                             shop now

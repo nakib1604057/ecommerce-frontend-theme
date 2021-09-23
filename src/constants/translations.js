@@ -109,7 +109,7 @@ var module = {
 	en: {
 		locale: "en_US",
 		messages: {
-			topbar_title: "Welcome to Our store Bay Of Style",
+			topbar_title: "Welcome to Our store Notlens",
 			call_us: "Call Us",
 			home: "home",
 			features: "features",

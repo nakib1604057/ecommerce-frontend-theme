@@ -20,7 +20,7 @@ class Electronic extends Component {
 		return (
 			<div className="container-fluid layout-8">
 				<Helmet>
-					<title>Bay Of Style | Electronic Store</title>
+					<title>Notlens | Electronic Store</title>
 				</Helmet>
 				<HeaderFour logoName={"logo/3.png"} />
 				<section className="p-0 padding-bottom-cls">
